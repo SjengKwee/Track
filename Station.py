@@ -8,9 +8,9 @@ class Station():
         Maakt een station zonder verbindingen
         """
 
-        self._name = naam  
+        self._name: str = naam  
         # met welke stations de station verbinding heeft
-        self._verbinding = {}
+        self._verbinding: dict = {}
 
     def add_verbinding(self,station: Station, duur: int) -> None:
         """
