@@ -17,7 +17,7 @@ class Station():
         Voegt een verbinding toe naar station met bepaalde duur
         """
 
-        verbinding = {station._name: (station, duur)}
+        verbinding = (station, duur)
         self._verbinding[station._name] = verbinding
 
     def __repr__(self):
