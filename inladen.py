@@ -3,13 +3,13 @@
 # Hier laden we de data in, koel
 
 import csv
-from Station import *
+from Classes.station import *
 
 def stations_aanmaken():
     """
     Laad alle stations in, returnt een dictionary met alle lege stations
     """
-    with open('StationsHolland.csv', newline='') as csvfile:
+    with open('Data/StationsHolland.csv', newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
         stations = {}
         for row in csvreader:
@@ -23,7 +23,7 @@ def verbinding():
     """
     Maakt alle stations met hun verbindingen, met behulp van stations_aanmaken(), returnt een dictionary
     """
-    with open('ConnectiesHolland.csv', newline='') as csvfile:
+    with open('Data/ConnectiesHolland.csv', newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
         stations = stations_aanmaken()
         for row in csvreader:
