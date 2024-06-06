@@ -6,7 +6,7 @@ class traject():
         self.verbinding = []
         self.reistijd = 0 
         eind_station = start_station
-        
+
 class station():
     def __init__(self, naam):
     self.name = naam  
