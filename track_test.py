@@ -13,12 +13,13 @@ print(T1._traveltime)
 print(T1._trajectconnection)
 print(T1._stations)
 T2 = Traject(stationDict["Alkmaar"])
+T2.add_trajectconnection(stationDict["Den Helder"])
 
 filename = 'TestTraject.csv'
 
 with open(filename, 'w', newline="") as file:
-    writer = csv.writer(file,quoting=csv.QUOTE_NONE,
+    writer = csv.writer(file,quoting=csv.QUOTE_NONE, delimiter = ' ',
          quotechar='"', escapechar='\\')
-    writer.writerows([T1._stations, T2._stations])
+    writer.writerows([["Tracks", "Stations"],["Track 1: ",T1._stations], ["Track 2: ", T2._stations]])
 
 print("Jeei")
