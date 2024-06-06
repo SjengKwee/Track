@@ -12,10 +12,13 @@ class Station():
         # met welke stations de station verbinding heeft
         self._verbinding: dict = {}
 
-    def add_verbinding(self,station: Station, duur: int) -> None:
+    def add_verbinding(self,station, duur: int) -> None:
         """
         Voegt een verbinding toe naar station met bepaalde duur
         """
 
         verbinding = {station._name: (station, duur)}
         self._verbinding[station._name] = verbinding
+
+    def __repr__(self):
+        return f"Station({self._name})"
