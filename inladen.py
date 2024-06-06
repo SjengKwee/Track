@@ -5,7 +5,7 @@
 import csv
 from Classes.station import *
 
-def stations_aanmaken():
+def make_stations():
     """
     Laad alle stations in, returnt een dictionary met alle lege stations
     """
@@ -19,17 +19,16 @@ def stations_aanmaken():
     return stations
 
 
-def verbinding():
+def make_connections():
     """
     Maakt alle stations met hun verbindingen, met behulp van stations_aanmaken(), returnt een dictionary
     """
     with open('Data/ConnectiesHolland.csv', newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
-        stations = stations_aanmaken()
+        stations = make_stations()
         for row in csvreader:
             if (row[0] in stations) & (row[1] in stations):
-                stations[row[0]].add_verbinding(stations[row[1]],row[2])
-                stations[row[1]].add_verbinding(stations[row[0]], row[2])
+                stations[row[0]].add_connection(stations[row[1]],row[2])
+                stations[row[1]].add_connection(stations[row[0]], row[2])
         return stations
                     
-st = verbinding()

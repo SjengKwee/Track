@@ -11,23 +11,23 @@ class Traject():
         Maakt een traject aan met beginstation zonder verbindingen
         """
 
-        self._trajectverbindingen = []
+        self._trajectconnection = []
         self._stations = [start_station._name]
-        self._reistijd: int = 0
-        self._eindstation: Station = start_station
+        self._traveltime: int = 0
+        self._endstation: Station = start_station
 
-    def add_trajectverbinding(self, station) -> None:
+    def add_trajectconnection(self, station) -> None:
         """
         Voegt een verbinding toe aan een traject
         """
 
-        if station._name in self._eindstation._verbinding:
-            stationTuple = self._eindstation._verbinding[station._name]
-            tijd = int(stationTuple[1])
-            self._reistijd += tijd
-            newVerb = set()
-            newVerb.add(self._eindstation._name)
-            newVerb.add(station._name)
-            self._trajectverbindingen.append(newVerb)
-            self._eindstation = stationTuple[0]
+        if station._name in self._endstation._connection:
+            stationTuple = self._endstation._connection[station._name]
+            time = int(stationTuple[1])
+            self._traveltime += time
+            newConn = set()
+            newConn.add(self._endstation._name)
+            newConn.add(station._name)
+            self._trajectconnection.append(newConn)
+            self._endstation = stationTuple[0]
             self._stations.append(station._name)
