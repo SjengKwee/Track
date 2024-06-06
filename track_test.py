@@ -1,7 +1,7 @@
 
 import csv
-from Classes.station import *
-from Classes.traject import *
+from Classes.Station import *
+from Classes.Traject import *
 from inladen import *
 
 stationDict = make_connections()
@@ -23,3 +23,4 @@ with open(filename, 'w', newline="") as file:
     writer.writerows([["Tracks", "Stations"],["Track 1: ",T1._stations], ["Track 2: ", T2._stations]])
 
 print("Jeei")
+

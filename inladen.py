@@ -3,7 +3,7 @@
 # Hier laden we de data in, koel
 
 import csv
-from Classes.station import *
+from Classes.Station import *
 
 def make_stations():
     """
@@ -13,8 +13,10 @@ def make_stations():
         csvreader = csv.reader(csvfile, delimiter=',')
         stations = {}
         for row in csvreader:
-            newStation = Station(row[0])
+            coordinates = (row[1], row[2])
+            newStation = Station(row[0], coordinates)
             stations[row[0]] = newStation
+
         
     return stations
 
@@ -31,4 +33,7 @@ def make_connections():
                 stations[row[0]].add_connection(stations[row[1]],row[2])
                 stations[row[1]].add_connection(stations[row[0]], row[2])
         return stations
-                    
+
+
+
+
