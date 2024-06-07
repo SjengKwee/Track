@@ -6,16 +6,16 @@ from inladen import *
 
 stationDict = make_connections()
 #print(stationDict["Alkmaar"])
-T1 = Traject(stationDict['Alkmaar'])
-T1.add_trajectconnection(stationDict["Hoorn"])
+T1 = Traject(stationDict['Hoorn'])
 T1.add_trajectconnection(stationDict["Zaandam"])
 T1.add_trajectconnection(stationDict["Beverwijk"])
 T1.add_trajectconnection(stationDict["Castricum"])
 print(T1._traveltime)
-print(T1._trajectconnection)
+#print(T1._trajectconnection)
 print(T1._stations)
-T2 = Traject(stationDict["Alkmaar"])
-T2.add_trajectconnection(stationDict["Den Helder"])
+T2 = Traject(stationDict["Den Helder"])
+T2.add_trajectconnection(stationDict["Alkmaar"])
+print(T2._stations)
 
 
 
