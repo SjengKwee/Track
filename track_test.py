@@ -10,10 +10,11 @@ from score import *
 
 #Maak tracks en bereken score
 stationDict = make_connections()
-T1 = Traject(stationDict['Hoorn'])
-T1.add_trajectconnection(stationDict["Zaandam"])
-T1.add_trajectconnection(stationDict["Beverwijk"])
+T1 = Traject(stationDict['Beverwijk'])
 T1.add_trajectconnection(stationDict["Castricum"])
+T1.add_trajectconnection(stationDict["Alkmaar"])
+T1.add_trajectconnection(stationDict["Hoorn"])
+T1.add_trajectconnection(stationDict["Zaandam"])
 T2 = Traject(stationDict["Den Helder"])
 T2.add_trajectconnection(stationDict["Alkmaar"])
 sc = score_calc(stationDict,[T1,T2])

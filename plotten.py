@@ -10,7 +10,8 @@ from inladen import make_stations
 def plot_track(track: list):
     """ elke track plotten"""
     stations = make_stations()
-    stations_track  = row[1].strip('[]').replace("'",'' ).split(', ')
+    stations_track  = track.strip('[]').replace("'",'' ).split(', ')
+    
     y = [float(stations[station]._coordinates[0]) for station in stations_track]
     x = [float(stations[station]._coordinates[1]) for station in stations_track]
     return plt.plot(x,y)
@@ -34,6 +35,8 @@ with open('TestTraject.csv', 'r') as csvfile:
     csvreader = csv.reader(csvfile)
     next(csvreader) 
     for row in csvreader:
+        if row[0] == "Score:":
+            break
         plot_track(row[1])
     
 # opslaan en weergeven
