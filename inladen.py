@@ -33,7 +33,3 @@ def make_connections():
                 stations[row[0]].add_connection(stations[row[1]],row[2])
                 stations[row[1]].add_connection(stations[row[0]], row[2])
         return stations
-
-
-
-

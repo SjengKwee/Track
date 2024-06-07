@@ -1,10 +1,12 @@
-#  sudo apt-get install python3-matplotlib 
+# Aangemaakt door Addey
+# Inladen.py
+# Hier plotten we een voorbeeld van trajecten
 
 import csv
 import matplotlib.pyplot as plt
 from inladen import make_stations
 
-
+#Plot een track
 def plot_track(track: list):
     """ elke track plotten"""
     stations = make_stations()
