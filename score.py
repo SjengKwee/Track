@@ -17,8 +17,4 @@ def score_calc(trajecten: list):
 
     p = len(ridenpairs)/28
     k = p*10000 - T*100 - min
-    print(p)
-    print(T)
-    print(min)
-    print(k)
     return k

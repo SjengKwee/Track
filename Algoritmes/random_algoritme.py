@@ -7,11 +7,13 @@ from score import *
 
 def random_traject():
     stations = make_connections()
-    start_station = stations[random.choice(stations.keys())]
+    
+    start_station = stations[random.choice(list(stations.keys()))]
     traject = Traject(start_station)
+    
     while True:
-        connection = traject._endstation._connection[random.choice(traject._endstation._connection.keys())]
-        if traject._traveltime + connection[1] > 120:
+        connection = traject._endstation._connection[random.choice(list(traject._endstation._connection.keys()))]
+        if int(traject._traveltime) + int(connection[1]) > 120:
             break
         traject.add_trajectconnection(connection[0])
     
