@@ -2,7 +2,7 @@
 # Traject.py
 # Hier definieren we de traject class. Het leek me netjes de classes in aparte files te definieren
 
-from Classes.Station import *
+from classes.station import *
 
 class Traject():
 

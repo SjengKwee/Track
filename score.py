@@ -2,7 +2,7 @@
 # score.py
 # Hier berekenen we de score van een lijst aan trajecten
 
-from Classes.Traject import *
+from classes.traject import *
 
 #Berekent de score
 def score_calc(trajecten: list):

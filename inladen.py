@@ -3,7 +3,7 @@
 # Hier laden we de data in, koel
 
 import csv
-from Classes.Station import *
+from classes.station import *
 
 def make_stations():
     """

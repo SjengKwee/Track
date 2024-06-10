@@ -3,8 +3,8 @@
 # Hier testen we een manualy made traject en sturen de resultaten in een csv
 
 import csv
-from Classes.Station import *
-from Classes.Traject import *
+from classes.station import *
+from classes.traject import *
 from inladen import *
 from score import *
 

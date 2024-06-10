@@ -1,7 +1,7 @@
 import random
 import csv
-from Classes.Station import *
-from Classes.Traject import *
+from classes.station import *
+from classes.traject import *
 from inladen import *
 from score import *
 
@@ -17,9 +17,11 @@ def random_traject():
     
     return traject
 
-lijst_traj = []
-for i in range(6):
-    traject = random_traject()
-    lijst_traj.append(traject)
+def run_random_algoritme():
 
-print(len(lijst_traj), score_calc(lijst_traj))
+    lijst_traj = []
+    for i in range(6):
+        traject = random_traject()
+        lijst_traj.append(traject)
+
+    print(len(lijst_traj), score_calc(lijst_traj))
