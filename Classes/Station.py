@@ -21,6 +21,9 @@ class Station():
 
         connection = (station, length)
         self._connection[station._name] = connection
+    
+    def __repr__(self):
+        return f"Station({self._name})"
 
 
     

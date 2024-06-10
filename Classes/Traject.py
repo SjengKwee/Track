@@ -31,3 +31,5 @@ class Traject():
             self._trajectconnection.append(newConn)
             self._endstation = stationTuple[0]
             self._stations.append(station._name)
+    def __repr__(self):
+        return f"traject({self._stations})"
