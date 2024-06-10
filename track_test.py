@@ -29,7 +29,7 @@ T3.add_trajectconnection(stationDict["Alphen a/d Rijn"])
 T3.add_trajectconnection(stationDict["Leiden Centraal"])
 T3.add_trajectconnection(stationDict["Schiphol Airport"])
 T3.add_trajectconnection(stationDict["Amsterdam Zuid"])
-sc = score_calc(stationDict,[T1,T2,T3])
+sc = score_calc([T1,T2,T3])
 
 
 filename = 'TestTraject.csv'
@@ -41,4 +41,5 @@ with open(filename, 'w', newline="") as file:
 
 #"Het is gelukt"
 print("Jeei")
+
 
