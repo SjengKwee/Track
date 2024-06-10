@@ -21,7 +21,6 @@ T2.add_trajectconnection(stationDict["Amsterdam Centraal"])
 T2.add_trajectconnection(stationDict["Amsterdam Amstel"])
 T2.add_trajectconnection(stationDict["Amsterdam Zuid"])
 T2.add_trajectconnection(stationDict["Schiphol Airport"])
-T2.add_trajectconnection(stationDict["Alkmaar"])
 
 T3 = Traject(stationDict["Rotterdam Alexander"])
 T3.add_trajectconnection(stationDict["Gouda"])

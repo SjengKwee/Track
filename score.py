@@ -7,15 +7,18 @@ from Classes.Traject import *
 #Berekent de score
 def score_calc(trajecten: list):
     ridenpairs = []
-    T = 0
+    T = len(trajecten)
     min = 0
     for traj in trajecten:
         min += traj._traveltime
-        T += len(traj._stations) - 1
         for connect in traj._trajectconnection:
             if (not connect in ridenpairs):
                 ridenpairs.append(connect)
 
     p = len(ridenpairs)/28
-    k = p*1000 - T*100 - min
+    k = p*10000 - T*100 - min
+    print(p)
+    print(T)
+    print(min)
+    print(k)
     return k
