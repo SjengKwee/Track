@@ -27,5 +27,5 @@ def run_random_algoritme(stations: dict):
         # print(traject)
     print(len(lijst_traj), score_calc(lijst_traj))
 
-    return score_calc(lijst_traj)
+    return lijst_traj
 

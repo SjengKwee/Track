@@ -4,7 +4,7 @@ from bouwblokjes.inladen import *
 
 stations = make_connections()
 
-run_random_algoritme(stations)
-
+traj = run_random_algoritme(stations)
+score_calc(traj)
 
 run_plot_trajectories()
