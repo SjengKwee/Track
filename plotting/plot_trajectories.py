@@ -49,6 +49,6 @@ def run_plot_trajectories():
 
 
 def run_plot_random_alg_score(scores):
-    plt.hist(scores, bins=30, density=True, alpha=0.6, color='g', label='Scores')
+    plt.hist(scores, bins=20, density=True, alpha=0.6, color='g', label='Scores')
     plt.grid(True)
     plt.show()

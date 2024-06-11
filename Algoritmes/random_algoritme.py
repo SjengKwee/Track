@@ -25,7 +25,8 @@ def run_random_algoritme(stations: dict):
         traject = random_traject(stations)
         lijst_traj.append(traject)
         # print(traject)
-    print(len(lijst_traj), score_calc(lijst_traj))
+    
+    # print(len(lijst_traj), score_calc(lijst_traj))
 
     return lijst_traj
 

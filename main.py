@@ -5,7 +5,7 @@ from bouwblokjes.score import *
 
 stations = make_connections()
 score_list = []
-for i in range(100):
+for i in range(100000):
     traj = run_random_algoritme(stations)
     score_list.append(score_calc(traj))
 
