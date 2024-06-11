@@ -48,12 +48,7 @@ def run_plot_trajectories():
     plt.show()
 
 
-def run_plot_random_alg_score():
-    scores = []
-    with open('random_algoritme_score.csv', 'r') as csvfile:
-        csvreader = csv.reader(csvfile)
-        for row in csvreader:
-            scores.append(row)
+def run_plot_random_alg_score(scores):
     plt.hist(scores, bins=30, density=True, alpha=0.6, color='g', label='Scores')
     plt.grid(True)
     plt.show()
