@@ -18,7 +18,7 @@ def plot_track(track: list):
     return plt.plot(x,y)
 
 
-def run_plot_trajectories():
+def run_plot_trajectories(csv_bestand):
         
     stations = make_stations()
     # data in list stoppen
@@ -35,7 +35,7 @@ def run_plot_trajectories():
         plt.text(x[i], y[i], name, fontsize=12)
 
     # Gereden trajecten inlezen en plotten
-    with open('tests/TestTraject.csv', 'r') as csvfile:
+    with open(csv_bestand, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
         next(csvreader) 
         for row in csvreader:

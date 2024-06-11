@@ -1,7 +1,8 @@
-from algoritmes.random_algoritme import run_random_algoritme
+from algoritmes.random_algoritme import *
 from plotting.plot_trajectories import *
 from bouwblokjes.inladen import *
 from bouwblokjes.score import *
+
 
 stations = make_connections()
 
@@ -17,3 +18,5 @@ for tracks in random_results[4]:
     print(tracks._stations)
 
 run_plot_random_alg_score(random_results[0])
+run_plot_trajectories('tests/TestTraject.csv')
+
