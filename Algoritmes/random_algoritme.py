@@ -3,6 +3,7 @@ import csv
 from classes.station import *
 from classes.traject import *
 from bouwblokjes.score import *
+import time
 
 def random_traject(stations: dict):    
     start_station = stations[random.choice(list(stations.keys()))]
@@ -19,7 +20,6 @@ def random_traject(stations: dict):
     return traject
 
 def run_random_algoritme(stations: dict):
-
     lijst_traj = []
     for i in range(7):
         traject = random_traject(stations)
@@ -31,6 +31,7 @@ def run_random_algoritme(stations: dict):
     return lijst_traj
 
 def run_random_times(stations: dict, i : int):
+    time0 = time.time()
     score_list = []
     max_score = 0
     min_score = 10000
@@ -45,4 +46,5 @@ def run_random_times(stations: dict, i : int):
             min_score = score_calc(traj)
             min_traj = traj
 
-    return [score_list, max_score, max_traj, min_score, min_traj]
+    time1 = time.time()
+    return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0]

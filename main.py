@@ -3,7 +3,6 @@ from plotting.plot_trajectories import *
 from bouwblokjes.inladen import *
 from bouwblokjes.score import *
 
-
 stations = make_connections()
 
 random_results = run_random_times(stations, 10000)
@@ -17,6 +16,7 @@ print("Het slechtste traject is: ")
 for tracks in random_results[4]:
     print(tracks._stations)
 
+print("Het algoritme duurt", random_result[5], "seconden")
 run_plot_random_alg_score(random_results[0])
 run_plot_trajectories('tests/TestTraject.csv')
 
