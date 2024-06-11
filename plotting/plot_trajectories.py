@@ -4,7 +4,7 @@
 
 import csv
 import matplotlib.pyplot as plt
-from inladen import make_stations
+from bouwblokjes.inladen import make_stations
 import numpy as np
 
 #Plot een track
@@ -35,7 +35,7 @@ def run_plot_trajectories():
         plt.text(x[i], y[i], name, fontsize=12)
 
     # Gereden trajecten inlezen en plotten
-    with open('TestTraject.csv', 'r') as csvfile:
+    with open('tests/TestTraject.csv', 'r') as csvfile:
         csvreader = csv.reader(csvfile)
         next(csvreader) 
         for row in csvreader:
