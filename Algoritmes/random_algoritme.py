@@ -30,3 +30,19 @@ def run_random_algoritme(stations: dict):
 
     return lijst_traj
 
+def run_random_times(stations: dict, i : int):
+    score_list = []
+    max_score = 0
+    min_score = 10000
+
+    for n in range(i):
+        traj = run_random_algoritme(stations)
+        score_list.append(score_calc(traj))
+        if score_calc(traj) > max_score:
+            max_score = score_calc(traj)
+            max_traj = traj
+        elif score_calc(traj) < min_score:
+            min_score = score_calc(traj)
+            min_traj = traj
+
+    return [score_list, max_score, max_traj, min_score, min_traj]
