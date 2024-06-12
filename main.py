@@ -18,8 +18,8 @@ for tracks in random_results[4]:
     print(tracks._stations)
 
 print("Het algoritme duurt", random_results[5], "seconden")
-run_plot_random_alg_score(random_results[0])
-run_plot_trajectories('tests/TestTraject.csv')
+run_plot_random_alg_score(random_results[0], 'images/scores_random_algoritme')
+
 
 # write output for maximum score
 tracks_writer(random_results[2], random_results[1], 'output/maximum.csv')
@@ -28,9 +28,10 @@ tracks_writer(random_results[2], random_results[1], 'output/maximum.csv')
 tracks_writer(random_results[4], random_results[3], 'output/minimum.csv')
 
 # plot graph from written max score
-
+run_plot_trajectories('output/maximum.csv', 'images/max_7_track.png')
 
 # plot graph from written min score
+run_plot_trajectories('output/minimum.csv', 'images/min_7_track.png')
 
 
 

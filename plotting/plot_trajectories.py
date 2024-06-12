@@ -18,7 +18,7 @@ def plot_track(track: list):
     return plt.plot(x,y)
 
 
-def run_plot_trajectories(csv_bestand):
+def run_plot_trajectories(csv_file, save_file):
         
     stations = make_stations()
     # data in list stoppen
@@ -35,7 +35,7 @@ def run_plot_trajectories(csv_bestand):
         plt.text(x[i], y[i], name, fontsize=12)
 
     # Gereden trajecten inlezen en plotten
-    with open(csv_bestand, 'r') as csvfile:
+    with open(csv_file, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
         next(csvreader) 
         for row in csvreader:
@@ -44,11 +44,12 @@ def run_plot_trajectories(csv_bestand):
             plot_track(row[1])
         
     # opslaan en weergeven
-    plt.savefig('images/plot_zuid_noord.png') 
+    plt.savefig(save_file) 
     plt.show()
 
 
-def run_plot_random_alg_score(scores):
+def run_plot_random_alg_score(scores, save_file):
     plt.hist(scores, bins=20, density=True, alpha=0.6, color='g', label='Scores')
     plt.grid(True)
+    plt.savefig(save_file) 
     plt.show()
