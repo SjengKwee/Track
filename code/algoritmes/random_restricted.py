@@ -1,6 +1,6 @@
 # Aangemaakt door Alec van Duin
 # Random_algoritme.py
-# Hier definieren we ons random algoritme
+# Hier definieren we een restricted random algoritme, waar tracks niet twee keer door hetzelfde station gaat
 
 import random
 import csv
