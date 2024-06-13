@@ -4,9 +4,9 @@
 
 import random
 import csv
-from classes.station import *
-from classes.traject import *
-from bouwblokjes.score import *
+from code.classes.station import *
+from code.classes.traject import *
+from code.bouwblokjes.score import *
 import time
 
 def random_traject(stations: dict): 

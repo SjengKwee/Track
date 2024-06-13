@@ -3,7 +3,7 @@
 
 import csv
 import matplotlib.pyplot as plt
-from bouwblokjes.inladen import make_stations
+from code.bouwblokjes.inladen import make_stations
 import numpy as np
 
 
