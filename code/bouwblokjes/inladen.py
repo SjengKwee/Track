@@ -11,7 +11,7 @@ def make_stations():
     """
 
     #Maakt stations
-    with open('data/input/StationsHolland.csv', newline='') as csvfile:
+    with open('Data/StationsHolland.csv', newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
         stations = {}
         for row in csvreader:
@@ -29,7 +29,7 @@ def make_connections():
     """
 
     #Itereerd door bestanden en maakt de volledige verbindingen
-    with open('data/input/ConnectiesHolland.csv', newline='') as csvfile:
+    with open('Data/ConnectiesHolland.csv', newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
         stations = make_stations()
         for row in csvreader:
