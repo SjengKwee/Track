@@ -20,10 +20,12 @@ def random_restr_traject(stations: dict):
     passing_stations = [start_station]
     
     #Runt tot traject te lang wordt
+    stop = False
     while not stop:
-        poss_conn = random.shuffle(list(traject._endstation._connection.keys()))
+        lijstje = list(traject._endstation._connection.keys())
+        lijstje = random.shuffle(lijstje)
         stop = True
-        for connection in poss_conn:
+        for connection in lijstje:
             if not connection in passing_stations:
                 if int(traject._traveltime) + int(connection[1]) > 120:
                     return traject
