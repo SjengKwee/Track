@@ -8,9 +8,12 @@ from code.bouwblokjes.writer import *
 stations = make_connections()
 
 #random_results = run_random_times(stations, 1000)
-#restr_results = run_random_restr_algoritme(stations,1000)
+restr_results = run_random_restr_times(stations, 10000)
 
-#print(restr_results[0])
+print(restr_results[1])
+print(restr_results[2])
+print(restr_results[3])
+print(restr_results[4])
 
 # print(random_results[1], random_results[3])
 # print("Het beste traject is: ")
