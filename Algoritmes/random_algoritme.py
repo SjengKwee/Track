@@ -45,6 +45,8 @@ def run_random_times(stations: dict, i : int):
         elif score_calc(traj) < min_score:
             min_score = score_calc(traj)
             min_traj = traj
+        elif score_calc(traj) > 6000 and score_calc(traj) < 6500:
+            medium_traj = traj
 
     time1 = time.time()
-    return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0]
+    return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0, medium_traj, score_calc(medium_traj)]
