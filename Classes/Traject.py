@@ -21,15 +21,15 @@ class Traject():
         Voegt een verbinding toe aan een traject
         """
 
-        if station._name in self._endstation._connection:
-            stationTuple = self._endstation._connection[station._name]
-            time = int(stationTuple[1])
-            self._traveltime += time
-            newConn = set()
-            newConn.add(self._endstation._name)
-            newConn.add(station._name)
-            self._trajectconnection.append(newConn)
-            self._endstation = stationTuple[0]
-            self._stations.append(station._name)
+        stationTuple = self._endstation._connection[station._name]
+        time = int(stationTuple[1])
+        self._traveltime += time
+        newConn = set()
+        newConn.add(self._endstation._name)
+        newConn.add(station._name)
+        self._trajectconnection.append(newConn)
+        self._endstation = stationTuple[0]
+        self._stations.append(station._name)
+
     def __repr__(self):
         return f"traject({self._stations})"
