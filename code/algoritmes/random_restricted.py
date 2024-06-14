@@ -17,20 +17,23 @@ def random_restr_traject(stations: dict):
     #Initialiseer parameters
     start_station = stations[random.choice(list(stations.keys()))]
     traject = Traject(start_station)
-    passing_stations = [start_station]
+    passing_stations = [start_station._name]
     
-    #Runt tot traject te lang wordt
+    #Runt tot traject te lang wordt, of er geen stations over zijn
     stop = False
     while not stop:
         lijstje = list(traject._endstation._connection.keys())
-        lijstje = random.shuffle(lijstje)
+        random.shuffle(lijstje)
         stop = True
         for connection in lijstje:
-            if not connection in passing_stations:
-                if int(traject._traveltime) + int(connection[1]) > 120:
-                    return traject
+            if connection in passing_stations:
+                stop = True
+            else:
                 conn_station = traject._endstation._connection[connection]
-                traject.add_trajectconnection[conn_station[0]]
+                if int(traject._traveltime) + int(conn_station[1]) > 120:
+                    return traject
+                traject.add_trajectconnection(conn_station[0])
+                passing_stations.append(connection)
                 stop = False
                 break
 
@@ -62,8 +65,6 @@ def run_random_restr_times(stations: dict, i : int):
     [3]: de minimaal gehaalde score
     [4]: het traject van minimale score
     [5]: de tijd die dit algoritme heeft gerunt
-    [6]: een traject dat op het gemiddelde van 6000-6500 score zit
-    [7]: de score van [6]
     """
 
     #Initialiseert parameters
@@ -83,12 +84,9 @@ def run_random_restr_times(stations: dict, i : int):
         elif score_calc(traj) < min_score:
             min_score = score_calc(traj)
             min_traj = traj
-        elif score_calc(traj) > 6000 and score_calc(traj) < 6500:
-            medium_traj = traj
     
     #Berekent laatste waardes
-    medium_score = score_calc(medium_traj)
     time1 = time.time()
 
     #Return
-    return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0, medium_traj, medium_score]
+    return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0]
