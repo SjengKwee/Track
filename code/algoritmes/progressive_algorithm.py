@@ -18,15 +18,19 @@ class Progressive_algorithm:
     """
 
     # initieer algoritme
-    def __init__(self, stations, repetitions=1000, trains=7):
+    def __init__(self, stations, repetitions=1000, trains=7, times = 10):
         self._stations = copy.deepcopy(stations)
         self._tracks = []
-        self._unused_connections = []
         self._trains = trains
         self._repetitions = repetitions
+        self._times = times
+        self.all_max_scores = {}
+        self.all_max_score = 0
+        self.all_max_tracks = {}
         self.score_list = {}
         self.max_scores = {}
         self.max_tracks = {}
+        self.max_score = 0
         
     def update_connections(self):
         raise NotImplementedError
@@ -44,7 +48,12 @@ class Progressive_algorithm:
         """
         Runs the algorithm
         """
-        
+        self.score_list.clear()
+        self.max_scores.clear()
+        self.max_tracks.clear()
+        self._tracks.clear()
+        self.max_score = 0
+
         for track in range(self._trains):
             self.score_list[track] = []
             self.max_scores[track] = 0
@@ -66,12 +75,42 @@ class Progressive_algorithm:
                 self.score_list[track].append(score)
 
                 # onthoud hoogste score en track
-                if score > self.max_scores[track]:
-                    self.max_scores[track] = score
-                    self.max_tracks[track] = new_track
+                if track == 0:
+                    if score > self.max_scores[track]:
+                        self.max_scores[track] = score
+                        self.max_tracks[track] = new_track
+                else:
+                    if score > self.max_scores[track] and score > self.max_scores[(track-1)] and self.max_scores[(track-1)] != 0:
+                        self.max_scores[track] = score
+                        self.max_tracks[track] = new_track
 
             # voeg beste volgende traject toe
-            self._tracks.append(self.max_tracks[track])
+            if self.max_tracks.get(track):
+                self._tracks.append(self.max_tracks[track])
+                self.max_score = self.max_scores[track]
+            
+
+    def run_times(self): # !!! still outputs the last track as best track somehow, highscore is remembered correctly !!!
+        
+
+
+        for i in range(self._times):
+            self.run()
+            print(self.max_score)
+            if self.max_score > self.all_max_score:
+                print("New best score found")
+                self.all_max_score = self.max_score
+                self.all_max_scores = copy.deepcopy(self.max_scores)
+                self.all_max_tracks = copy.deepcopy(self.max_tracks)
+    
+        
+class Progressive_connection(Progressive_algorithm):
+
+    def __init__()
+        super().__init__(stations, repetitions=1000, trains=7, times = 10)
+        
+
+
 
         
         

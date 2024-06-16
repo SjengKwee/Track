@@ -9,41 +9,74 @@ import time
 
 stations = make_connections()
 
-random_progressive_results = pr.Progressive_algorithm(stations)
+random_progressive = pr.Progressive_algorithm(stations, repetitions=1000)
 
-# run algorithm keeping track of runtime
-time0 = time.time()
-random_progressive_results.run()
-time1 = time.time()
+def run_progressive_run():
+        
+    # run algorithm keeping track of runtime
+    time0 = time.time()
+    random_progressive.run()
+    time1 = time.time()
 
-# print maximumscore, print maximumtrack
-for track in random_progressive_results.max_tracks.keys():
-    print("beste score bij", track,"tracks:", random_progressive_results.max_scores[track])
+    # print maximumscore, print maximumtrack
+    for track in random_progressive.max_tracks.keys():
+        print("beste score bij", (track+1),"tracks:", random_progressive.max_scores[track])
 
-# plot score verdeling per hoeveelheid tracks
+    # print runtime
+    print("runtime:", (time1 - time0))
 
-# output in csv voor maximumtraject per hoeveelheid tracks
+    # plot score verdeling per hoeveelheid tracks
 
-# plot maximumtraject voor maximumtraject per hoeveelheid tracks
+    # output in csv voor maximumtraject per hoeveelheid tracks
+    for track in random_progressive.max_tracks.keys():
 
+        # generate track list
+        track_list = []
+        for i in range(track+1):
+            track_list.append(random_progressive.max_tracks[i])
 
-# print(random_results[1], random_results[3])
-# print("Het beste traject is: ")
-# for tracks in random_results[2]:
-#     print(tracks._stations)
+        # generate filenames
+        csvname = "data/output/random_progressive_output/maximum" + str(track+1) + "tracks.csv"
+        pngname = "data/images/random_progressive_images/maximum" + str(track+1) + "tracks.png"
+        tracks_writer(track_list, random_progressive.max_scores[track], csvname)
 
-# print("Het slechtste traject is: ")
-# for tracks in random_results[4]:
-#     print(tracks._stations)
-
-# print("Het algoritme duurt", random_results[5], "seconden")
-# run_plot_random_alg_score(random_results[0], 'data/images/scores3_random_algoritme')
-
-# # write output for maximum score
-# tracks_writer(random_results[2], random_results[1], 'data/output/maximum3.csv')
-
-# # plot graph from written max score
-# run_plot_trajectories('data/output/maximum3.csv', 'data/images/max_7_track3.png')
+        # # plot maximumtraject voor maximumtraject per hoeveelheid tracks
+        # run_plot_trajectories(csvname, pngname)
 
 
+def run_progressive_run_times():
+        
+    # run algorithm keeping track of runtime
+    time0 = time.time()
+    random_progressive.run_times()
+    time1 = time.time()
 
+    # print maximumscore, print maximumtrack
+    for track in random_progressive.all_max_tracks.keys():
+        print("beste score bij", (track+1),"tracks:", random_progressive.all_max_scores[track])
+
+    # print runtime
+    print("runtime:", (time1 - time0))
+
+    # plot score verdeling per hoeveelheid tracks
+
+    # output in csv voor maximumtraject per hoeveelheid tracks
+    for track in random_progressive.all_max_tracks.keys():
+
+        # generate track list
+        track_list = []
+        for i in range(track+1):
+            track_list.append(random_progressive.all_max_tracks[i])
+
+        # generate filenames
+        csvname = "data/output/random_progressive_output/maximum" + str(track+1) + "tracks.csv"
+        pngname = "data/images/random_progressive_images/maximum" + str(track+1) + "tracks.png"
+        tracks_writer(track_list, random_progressive.all_max_scores[track], csvname)
+
+        # # plot maximumtraject voor maximumtraject per hoeveelheid tracks
+        # run_plot_trajectories(csvname, pngname)
+
+
+
+
+run_progressive_run_times()
