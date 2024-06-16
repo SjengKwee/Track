@@ -9,7 +9,7 @@ import time
 
 stations = make_connections()
 
-random_progressive = pr.Progressive_algorithm(stations, repetitions=1000)
+random_progressive = pr.Progressive_connections(stations, repetitions=1000)
 
 def run_progressive_run():
         

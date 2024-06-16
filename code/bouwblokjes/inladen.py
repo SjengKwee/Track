@@ -39,3 +39,22 @@ def make_connections():
 
         #Return
         return stations
+
+def save_connections():
+    with open('data/input/ConnectiesHolland.csv', newline='') as csvfile:
+        csvreader = csv.reader(csvfile, delimiter=',')
+        next(csvreader) # skip the header
+
+        # make a dictionary for connections
+        all_connections = []
+
+        # save all connections
+        for row in csvreader:
+            new_connection = set()
+            new_connection.add(row[0])
+            new_connection.add(row[1])
+            all_connections.append(new_connection)
+        
+        # return
+        return all_connections
+        

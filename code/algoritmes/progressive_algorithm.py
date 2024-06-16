@@ -90,9 +90,7 @@ class Progressive_algorithm:
                 self.max_score = self.max_scores[track]
             
 
-    def run_times(self): # !!! still outputs the last track as best track somehow, highscore is remembered correctly !!!
-        
-
+    def run_times(self):
 
         for i in range(self._times):
             self.run()
@@ -104,35 +102,62 @@ class Progressive_algorithm:
                 self.all_max_tracks = copy.deepcopy(self.max_tracks)
     
         
-class Progressive_connection(Progressive_algorithm):
-
-    def __init__()
+class Progressive_connections(Progressive_algorithm):
+    """
+    A "Progressive_algorithm" that tries to build tracks that do not overlap with previous tracks
+    """
+     
+    def __init__(self, stations, repetitions=1000, trains=7, times = 10):
         super().__init__(stations, repetitions=1000, trains=7, times = 10)
+        self._used_connections = set()
+    
+    def next_track(self):
+
+        #Initialiseer parameters
+        start_station = self._stations[random.choice(list(self._stations.keys()))]
+        traject = Traject(start_station)
+
+        #Runt tot traject te lang wordt
+        while True:
+            # Maak een lijst van beschikbare connecties die nog niet gereden zijn.
+            connections_choices = []
+            connections_available = set()
+            for station in traject._endstation._connection.keys():
+
+                # add pairs to available
+                connections_available.add((traject._endstation._name, station))
+
+            # select choices not in used_connections
+            connections_choices = list(connections_available - self._used_connections)
+            if not connections_choices:
+                connections_choices = connections_available
+            
+            # select the station to go to
+            choice = random.choice(list(connections_choices))
+
+            # make connection
+            connection = traject._endstation._connection[choice[1]]
+            if int(traject._traveltime) + int(connection[1]) > 120:
+                break
+            traject.add_trajectconnection(connection[0])
+
+            # add chosen connection to used_connections in both directions
+            if choice not in self._used_connections:
+                self._used_connections.add(choice)
+                self._used_connections.add((choice[1], choice[0]))
+
+        #Return
+        return traject
+
+
+class Progressive_stations(Progressive_algorithm):
+
+    def __init__(self, stations, repetitions=1000, trains=7, times = 10):
+        super(Progressive_algorithm, self).__init__(stations, repetitions=1000, trains=7, times = 10)
+        self._unused_stations = stations
         
 
-
-
-        
-        
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 # def next_traject(stations: dict): 
 #     """
 #     Deze functie maakt een traject dat zo min mogelijk overlapt met de vorige trajecten.
@@ -156,12 +181,6 @@ class Progressive_connection(Progressive_algorithm):
 # first_track = random_traject()
 
 
-# # update unused_connections
-# new_unused_connections = []
-# for connection in first_track._trajectconnection:
-#     if connection in unused_connections:
-#         new_unused_connections.append(connection)
-# unused_connections = new_unused_connections
 
 
 
