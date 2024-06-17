@@ -1,57 +1,56 @@
 # Aangemaakt door Alec van Duin
-# Random_algoritme_2.py
-# Hier definieren we een restricted random algoritme, waar tracks niet twee keer door dezelfde verbinding gaat
+# greedy_apriori.py
+# Hier definieren we een greedy algoritme, die gebruikt maakt van heuristieken.
 
-import copy
 import time
+import copy
 import random
-from code.classes.traject import *
 from code.classes.station import *
-from code.bouwblokjes.score import *
+from code.classes.traject import *
 
-class Restricted_2():
+class Greedy_apri():
 
-    def __init__(self, stations: dict):
+    def __init__(self,stations):
         self._stations = copy.deepcopy(stations)
-    
-    def random_restr2_traject(self):
-        #Initialiseer parameters
-        start_station = self._stations[random.choice(list(self._stations.keys()))]
-        traject = Traject(start_station)
+        self._ridentracks = []
+
+    def greedy_traject(self):
+        traject = Traject(self._stations[random.choice(list(self._stations.keys()))])
         tried_conn = []
 
         while True:
-            connect_name = random.choice(list(traject._endstation._connection.keys()))
-            connection = traject._endstation._connection[connect_name]
-            if not {traject._endstation._name, connect_name} in traject._trajectconnection:
-                if int(traject._traveltime) + int(connection[1]) > 120:
-                    break
-                traject.add_trajectconnection(connection[0])
-                tried_conn = []
-            elif connect_name not in tried_conn:
-                tried_conn.append(connect_name)
-            elif len(tried_conn) == len(traject._endstation._connection):
-                break
-        
-        return traject
-    
-    def run_random_restr2_algoritme(self, n : int):
+            sorted_connections = sorted(traject._endstation._apriori_heuristiek)
+            for connection in sorted_connections:
+                if not {traject._endstation._name, connection} in self._ridentracks:
+                    new_conn = traject._endstation._connection[connection]
+                    if int(traject._traveltime) + int(new_conn[1]) > 120:
+                        return traject
+                    traject.add_trajectconnection(new_conn[0])
+                    tried_conn = []
+                    self._ridentracks.append({traject._endstation._name, connection})
+                elif connect_name not in tried_conn:
+                    tried_conn.append(connect_name)
+                elif len(tried_conn) == len(traject._endstation._connection):
+                    return traject
+
+    def greedy_alg(self,n: int):
         """
-        Maakt n aantal random trajecten
+        Maakt i aantal random trajecten
         """
 
         #Initialiseer parameters
         lijst_traj = []
+        self._ridentracks = []
 
         #Maakt n random trajecten
         for i in range(n):
-            traject = self.random_restr2_traject()
+            traject = self.greedy_traject()
             lijst_traj.append(traject)
-
+        
         #Return
         return lijst_traj
 
-    def run_random_restr2_times(self, i : int):
+    def run_greedy_times(self, i : int):
         """
         Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
@@ -71,7 +70,7 @@ class Restricted_2():
 
         #Runt algoritme i keer
         for n in range(i):
-            traj = self.run_random_restr2_algoritme(m)
+            traj = self.greedy_alg(m)
             score_list.append(score_calc(traj))
             if score_calc(traj) > max_score:
                 max_score = score_calc(traj)

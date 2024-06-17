@@ -1,6 +1,6 @@
 # Aangemaakt door Alec van Duin
-# Random_algoritme_2.py
-# Hier definieren we een restricted random algoritme, waar tracks niet twee keer door dezelfde verbinding gaat
+# Random_algoritme_3.py
+# Hier definieren we een restricted random algoritme, waar geen enkele verbinding meer dan een keer wordt bereden
 
 import copy
 import time
@@ -9,25 +9,28 @@ from code.classes.traject import *
 from code.classes.station import *
 from code.bouwblokjes.score import *
 
-class Restricted_2():
+class Restricted_3():
 
     def __init__(self, stations: dict):
         self._stations = copy.deepcopy(stations)
+        self._ridentracks = []
     
-    def random_restr2_traject(self):
+    def random_restr3_traject(self):
         #Initialiseer parameters
         start_station = self._stations[random.choice(list(self._stations.keys()))]
         traject = Traject(start_station)
         tried_conn = []
 
+        #add stop
         while True:
             connect_name = random.choice(list(traject._endstation._connection.keys()))
             connection = traject._endstation._connection[connect_name]
-            if not {traject._endstation._name, connect_name} in traject._trajectconnection:
+            if not {traject._endstation._name, connect_name} in self._ridentracks:
                 if int(traject._traveltime) + int(connection[1]) > 120:
                     break
                 traject.add_trajectconnection(connection[0])
                 tried_conn = []
+                self._ridentracks.append({traject._endstation._name, connect_name})
             elif connect_name not in tried_conn:
                 tried_conn.append(connect_name)
             elif len(tried_conn) == len(traject._endstation._connection):
@@ -35,23 +38,25 @@ class Restricted_2():
         
         return traject
     
-    def run_random_restr2_algoritme(self, n : int):
+    def run_random_restr3_algoritme(self, n : int):
         """
         Maakt n aantal random trajecten
         """
 
         #Initialiseer parameters
         lijst_traj = []
+        self._ridentracks = []
 
         #Maakt n random trajecten
         for i in range(n):
-            traject = self.random_restr2_traject()
+            traject = self.random_restr3_traject()
             lijst_traj.append(traject)
+        
 
         #Return
         return lijst_traj
 
-    def run_random_restr2_times(self, i : int):
+    def run_random_restr3_times(self, i : int):
         """
         Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
@@ -71,7 +76,7 @@ class Restricted_2():
 
         #Runt algoritme i keer
         for n in range(i):
-            traj = self.run_random_restr2_algoritme(m)
+            traj = self.run_random_restr3_algoritme(m)
             score_list.append(score_calc(traj))
             if score_calc(traj) > max_score:
                 max_score = score_calc(traj)

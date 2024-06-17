@@ -34,8 +34,8 @@ def make_connections():
         stations = make_stations()
         for row in csvreader:
             if (row[0] in stations) & (row[1] in stations):
-                stations[row[0]].add_connection(stations[row[1]],row[2])
-                stations[row[1]].add_connection(stations[row[0]], row[2])
+                stations[row[0]].add_connection(stations[row[1]],row[2], 1)
+                stations[row[1]].add_connection(stations[row[0]], row[2], 1)
 
         #Return
         return stations
