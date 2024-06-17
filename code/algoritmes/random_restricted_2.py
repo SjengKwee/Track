@@ -12,9 +12,17 @@ from code.bouwblokjes.score import *
 class Restricted_2():
 
     def __init__(self, stations: dict):
+        """
+        Copieert stations en slaat deze op
+        """
+
         self._stations = copy.deepcopy(stations)
     
     def random_restr2_traject(self):
+        """
+        Maakt een random traject waar iedere verbinding maar een keer in voorkomt
+        """
+    
         #Initialiseer parameters
         start_station = self._stations[random.choice(list(self._stations.keys()))]
         traject = Traject(start_station)
@@ -37,7 +45,7 @@ class Restricted_2():
     
     def run_random_restr2_algoritme(self, n : int):
         """
-        Maakt n aantal random trajecten
+        Maakt n aantal random trajecten met unieke verbindingen
         """
 
         #Initialiseer parameters
@@ -53,7 +61,7 @@ class Restricted_2():
 
     def run_random_restr2_times(self, i : int):
         """
-        Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
+        Maakt i keer 1-7 random trajecten met unieke verbindingen en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
         [1]: de maximaal gehaalde score
         [2]: het traject dat de maximale score heeft gehaald

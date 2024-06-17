@@ -12,13 +12,23 @@ from code.bouwblokjes.score import *
 class Greedy_apri():
 
     def __init__(self,stations):
+        """
+        init, slaat de dictionary van de stations op, en houdt bij welke trajecten gepasseert zijn
+        """
+
         self._stations = copy.deepcopy(stations)
         self._ridentracks = []
 
     def greedy_traject(self):
+        """
+        Maakt een greedy traject op mbv een random startstation en heuristieken meegegeven bij de stations
+        """
+
+        #Initialise variabelen
         traject = Traject(self._stations[random.choice(list(self._stations.keys()))])
         tried_conn = []
 
+        #Bouwt langzaam een traject
         while True:
             sorted_connections = sorted(traject._endstation._apriori_heuristiek, key=lambda item: item[1])
             for connection in sorted_connections:
@@ -30,14 +40,18 @@ class Greedy_apri():
                     traject.add_trajectconnection(new_conn[0])
                     tried_conn = []
                     break
+                
+                #Houdt bij welke verbindingen geprobeerd zijn
                 elif connection not in tried_conn:
                     tried_conn.append(connection)
+
+                #Escape als er geen verbindingen meer gelegd kunnen worden
                 elif len(tried_conn) == len(traject._endstation._connection):
                     return traject
 
     def greedy_alg(self,n: int):
         """
-        Maakt i aantal random trajecten
+        Maakt i aantal greedy trajecten, die geen verbindingen dubbel doen
         """
 
         #Initialiseer parameters
@@ -54,7 +68,7 @@ class Greedy_apri():
 
     def run_greedy_times(self, i : int):
         """
-        Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
+        Maakt i keer 1-7 greedy trajecten en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
         [1]: de maximaal gehaalde score
         [2]: het traject dat de maximale score heeft gehaald
