@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # een lijst met oplossing 1 oplossing kiezen 
     possible_solutions = []
     for i in range(5):
-        solution = run_random_algoritme(stations,7)
+        solution = run_random_algoritme(stations,8)
         possible_solutions.append(solution)
 
     random_chosen_solution= random.choice(possible_solutions)

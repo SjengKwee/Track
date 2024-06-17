@@ -31,6 +31,14 @@ class HillClimber():
     def delete_last_connection(self, new_trajectories):
         
         getal = random.randint(0, len(new_trajectories)-1)
+        verbindingen= len(new_trajectories[getal]._stations)
+
+        # als de traject leeg is 
+        while verbindingen < 1:
+            getal = random.randint(0, len(new_trajectories)-1)
+            verbindingen= len(new_trajectories[getal]._stations)
+        
+
         old_traject = new_trajectories[getal]
         start_station = new_trajectories[getal]._stations[0]
         station_object = make_connections()
@@ -38,31 +46,64 @@ class HillClimber():
        
         for i in old_traject._stations[1:len(old_traject._stations)-1]:
             new_traject.add_trajectconnection(station_object[i])
-
         new_trajectories[getal] = new_traject
-        
-
     
-      
+    def change_start_station(self,new_trajectories):
 
+        getal = random.randint(0, len(new_trajectories)-1)
 
+        while len(new_trajectories[getal]._stations) < 2:
+            getal = random.randint(0, len(new_trajectories)-1)
+            
+        old_traject = new_trajectories[getal]
+        start_station = new_trajectories[getal]._stations[1]
+        station_object = make_connections()
+        new_traject = Traject(station_object[start_station])
 
+        for i in old_traject._stations[2:len(old_traject._stations)]:
+            new_traject.add_trajectconnection(station_object[i])
+        new_trajectories[getal] = new_traject
 
-
-
-        verbindingen= len(new_trajectories[getal]._stations)
-        # print(len(new_trajectories))
-
-        # while verbindingen < 1:
-        #     getal = random.randint(0, len(new_trajectories)-1)
-        #     verbindingen= len(new_trajectories[getal]._stations)
+    def separate_traject(self, new_trajectories):
+        number_routes = len(new_trajectories)
+        if number_routes >= 9:
+            return new_trajectories
         
-        # station_verwijderen = new_trajectories[getal]._stations.pop()
-        # station_verwijderen = new_trajectories[getal]._trajectconnection.pop()
-        # print(new_trajectories[getal]._stations)
-        #return new_trajectories
-        #print(len(new_trajectories[getal]._stations),getal)
+        number = random.randint(0, len(new_trajectories)-1)
+        old_traject = new_trajectories[number]
+        separate_number= random.randint(0, len(old_traject._stations)-1)
+        start_station_first_traject = old_traject._stations[0]
+        start_station_second_traject = old_traject._stations[separate_number]
 
+        station_object = make_connections()
+        first_traject= Traject(station_object[start_station_first_traject])
+        second_traject= Traject(station_object[start_station_second_traject])
+
+        for i in old_traject._stations[1:separate_number]:
+            first_traject.add_trajectconnection(station_object[i])
+
+        for i in old_traject._stations[separate_number+1: len(old_traject._stations)]:
+            second_traject.add_trajectconnection(station_object[i])
+
+        while True:
+            connection = first_traject._endstation._connection[random.choice(list(first_traject._endstation._connection.keys()))]
+            if int(first_traject._traveltime) + int(connection[1]) > 120:
+                break
+            first_traject.add_trajectconnection(connection[0])
+
+        new_trajectories.pop(number)
+        new_trajectories.append(first_traject)
+        new_trajectories.append(second_traject)
+        #print(first_traject)
+
+        #print(len(new_trajectories))
+        
+
+
+
+
+        #new_trajectories.pop(number_routes)
+       
 
 
     def check_solution(self, new_trajectories):
@@ -70,7 +111,7 @@ class HillClimber():
         new_value = score_calc(new_trajectories)
         
         old_value = self.value 
-        #print(new_value, old_value)
+        #print(new_value)
     
         if new_value >= old_value:
             self.trajectories= new_trajectories
@@ -85,22 +126,26 @@ class HillClimber():
         
        
         for iteration in range(iterations):
-            
             print(self.value)
 
             new_trajectories = copy.deepcopy(self.trajectories)
             # doe een kleine random aanpassing 
-            # een traject meer of minder rijden 
-            # van een traject laatste verbinding verwijderen 
+            # een traject minder rijden x
+            # van een traject laatste verbinding verwijderen x
             # van een traject een verbinding toevoegen 
-            # een traject bij een andere startpunt laten beginnen  
+            # een traject bij een andere startpunt laten beginnen  x
             # een traject opsplitsten
-            self.mutate_trajectories(new_trajectories)
-            self.delete_last_connection(new_trajectories)
-            #print(new_trajectories)
 
+            #self.mutate_trajectories(new_trajectories)
+            #self.delete_last_connection(new_trajectories)
+            #self.change_start_station(new_trajectories)
+            #print(new_trajectories)
+            self.separate_traject(new_trajectories)
             #als de state is verslechterd:
+            
             self.check_solution(new_trajectories)
+            
+            
         
         print(new_trajectories, len(new_trajectories))
                 
