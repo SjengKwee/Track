@@ -15,7 +15,7 @@ class Station():
         self._connection: dict = {}
         self._apriori_heuristiek: dict = {}
 
-    def add_connection(self,station, length: int, heur: int) -> None:
+    def add_connection(self,station, length: int, heur: float) -> None:
         """
         Voegt een verbinding toe naar station met bepaalde duur
         """

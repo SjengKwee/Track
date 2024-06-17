@@ -7,6 +7,7 @@ import copy
 import random
 from code.classes.station import *
 from code.classes.traject import *
+from code.bouwblokjes.score import *
 
 class Greedy_apri():
 
@@ -19,17 +20,18 @@ class Greedy_apri():
         tried_conn = []
 
         while True:
-            sorted_connections = sorted(traject._endstation._apriori_heuristiek)
+            sorted_connections = sorted(traject._endstation._apriori_heuristiek, key=lambda item: item[1])
             for connection in sorted_connections:
                 if not {traject._endstation._name, connection} in self._ridentracks:
                     new_conn = traject._endstation._connection[connection]
                     if int(traject._traveltime) + int(new_conn[1]) > 120:
                         return traject
+                    self._ridentracks.append({traject._endstation._name, connection})
                     traject.add_trajectconnection(new_conn[0])
                     tried_conn = []
-                    self._ridentracks.append({traject._endstation._name, connection})
-                elif connect_name not in tried_conn:
-                    tried_conn.append(connect_name)
+                    break
+                elif connection not in tried_conn:
+                    tried_conn.append(connection)
                 elif len(tried_conn) == len(traject._endstation._connection):
                     return traject
 

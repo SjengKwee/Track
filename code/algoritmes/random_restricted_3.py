@@ -28,9 +28,10 @@ class Restricted_3():
             if not {traject._endstation._name, connect_name} in self._ridentracks:
                 if int(traject._traveltime) + int(connection[1]) > 120:
                     break
+                self._ridentracks.append({traject._endstation._name, connect_name})
                 traject.add_trajectconnection(connection[0])
                 tried_conn = []
-                self._ridentracks.append({traject._endstation._name, connect_name})
+
             elif connect_name not in tried_conn:
                 tried_conn.append(connect_name)
             elif len(tried_conn) == len(traject._endstation._connection):

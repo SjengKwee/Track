@@ -7,6 +7,7 @@ from code.bouwblokjes.plot_trajectories import *
 from code.bouwblokjes.inladen import *
 from code.bouwblokjes.score import *
 from code.bouwblokjes.writer import *
+from code.bouwblokjes.heur_maker import *
 import sys
 
 random.seed(10)
@@ -66,7 +67,10 @@ elif(algoritme == "Restricted_3"):
 #Greedy_apri
 elif(algoritme == "Greedy_apri"):
     print("Voor een even verdeelde standaard heuristiek: Basic")
+    print("Voor een heuristiek gebasseerd het aantal verbindingen van groot naar klein: Max_connections")
     heuristiek = input("Welke heuristiek wil je gebruiken? ")
+
+    #Geen heuristiek
     if(heuristiek == "Basic"):
         heur_stat = stations
         alg = Greedy_apri(heur_stat)
@@ -78,6 +82,17 @@ elif(algoritme == "Greedy_apri"):
         run_plot_trajectories('data/output/greed_apri/zonder_heur/maximum.csv', 'data/images/greed_apri/zonder_heur/max_track.png')
         run_plot_trajectories('data/output/greed_apri/zonder_heur/minimum.csv', 'data/images/greed_apri/zonder_heur/min_track.png')
 
+    #Max connections heuristiek
+    elif(heuristiek == "Max_connections"):
+        heur_stat = max_connection_counter(stations)
+        alg = Greedy_apri(heur_stat)
+        greed_results = alg.run_greedy_times(10000)
+        print("Het algoritme duurt", greed_results[5], "seconden")
+        run_plot_random_alg_score(greed_results[0], 'data/images/greed_apri/max_connections/scores_algoritme')
+        tracks_writer(greed_results[2], greed_results[1], 'data/output/greed_apri/max_connections/maximum.csv')
+        tracks_writer(greed_results[4], greed_results[3], 'data/output/greed_apri/max_connections/minimum.csv')
+        run_plot_trajectories('data/output/greed_apri/max_connections/maximum.csv', 'data/images/greed_apri/max_connections/max_track.png')
+        run_plot_trajectories('data/output/greed_apri/max_connections/minimum.csv', 'data/images/greed_apri/max_connections/min_track.png')
     else:
         print("Verkeerde input")
     
