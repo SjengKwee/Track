@@ -22,8 +22,8 @@ def max_connection_counter(stations:dict):
         for connection in station._apriori_heuristiek.keys():
             connecting_tuple = station._connection[connection]
             connecting_station = connecting_tuple[0]
-            connected_number = float(1/len(connecting_station._connection))
-            station._apriori_heuristiek[connection] = connected_number
+            connected_number = -len(connecting_station._connection)
+            station._apriori_heuristiek[connection] = int(connected_number)
         returnstations[key] = station
 
     #Return nieuwe stations
@@ -44,6 +44,28 @@ def min_traveltime(stations:dict):
             connecting_tuple = station._connection[connection]
             traveltime = connecting_tuple[1]
             station._apriori_heuristiek[connection] = traveltime
+        returnstations[key] = station
+
+    #Return nieuwe stations
+    return returnstations
+
+def combi(stations:dict, weight_conn: float, weight_trav: float):
+    """
+    Maakt een heuristiek die de connecties en traveltime combineert waar ook gewichten aan gezet kunnen worden
+    """
+
+    #Initialiseer parameters
+    returnstations = copy.deepcopy(stations)
+
+    #Implementeer heuristiek
+    for key in returnstations.keys():
+        station = returnstations[key]
+        for connection in station._apriori_heuristiek.keys():
+            connecting_tuple = station._connection[connection]
+            traveltime = connecting_tuple[1]
+            connecting_station = connecting_tuple[0]
+            connected_number = len(connecting_station._connection)
+            station._apriori_heuristiek[connection] = weight_trav*traveltime - weight_conn*connected_number
         returnstations[key] = station
 
     #Return nieuwe stations

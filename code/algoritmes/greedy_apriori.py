@@ -30,7 +30,10 @@ class Greedy_apri():
 
         #Bouwt langzaam een traject
         while True:
-            sorted_connections = sorted(traject._endstation._apriori_heuristiek, key=lambda item: item[1])
+            first_connections = sorted(traject._endstation._apriori_heuristiek.items(), key=lambda item: item[1])
+            sorted_connections = []
+            for items in first_connections:
+                sorted_connections.append(items[0])
             for connection in sorted_connections:
                 if not {traject._endstation._name, connection} in self._ridentracks:
                     new_conn = traject._endstation._connection[connection]
