@@ -36,7 +36,7 @@ if(algoritme == "Random"):
 elif(algoritme == "Restricted_1"):
     restr1_results = run_random_restr_times(stations,10000)
     print("Het algoritme duurt", restr1_results[5], "seconden")
-    run_plot_random_alg_score(restr1_results[0], 'data/images/random_restricted_1/scores_random_algoritme')
+    run_plot_random_alg_score(restr1_results[0], 'data/images/random_restr_1/scores_random_algoritme')
     tracks_writer(restr1_results[2], restr1_results[1], 'data/output/random_restr_1/maximum.csv')
     tracks_writer(restr1_results[4], restr1_results[3], 'data/output/random_restr_1/minimum.csv')
     run_plot_trajectories('data/output/random_restr_1/maximum.csv', 'data/images/random_restr_1/max_7_track.png')
