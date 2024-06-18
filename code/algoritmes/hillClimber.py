@@ -91,6 +91,12 @@ class HillClimber():
                 break
             first_traject.add_trajectconnection(connection[0])
 
+        while True:
+            connection = second_traject._endstation._connection[random.choice(list(second_traject._endstation._connection.keys()))]
+            if int(second_traject._traveltime) + int(connection[1]) > 120:
+                break
+            second_traject.add_trajectconnection(connection[0])
+
         new_trajectories.pop(number)
         new_trajectories.append(first_traject)
         new_trajectories.append(second_traject)
@@ -98,10 +104,6 @@ class HillClimber():
 
         #print(len(new_trajectories))
         
-
-
-
-
         #new_trajectories.pop(number_routes)
        
 
@@ -118,6 +120,13 @@ class HillClimber():
             self.value = new_value
            
 
+    def mutate_random_trajectories(self,new_trajectories):
+        functions = []
+        functions.append("self.delete_last_connection(new_trajectories)")
+         #self.mutate_trajectories(new_trajectories)
+            # self.delete_last_connection(new_trajectories)
+            # self.change_start_station(new_trajectories)
+        print(functions)
 
     
     def run(self, iterations, mutate_trajectories_number=1):
@@ -126,27 +135,26 @@ class HillClimber():
         
        
         for iteration in range(iterations):
-            print(self.value)
+            #print(self.value)
 
             new_trajectories = copy.deepcopy(self.trajectories)
             # doe een kleine random aanpassing 
             # een traject minder rijden x
             # van een traject laatste verbinding verwijderen x
-            # van een traject een verbinding toevoegen 
             # een traject bij een andere startpunt laten beginnen  x
-            # een traject opsplitsten
+            # een traject opsplitsten x
 
-            #self.mutate_trajectories(new_trajectories)
-            #self.delete_last_connection(new_trajectories)
-            #self.change_start_station(new_trajectories)
+            # self.mutate_trajectories(new_trajectories)
+            # self.delete_last_connection(new_trajectories)
+            # self.change_start_station(new_trajectories)
             #print(new_trajectories)
-            self.separate_traject(new_trajectories)
+            # self.separate_traject(new_trajectories)
             #als de state is verslechterd:
-            
+            self.mutate_random_trajectories(new_trajectories)
             self.check_solution(new_trajectories)
             
             
         
-        print(new_trajectories, len(new_trajectories))
+        #print(new_trajectories, len(new_trajectories))
                 
                 
