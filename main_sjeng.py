@@ -41,6 +41,7 @@ def run_progressive_run():
         tracks_writer(track_list, random_progressive.max_scores[track], csvname)
 
         # # plot maximumtraject voor maximumtraject per hoeveelheid tracks
+
         # run_plot_trajectories(csvname, pngname)
 
 
@@ -71,12 +72,13 @@ def run_progressive_run_times():
         # generate filenames
         csvname = "data/output/random_progressive_output/maximum" + str(track+1) + "tracks.csv"
         pngname = "data/images/random_progressive_images/maximum" + str(track+1) + "tracks.png"
+
+        # write csv
         tracks_writer(track_list, random_progressive.all_max_scores[track], csvname)
 
-        # # plot maximumtraject voor maximumtraject per hoeveelheid tracks
+        # plot best score per added track
+        run_plot_trajectories(csvname, pngname)
+
         # run_plot_trajectories(csvname, pngname)
-
-
-
 
 run_progressive_run_times()

@@ -36,7 +36,10 @@ class Progressive_algorithm:
         raise NotImplementedError
     
     def next_start_station(self):
-        raise NotImplementedError
+
+        start_station = self._stations[random.choice(list(self._stations.keys()))]
+
+        return start_station
 
     def next_track(self):
         
@@ -88,7 +91,6 @@ class Progressive_algorithm:
             if self.max_tracks.get(track):
                 self._tracks.append(self.max_tracks[track])
                 self.max_score = self.max_scores[track]
-            
 
     def run_times(self):
 
@@ -110,25 +112,48 @@ class Progressive_connections(Progressive_algorithm):
     def __init__(self, stations, repetitions=1000, trains=7, times = 10):
         super().__init__(stations, repetitions=1000, trains=7, times = 10)
         self._used_connections = set()
+        self._all_connections = set()
+
+        # Make a list of all connections
+        for station_name in self._stations.keys():
+            station = self._stations[station_name]
+                
+            # for all connections in station
+            for end_station in station._connection.keys():
+
+                # if not in all_connections add to it both ways
+                connection = (station._name, end_station)
+                if connection not in self._all_connections:
+                    self._all_connections.add(connection)
+                    self._all_connections.add((connection[1], connection[0]))
     
+    def next_start_station(self):
+
+        start_station = self._stations[random.choice(list(self._stations.keys()))]
+
+        return start_station
+
+
     def next_track(self):
 
         #Initialiseer parameters
-        start_station = self._stations[random.choice(list(self._stations.keys()))]
+        start_station = self.next_start_station()
         traject = Traject(start_station)
+        used_connections_temp = self._used_connections.copy()
 
         #Runt tot traject te lang wordt
         while True:
             # Maak een lijst van beschikbare connecties die nog niet gereden zijn.
             connections_choices = []
             connections_available = set()
+
             for station in traject._endstation._connection.keys():
 
                 # add pairs to available
                 connections_available.add((traject._endstation._name, station))
 
             # select choices not in used_connections
-            connections_choices = list(connections_available - self._used_connections)
+            connections_choices = list(connections_available - used_connections_temp)
             if not connections_choices:
                 connections_choices = connections_available
             
@@ -143,46 +168,59 @@ class Progressive_connections(Progressive_algorithm):
 
             # add chosen connection to used_connections in both directions
             if choice not in self._used_connections:
-                self._used_connections.add(choice)
-                self._used_connections.add((choice[1], choice[0]))
+                used_connections_temp.add(choice)
+                used_connections_temp.add((choice[1], choice[0]))
+                
+            
+            # !!! stop running if all connections have been used. !!!
+
+        self._used_connections = used_connections_temp
 
         #Return
         return traject
 
 
-class Progressive_stations(Progressive_algorithm):
+
+
+class Progressive_stations(Progressive_connections):
+    """
+    Limits startstations to stations that still have connections that are unused.
+    I not it should always be skipped instead.
+    """
+    
 
     def __init__(self, stations, repetitions=1000, trains=7, times = 10):
-        super(Progressive_algorithm, self).__init__(stations, repetitions=1000, trains=7, times = 10)
-        self._unused_stations = stations
+        super().__init__(stations, repetitions=1000, trains=7, times = 10)
         
+        
+    def next_start_station(self):
+        """
+        chooses a station that has connections left
+        """
+
+        unused_connections = (self._all_connections - self._used_connections)
+
+        if not unused_connections:
+            # If there are no unused connections, return a random station
+            print("fail")
+            return self._stations[random.choice(list(self._stations.keys()))]
+
+        # list all stations of interest
+        stations = []
+        for connection in unused_connections:
+            if connection[0] not in stations:
+                stations.append(connection[0])
+            if connection[1] not in stations:
+                stations.append(connection[1])
+
+        # choose random station
+        start_station_name = random.choice(stations)
+        start_station = self._stations[start_station_name]
+
+        return start_station
+
 
  
-# def next_traject(stations: dict): 
-#     """
-#     Deze functie maakt een traject dat zo min mogelijk overlapt met de vorige trajecten.
-#     """
-
-#     #Initialiseer parameters
-#     start_station = stations[random.choice(list(stations.keys()))]
-#     traject = Traject(start_station)
-    
-#     #Runt tot traject te lang wordt
-#     while True:
-        
-#         connection = traject._endstation._connection[random.choice(list(traject._endstation._connection.keys()))]
-#         if int(traject._traveltime) + int(connection[1]) > 120:
-#             break
-#         traject.add_trajectconnection(connection[0])
-
-#     #Return
-#     return traject
-
-# first_track = random_traject()
-
-
-
-
 
 
 
