@@ -107,6 +107,38 @@ elif(algoritme == "Greedy_apri"):
         run_plot_trajectories('data/output/greed_apri/min_traveltime/maximum.csv', 'data/images/greed_apri/min_traveltime/max_track.png')
         run_plot_trajectories('data/output/greed_apri/min_traveltime/minimum.csv', 'data/images/greed_apri/min_traveltime/min_track.png')
 
+    #Min combi heuristiek
+    elif(heuristiek == "Combi"):
+        heur_stat1 = combi(stations,1,1)
+        alg1 = Greedy_apri(heur_stat1)
+        greed1_results = alg1.run_greedy_times(10000)
+        print("De eerste combinatie duurt", greed1_results[5], "seconden")
+        run_plot_random_alg_score(greed1_results[0], 'data/images/greed_apri/combi/1,1/scores_algoritme')
+        tracks_writer(greed1_results[2], greed1_results[1], 'data/output/greed_apri/combi/1,1/maximum.csv')
+        tracks_writer(greed1_results[4], greed1_results[3], 'data/output/greed_apri/combi/1,1/minimum.csv')
+        run_plot_trajectories('data/output/greed_apri/combi/1,1/maximum.csv', 'data/images/greed_apri/combi/1,1/max_track.png')
+        run_plot_trajectories('data/output/greed_apri/combi/1,1/minimum.csv', 'data/images/greed_apri/combi/1,1/min_track.png')
+
+        heur_stat2 = combi(stations,1,2)
+        alg2 = Greedy_apri(heur_stat2)
+        greed2_results = alg2.run_greedy_times(10000)
+        print("De tweede combinatie duurt", greed2_results[5], "seconden")
+        run_plot_random_alg_score(greed2_results[0], 'data/images/greed_apri/combi/1,2/scores_algoritme')
+        tracks_writer(greed2_results[2], greed2_results[1], 'data/output/greed_apri/combi/1,2/maximum.csv')
+        tracks_writer(greed2_results[4], greed2_results[3], 'data/output/greed_apri/combi/1,2/minimum.csv')
+        run_plot_trajectories('data/output/greed_apri/combi/1,2/maximum.csv', 'data/images/greed_apri/combi/1,2/max_track.png')
+        run_plot_trajectories('data/output/greed_apri/combi/1,2/minimum.csv', 'data/images/greed_apri/combi/1,2/min_track.png')
+
+        heur_stat3 = combi(stations,2,1)
+        alg3 = Greedy_apri(heur_stat3)
+        greed3_results = alg3.run_greedy_times(10000)
+        print("De derde combinatie duurt", greed3_results[5], "seconden")
+        run_plot_random_alg_score(greed3_results[0], 'data/images/greed_apri/combi/2,1/scores_algoritme')
+        tracks_writer(greed3_results[2], greed3_results[1], 'data/output/greed_apri/combi/2,1/maximum.csv')
+        tracks_writer(greed3_results[4], greed3_results[3], 'data/output/greed_apri/combi/2,1/minimum.csv')
+        run_plot_trajectories('data/output/greed_apri/combi/2,1/maximum.csv', 'data/images/greed_apri/combi/2,1/max_track.png')
+        run_plot_trajectories('data/output/greed_apri/combi/2,1/minimum.csv', 'data/images/greed_apri/combi/2,1/min_track.png')
+
     else:
         print("Verkeerde input")
     

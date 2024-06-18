@@ -43,7 +43,7 @@ def min_traveltime(stations:dict):
         for connection in station._apriori_heuristiek.keys():
             connecting_tuple = station._connection[connection]
             traveltime = connecting_tuple[1]
-            station._apriori_heuristiek[connection] = traveltime
+            station._apriori_heuristiek[connection] = int(traveltime)
         returnstations[key] = station
 
     #Return nieuwe stations
@@ -62,9 +62,9 @@ def combi(stations:dict, weight_conn: float, weight_trav: float):
         station = returnstations[key]
         for connection in station._apriori_heuristiek.keys():
             connecting_tuple = station._connection[connection]
-            traveltime = connecting_tuple[1]
+            traveltime = int(connecting_tuple[1])
             connecting_station = connecting_tuple[0]
-            connected_number = len(connecting_station._connection)
+            connected_number = int(len(connecting_station._connection))
             station._apriori_heuristiek[connection] = weight_trav*traveltime - weight_conn*connected_number
         returnstations[key] = station
 
