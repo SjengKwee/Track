@@ -26,7 +26,7 @@ class HillClimber():
         # kies een getal en verwijder die traject 
         getal = random.randint(0, len(new_trajectories)-1)
         new_trajectories.pop(getal)
-        print(getal)
+        #print(getal)
         #print(new_trajectories.pop(7))
 
         #print(len(new_trajectories), "na ")
@@ -135,13 +135,13 @@ class HillClimber():
         
 
     
-    def run(self, iterations, mutate_trajectories_number=1):
+    def run(self, iterations):
 
         # herhaal
         
-       
+        scores_na_iteratie = []
         for iteration in range(iterations):
-            print(self.value)
+            #print(self.value)
 
             new_trajectories = copy.deepcopy(self.trajectories)
             # doe een kleine random aanpassing 
@@ -162,9 +162,9 @@ class HillClimber():
             
           
             self.check_solution(new_trajectories)
+            scores_na_iteratie.append(self.value)
             
-            
-        
-        print(new_trajectories, len(new_trajectories))
+        return [new_trajectories, scores_na_iteratie, self.value]
+        #print(new_trajectories, len(new_trajectories))
                 
                 

@@ -59,3 +59,14 @@ def run_plot_random_alg_score(scores, save_file):
     # opslaan en weergeven
     plt.savefig(save_file) 
     plt.show()
+
+def plot_iterations_scores(scores,iterations, save_file):
+    
+    """ Scores van een algoritme plotten """
+    y = [score for score in scores]
+    x = [iteration for iteration in range(iterations)]
+    plt.plot(x,y)
+    plt.savefig(save_file) 
+    plt.show()
+
+
