@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # start state 1 oplossing = lijst[traject([stations)])]
     # een lijst met oplossing 1 oploss#ing kiezen 
     possible_solutions = []
-    for i in range(5):
+    for i in range(10000):
         solution = run_random_algoritme(stations,7)
         possible_solutions.append(solution)
     random_chosen_solution= random.choice(possible_solutions)
