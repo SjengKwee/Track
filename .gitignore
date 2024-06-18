@@ -7,3 +7,6 @@ scores3_random_algoritme.png
 min_7_track3.png
 medium_7_track3.png
 max_7_track3.png
+
+data/images/*.png
+data/output/*.png
