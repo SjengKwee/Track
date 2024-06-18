@@ -26,7 +26,8 @@ if __name__ == "__main__":
     climber =  HillClimber(random_chosen_solution)
 
     #print("Running Hill Climber...")
-    climber.run(100,1)
+    
+    climber.run(1000,1)
 
 
     
