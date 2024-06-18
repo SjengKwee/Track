@@ -32,4 +32,5 @@ class Traject():
         self._stations.append(station._name)
 
     def __repr__(self):
-        return f"traject({self._stations})"
+        return f"traject{self._stations}"
+        # return f" {self._trajectconnection}"

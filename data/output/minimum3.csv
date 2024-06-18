@@ -1,6 +1,14 @@
 Tracks,Stations
+<<<<<<< HEAD
 0,"['Alkmaar', 'Den Helder', 'Alkmaar', 'Den Helder']"
 1,"['Den Helder', 'Alkmaar', 'Den Helder', 'Alkmaar']"
 2,"['Alkmaar', 'Hoorn', 'Alkmaar', 'Hoorn', 'Zaandam']"
 3,"['Schiphol Airport', 'Amsterdam Zuid', 'Amsterdam Sloterdijk', 'Amsterdam Zuid', 'Amsterdam Sloterdijk', 'Amsterdam Zuid', 'Amsterdam Sloterdijk', 'Amsterdam Zuid', 'Amsterdam Sloterdijk']"
 Score:,953.7142857142858
+=======
+0,"['Den Helder', 'Alkmaar', 'Den Helder', 'Alkmaar', 'Castricum']"
+1,"['Den Helder', 'Alkmaar', 'Den Helder', 'Alkmaar', 'Castricum']"
+2,"['Den Helder', 'Alkmaar', 'Den Helder', 'Alkmaar']"
+3,"['Hoorn', 'Zaandam', 'Castricum', 'Zaandam', 'Castricum', 'Beverwijk', 'Castricum', 'Zaandam']"
+Score:,943.7142857142858
+>>>>>>> 2a90b864cb20e654a5fdad101c554a0183a5223a

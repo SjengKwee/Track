@@ -13,14 +13,16 @@ class Station():
       
         # met welke stations de station verbinding heeft
         self._connection: dict = {}
+        self._apriori_heuristiek: dict = {}
 
-    def add_connection(self,station, length: int) -> None:
+    def add_connection(self,station, length: int, heur: float) -> None:
         """
         Voegt een verbinding toe naar station met bepaalde duur
         """
 
         connection = (station, length)
         self._connection[station._name] = connection
+        self._apriori_heuristiek[station._name] = heur
     
     def __repr__(self):
         return f"Station({self._name})"

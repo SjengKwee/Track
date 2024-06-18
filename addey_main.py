@@ -17,8 +17,8 @@ if __name__ == "__main__":
     # start state 1 oplossing = lijst[traject([stations)])]
     # een lijst met oplossing 1 oplossing kiezen 
     possible_solutions = []
-    for i in range(100):
-        solution = run_random_algoritme(stations,7)
+    for i in range(5):
+        solution = run_random_algoritme(stations,8)
         possible_solutions.append(solution)
 
     random_chosen_solution= random.choice(possible_solutions)
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     climber =  HillClimber(random_chosen_solution)
 
     #print("Running Hill Climber...")
-    climber.run(10,1)
+    climber.run(100,1)
 
 
     
