@@ -3,6 +3,7 @@
 # Hier definieren we de traject class. Het leek me netjes de classes in aparte files te definieren
 
 from code.classes.station import *
+from code.classes.connection import Connection
 
 class Traject():
 
@@ -24,7 +25,7 @@ class Traject():
         stationTuple = self._endstation._connection[station._name]
         time = int(stationTuple[1])
         self._traveltime += time
-        newConn = set()
+        newConn = Connection()
         newConn.add(self._endstation._name)
         newConn.add(station._name)
         self._trajectconnection.append(newConn)
