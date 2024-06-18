@@ -9,7 +9,7 @@ import time
 
 stations = make_connections()
 
-random_progressive = pr.Progressive_connections(stations, repetitions=10, times=10)
+random_progressive = pr.Progressive_stations(stations, repetitions=1000, times=100)
 
 def run_progressive_run():
         
@@ -80,10 +80,14 @@ def run_progressive_run_times():
         run_plot_trajectories(csvname, pngname)
 
     # print alle scores (test)
-    print(random_progressive.all_max_scores)
+    all_scores = random_progressive.all_max_scores
+    print(all_scores)
+
+    # print gemiddelde van scores
+    gem_score = (sum(all_scores)/len(all_scores))
+    print(gem_score)
 
     # plot verdeling van de scores
     run_plot_random_alg_score(random_progressive.all_max_scores, "data/images/random_progressive_images/plot.png")
 
 run_progressive_run_times()
-

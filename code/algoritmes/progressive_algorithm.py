@@ -116,9 +116,9 @@ class Progressive_connections(Progressive_algorithm):
     """
      
     def __init__(self, stations, repetitions=1000, trains=7, times = 10):
-        super().__init__(stations, repetitions=1000, trains=7, times = 10)
+        super().__init__(stations, repetitions, trains, times)
         self._total_used_connections = set()
-        self._used_connections = set()
+
         self._all_connections = set()
 
         # Make a list of all connections
@@ -176,10 +176,12 @@ class Progressive_connections(Progressive_algorithm):
             traject.add_trajectconnection(connection[0])
 
             # add chosen connection to used_connections in both directions
-            if choice not in self._used_connections:
+            if choice not in used_connections_temp:
                 used_connections_temp.add(choice)
             
             # !!! stop running if all connections have been used. !!!
+            if used_connections_temp == self._all_connections:
+                break
 
         #Return
         return traject
@@ -193,6 +195,8 @@ class Progressive_connections(Progressive_algorithm):
         self.max_tracks.clear()
         self._tracks.clear()
         self.max_score = 0
+
+        self._total_used_connections = set()
 
         for track in range(self._trains):
             self.score_list[track] = []
@@ -236,15 +240,15 @@ class Progressive_connections(Progressive_algorithm):
                     self._total_used_connections.add(connection)
 
 
+
 class Progressive_stations(Progressive_connections):
     """
     Limits startstations to stations that still have connections that are unused.
     I not it should always be skipped instead.
     """
     
-
     def __init__(self, stations, repetitions=1000, trains=7, times = 10):
-        super().__init__(stations, repetitions=1000, trains=7, times = 10)
+        super().__init__(stations, repetitions, trains, times)
         
         
     def next_start_station(self):
@@ -252,20 +256,18 @@ class Progressive_stations(Progressive_connections):
         chooses a station that has connections left
         """
 
-        unused_connections = (self._all_connections - self._used_connections)
+        unused_connections = (self._all_connections - self._total_used_connections)
 
         if not unused_connections:
             # If there are no unused connections, return a random station
-            print("fail")
             return self._stations[random.choice(list(self._stations.keys()))]
 
-        # list all stations of interest
+        #list all stations of interest
         stations = []
         for connection in unused_connections:
-            if connection[0] not in stations:
-                stations.append(connection[0])
-            if connection[1] not in stations:
-                stations.append(connection[1])
+            for station in connection:
+                if station not in stations:
+                    stations.append(station)
 
         # choose random station
         start_station_name = random.choice(stations)
