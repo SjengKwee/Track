@@ -3,6 +3,8 @@ from code.algoritmes.random_restricted import *
 from code.algoritmes.random_restricted_2 import *
 from code.algoritmes.random_restricted_3 import *
 from code.algoritmes.greedy_apriori import *
+from code.algoritmes.progressive_algorithm import Progressive_algorithm as pr
+from main_sjeng import *
 from code.bouwblokjes.plot_trajectories import *
 from code.bouwblokjes.inladen import *
 from code.bouwblokjes.score import *
@@ -12,14 +14,28 @@ import sys
 
 random.seed(10)
 
-stations = make_connections()
-
 print("Welkom bij onze vette algoritmes")
+print("Wil je runnen voor holland of nederland?")
+regio = input("kies: holland / nederland \n")
+if(regio == "holland"):
+    stations = make_connections()
+    number_connections = 28
+    stations_file = 'StationsHolland.csv'
+    traveltime = 120
+    trains = 7
+elif(regio == "nederland"):
+    stations = make_connections(stations_file = 'stationsnederland.csv', connecties_file = 'connectiesnederland.csv')
+    number_connections = 89
+    stations_file = 'stationsnederland.csv'
+    traveltime = 180
+    trains = 20
+
 print("Om onze random baseline te runnen: Random")
 print("Om de restricted random nr 1 te runnen: Restricted_1")
 print("Om de restricted random nr 2 te runnen: Restricted_2")
 print("Om de restricted random nr 3 te runnen: Restricted_3")
 print("Om een greedy algoritme met apriori heuristieken: Greedy_apri")
+print('Om een progressive algoritme te runnen: Progressive')
 algoritme = input("Welk algoritme wil je runnen? ")
 
 #Random algoritme
@@ -141,6 +157,29 @@ elif(algoritme == "Greedy_apri"):
 
     else:
         print("Verkeerde input")
+
+# Progressive_algorithm
+elif(algoritme == "Progressive"):
+    print("Voor een greedy progressive met random trajecten: Random")
+    print("Voor een greedy progressive met voorkeur voor ongebruikte connecties: Connections")
+    print("Voor een Connections met voorkeur voor benodigde stations: Stations")
+    heuristiek = input("Welke heuristiek wil je gebruiken? \n")
+    repetitions = int(input("Hoeveel repetities per nieuwe track? \n"))
+    times = int(input("Hoeveel scores wil je hebben? \n"))
+
     
+    # initialise correct algorithm with inputted parameters
+    if(heuristiek == "Random"):
+        progressive = pr.Progressive_algorithm(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
+    elif(heuristiek == "Connections"):
+        progressive = pr.Progressive_connections(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
+    elif(heuristiek == "Stations"):
+        progressive = pr.Progressive_stations(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
+    else:
+        print("verkeerde input")
+    
+    # run algorithm
+    run_progressive_run_times(progressive, stations_file = stations_file)
+
 else:
     print("Verkeerde input")

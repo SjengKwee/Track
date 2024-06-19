@@ -7,9 +7,9 @@ from code.bouwblokjes.inladen import make_stations
 import numpy as np
 
 
-def plot_track(track: list):
+def plot_track(track: list, stations_file = 'StationsHolland.csv'):
     """ Visualisatie code die matplotlib gebruikt om elke track te plotten"""
-    stations = make_stations()
+    stations = make_stations(stations_file=stations_file)
 
     # data bruikbaar maken voor plotten 
     stations_track  = track.strip('[]').replace("'",'' ).split(', ')
@@ -19,10 +19,10 @@ def plot_track(track: list):
     return plt.plot(x,y)
 
 
-def run_plot_trajectories(csv_file, save_file):
+def run_plot_trajectories(csv_file, save_file, stations_file = 'StationsHolland.csv'):
     """ Namen van stations plotten op de juiste plaats en de functie plot_track aanroepen. """
         
-    stations = make_stations()
+    stations = make_stations(stations_file = stations_file)
     # data in list stoppen
     station_names = list(stations.keys())
     y = [float(stations[station]._coordinates[0]) for station in station_names]
@@ -43,7 +43,7 @@ def run_plot_trajectories(csv_file, save_file):
         for row in csvreader:
             if row[0] == "Score:":
                 break
-            plot_track(row[1])
+            plot_track(row[1], stations_file=stations_file)
         
     # opslaan en weergeven
     plt.savefig(save_file) 

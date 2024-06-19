@@ -18,12 +18,17 @@ class Progressive_algorithm:
     """
 
     # initieer algoritme
-    def __init__(self, stations, repetitions=1000, trains=7, times = 10):
+    def __init__(self, stations, repetitions=1000, trains=7, traveltime = 120, times = 10, number_of_connections = 28):
+        # parameters
         self._stations = copy.deepcopy(stations)
+        self._number_of_connectinos = number_of_connections
         self._tracks = []
         self._trains = trains
         self._repetitions = repetitions
         self._times = times
+        self._traveltime = traveltime
+
+        # variables
         self.best_max_scores = {}
         self.best_max_score = 0
         self.best_max_tracks = {}
@@ -33,9 +38,6 @@ class Progressive_algorithm:
         self.max_score = 0
         self.all_max_scores = []
         
-    def update_connections(self):
-        raise NotImplementedError
-    
     def next_start_station(self):
 
         start_station = self._stations[random.choice(list(self._stations.keys()))]
@@ -44,7 +46,17 @@ class Progressive_algorithm:
 
     def next_track(self):
         
-        new_track = random_traject(self._stations)
+
+        #Initialiseer parameters
+        start_station = self.stations[random.choice(list(self.stations.keys()))]
+        new_track = Traject(start_station)
+        
+        #Runt tot traject te lang wordt
+        while True:
+            connection = new_track._endstation._connection[random.choice(list(new_track._endstation._connection.keys()))]
+            if int(new_track._traveltime) + int(connection[1]) > self._traveltime:
+                break
+            new_track.add_trajectconnection(connection[0])
 
         return new_track
 
@@ -73,7 +85,7 @@ class Progressive_algorithm:
                 copy_tracks.append(new_track)
 
                 # bereken score en sla op in dictionary
-                score = score_calc(copy_tracks)
+                score = score_calc(copy_tracks, connections = self._number_of_connectinos)
 
                 # sla score op in dictionary
                 self.score_list[track].append(score)
@@ -115,8 +127,8 @@ class Progressive_connections(Progressive_algorithm):
     A "Progressive_algorithm" that tries to build tracks that do not overlap with previous tracks
     """
      
-    def __init__(self, stations, repetitions=1000, trains=7, times = 10):
-        super().__init__(stations, repetitions, trains, times)
+    def __init__(self, stations, repetitions=1000, trains=7, traveltime = 120, times = 10, number_of_connections = 28):
+        super().__init__(stations, repetitions, trains, traveltime, times, number_of_connections)
         self._total_used_connections = set()
 
         self._all_connections = set()
@@ -128,7 +140,7 @@ class Progressive_connections(Progressive_algorithm):
             # for all connections in station
             for end_station in station._connection.keys():
 
-                # if not in all_connections add to it both ways
+                # if not in all_connections add to it
                 connection = Connection((station._name, end_station))
                 if connection not in self._all_connections:
                     self._all_connections.add(connection)
@@ -171,7 +183,7 @@ class Progressive_connections(Progressive_algorithm):
                 if station_name != traject._endstation._name:
                     endstation_name = station_name
             connection = traject._endstation._connection[endstation_name]
-            if int(traject._traveltime) + int(connection[1]) > 120:
+            if int(traject._traveltime) + int(connection[1]) > self._traveltime:
                 break
             traject.add_trajectconnection(connection[0])
 
@@ -214,7 +226,7 @@ class Progressive_connections(Progressive_algorithm):
                 copy_tracks.append(new_track)
 
                 # bereken score en sla op in dictionary
-                score = score_calc(copy_tracks)
+                score = score_calc(copy_tracks, connections = self._number_of_connectinos)
 
                 # sla score op in dictionary
                 self.score_list[track].append(score)
@@ -247,8 +259,8 @@ class Progressive_stations(Progressive_connections):
     I not it should always be skipped instead.
     """
     
-    def __init__(self, stations, repetitions=1000, trains=7, times = 10):
-        super().__init__(stations, repetitions, trains, times)
+    def __init__(self, stations, repetitions=1000, trains=7, traveltime = 120, times = 10, number_of_connections = 28):
+        super().__init__(stations, repetitions, trains, traveltime, times, number_of_connections)
         
         
     def next_start_station(self):

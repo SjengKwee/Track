@@ -5,7 +5,7 @@
 from code.classes.traject import *
 
 #Berekent de score
-def score_calc(trajecten: list) -> int:
+def score_calc(trajecten: list, connections = 28) -> int:
     """
     Berekent de score van een lijst aan trajecten
     """
@@ -23,7 +23,7 @@ def score_calc(trajecten: list) -> int:
                 ridenpairs.append(connect)
 
     #Berekent laatste stukjes
-    p = len(ridenpairs)/28
+    p = len(ridenpairs)/connections
     k = p*10000 - T*100 - min
 
     #Return

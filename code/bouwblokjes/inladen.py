@@ -5,13 +5,14 @@
 import csv
 from code.classes.station import *
 
-def make_stations():
+def make_stations(stations_file = 'StationsHolland.csv'):
     """
     Laad alle stations in, returnt een dictionary met alle lege stations
     """
 
     #Maakt stations
-    with open('data/input/StationsHolland.csv', newline='') as csvfile:
+    csvlocation = 'data/input/' + str(stations_file)
+    with open(csvlocation, newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
         stations = {}
         for row in csvreader:
@@ -23,15 +24,16 @@ def make_stations():
     return stations
 
 
-def make_connections():
+def make_connections(stations_file = 'StationsHolland.csv', connecties_file = 'ConnectiesHolland.csv'):
     """
     Maakt alle stations met hun verbindingen, met behulp van stations_aanmaken(), returnt een dictionary
     """
 
     #Itereerd door bestanden en maakt de volledige verbindingen
-    with open('data/input/ConnectiesHolland.csv', newline='') as csvfile:
+    csvlocation = 'data/input/' + str(connecties_file)
+    with open(csvlocation, newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
-        stations = make_stations()
+        stations = make_stations(stations_file = stations_file)
         for row in csvreader:
             if (row[0] in stations) & (row[1] in stations):
                 stations[row[0]].add_connection(stations[row[1]],row[2], 1)
