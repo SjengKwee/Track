@@ -20,8 +20,8 @@ if __name__ == "__main__":
     # start state 1 oplossing = lijst[traject([stations)])]
     # een lijst met oplossing 1 oploss#ing kiezen 
     possible_solutions = []
-    for i in range(10000):
-        solution = run_random_algoritme(stations,7)
+    for i in range(5):
+        solution = run_random_algoritme(stations,2)
         possible_solutions.append(solution)
     random_chosen_solution= random.choice(possible_solutions)
 
@@ -31,9 +31,10 @@ if __name__ == "__main__":
     # run_plot_trajectories('data/output/hillclimber/chosen_trajectories.csv', 'data/images/hillclimber/huidige_trajectories.png')
   
     
-    # climber =  HillClimber(random_chosen_solution)
-    # result =climber.run(800)
-    # trajectories = result[0]
+    climber =  HillClimber(random_chosen_solution)
+    result =climber.run(1)
+    trajectories = result[0]
+    print(trajectories)
     
     # score na elke iteratie plotten 
     # scores = result[1]
@@ -45,34 +46,35 @@ if __name__ == "__main__":
     # run_plot_trajectories('data/output/hillclimber/trajectories_after_one_hill.csv', 'data/images/hillclimber/trajectories_after_one_hill.png')
   
     
-
+    ###
 
     # hillclimber meerdere keren runnen en score na elke hilclimber printen 
-    hillclimber_results = []
-    scores_iteration_hillclimber = []
-    for i in range(100):
+    # hillclimber_results = []
+    # scores_iteration_hillclimber = []
+    # for i in range(10):
 
-        climber =  HillClimber(random_chosen_solution)
-        result =climber.run(800)
-        hillclimber_results.append(result)
-        scores_iteration_hillclimber.append(result[2])
+    #     climber =  HillClimber(random_chosen_solution)
+    #     result =climber.run(8)
+    #     hillclimber_results.append(result)
+    #     scores_iteration_hillclimber.append(result[2])
+    ###
 
-
-    plot_iterations_scores(scores_iteration_hillclimber,100, 'data/images/hillclimber/scores_iteration_hillclimber.png')
+    # # plot_iterations_scores(scores_iteration_hillclimber,10, 'data/images/hillclimber/scores_iteration_hillclimber.png')
     max_result = 0
     
-    for i in range(100):
-        if int(hillclimber_results[i][2]) > max_result:
-            max_result = int(hillclimber_results[i][2])
-            best_trajectories = hillclimber_results[i][0]
+    ###
+    # for i in range(10):
+    #     if int(hillclimber_results[i][2]) > max_result:
+    #         max_result = int(hillclimber_results[i][2])
+    #         best_trajectories = hillclimber_results[i][0]
            
-    print(max_result)
+    # print(max_result)
 
-
+    ###
 
     # de hilclimber met de beste score  plotten
-    tracks_writer(best_trajectories, max_result, 'data/output/hillclimber/trajectories_after_more_hill.csv')
-    run_plot_trajectories('data/output/hillclimber/trajectories_after_more_hill.csv', 'data/images/hillclimber/trajectories_after_more_hill.png')
+    # #tracks_writer(best_trajectories, max_result, 'data/output/hillclimber/trajectories_after_more_hill.csv')
+    # # run_plot_trajectories('data/output/hillclimber/trajectories_after_more_hill.csv', 'data/images/hillclimber/trajectories_after_more_hill.png')
 
         
 
