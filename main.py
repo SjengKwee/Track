@@ -189,9 +189,9 @@ if __name__ == "__main__":
             print("werkt niet")
     
         # --------------------------- Hill Climber ---------------------------------
-        number_random_startstate = 5
+        number_random_startstate = 10000
         hillclimber_iteration = 800
-        hillclimber_restart_iteration= 10
+        hillclimber_restart_iteration= 100
 
         print("Setting up Hill Climber...")
         random_chosen_solution = make_random_start_state( number_random_startstate)
@@ -213,7 +213,7 @@ if __name__ == "__main__":
     
         # hillclimber meerdere keren runnen en plotten
         hc_restart = restart_hillclimber(hillclimber_restart_iteration, hillclimber_iteration, random_chosen_solution)
-        plot_iterations_scores(hc_restart[1],hillclimber_restart_iteration, 'data/images/hillclimber/scores_iteration_hillclimber.png')
+        run_plot_random_alg_score(hc_restart[1],'data/images/hillclimber/scores_iteration_hillclimber.png',"Restart Hill Climber scores")
         result_max = calculate_best_trajectory(hc_restart[0],hillclimber_restart_iteration)
         
         # de hilclimber met de beste score  plotten

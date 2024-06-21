@@ -23,6 +23,7 @@ class HillClimber():
 
         getal = random.randint(0, len(new_trajectories)-1)
         new_trajectories.pop(getal)
+
       
     def delete_last_connection(self, new_trajectories):
         """Kies een willekeurig traject en verwijder de laatste verbinding"""
@@ -177,7 +178,7 @@ def make_random_start_state(number_of_starts):
     stations = make_connections()
     possible_solutions = []
     for i in range(number_of_starts):
-        solution = run_random_algoritme(stations,2)
+        solution = run_random_algoritme(stations,7)
         possible_solutions.append(solution)
     random_chosen_solution= random.choice(possible_solutions)
     return random_chosen_solution

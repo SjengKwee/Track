@@ -1,10 +1,10 @@
 # Aangemaakt door Addey
-# Hier plotten we een voorbeeld van trajecten
 
 import csv
 import matplotlib.pyplot as plt
 from code.bouwblokjes.inladen import make_stations
 import numpy as np
+from adjustText import adjust_text
 
 
 def plot_track(track: list, stations_file = 'StationsHolland.csv'):
@@ -20,7 +20,7 @@ def plot_track(track: list, stations_file = 'StationsHolland.csv'):
 
 
 def run_plot_trajectories(csv_file, save_file, stations_file = 'StationsHolland.csv'):
-    """ Namen van stations plotten op de juiste plaats en de functie plot_track aanroepen. """
+    """Namen van stations plotten op de juiste plaats en de functie plot_track aanroepen."""
         
     stations = make_stations(stations_file = stations_file)
     # data in list stoppen
@@ -33,8 +33,9 @@ def run_plot_trajectories(csv_file, save_file, stations_file = 'StationsHolland.
     plt.scatter(x, y)
 
     # namen van stations weergeven
+    texts = []
     for i, name in enumerate(station_names):
-        plt.text(x[i], y[i], name, fontsize=12)
+        texts.append(plt.text(x[i], y[i], name, fontsize=18))
 
     # Gereden trajecten inlezen en plotten
     with open(csv_file, 'r') as csvfile:
@@ -45,27 +46,36 @@ def run_plot_trajectories(csv_file, save_file, stations_file = 'StationsHolland.
                 break
             plot_track(row[1], stations_file=stations_file)
         
-    # opslaan en weergeven
+    # opslaan en weergeven'
+    adjust_text(texts)
+    plt.title("Weergave van verbindingen", fontsize=25)
     plt.savefig(save_file) 
     plt.show()
 
 
-def run_plot_random_alg_score(scores, save_file):
-    """ Scores van random algoritme plotten in een histogram. """
+def run_plot_random_alg_score(scores, save_file,titel='Histogram van Algoritme Scores' ):
+    """ Scores van algoritme plotten in een histogram. """
     # plotten 
+    plt.figure(figsize=(15, 15))
     plt.hist(scores, bins=20, density=True, alpha=0.6, color='g', label='Scores')
     plt.grid(True)
-    
+    plt.xlabel('Score', fontsize=16)  
+    plt.ylabel('Dichtheid', fontsize=16)  
+    plt.title(titel, fontsize=20)
     # opslaan en weergeven
     plt.savefig(save_file) 
     plt.show()
 
-def plot_iterations_scores(scores,iterations, save_file):
+def plot_iterations_scores(scores,iterations, save_file, titel='Score per iteratie'):
     
-    """ Scores van een algoritme plotten """
+    """ Score na elke iteratie plotten """
     y = [score for score in scores]
     x = [iteration for iteration in range(iterations)]
     plt.plot(x,y)
+
+    plt.xlabel('Iteratie', fontsize=16)  
+    plt.ylabel('Score', fontsize=16)  
+    plt.title(titel,fontsize=20)
     plt.savefig(save_file) 
     plt.show()
 
