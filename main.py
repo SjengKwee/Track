@@ -166,6 +166,7 @@ if __name__ == "__main__":
         print("Voor een greedy progressive met random trajecten: Random")
         print("Voor een greedy progressive met voorkeur voor ongebruikte connecties: Connections")
         print("Voor een Connections met voorkeur voor benodigde stations: Stations")
+        print("Voor een Connections met voorkeur voor stations met 1 vervolgverbinding: Filler")
         heuristiek = input("Welke heuristiek wil je gebruiken? \n")
         repetitions = int(input("Hoeveel repetities per nieuwe track? \n"))
         times = int(input("Hoeveel scores wil je hebben? \n"))
@@ -178,11 +179,15 @@ if __name__ == "__main__":
             progressive = pr.Progressive_connections(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
         elif(heuristiek == "Stations"):
             progressive = pr.Progressive_stations(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
+        elif(heuristiek == "Filler"):
+            progressive = pr.Progressive_randomstart(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
         else:
             print("verkeerde input")
         
         # run algorithm
         run_progressive_run_times(progressive, stations_file = stations_file)
+
+
     elif(algoritme== "Hill Climber"):
 
         if regio == "nederland":
