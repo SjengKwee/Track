@@ -4,6 +4,7 @@ from code.bouwblokjes.score import *
 from code.classes.station import *
 from code.classes.traject import *
 from code.bouwblokjes.inladen import *
+from .random_algoritme import *
 
 
 random.seed(10)
@@ -101,33 +102,24 @@ class HillClimber():
         return functions
     
     def run(self, iterations):
-
-        
+        """ Voert optimalisatie uit voor een bepaald aantal iteraties."""
         scores_na_iteratie = []
         for iteration in range(iterations):
 
+            # maak een copy 
             new_trajectories = copy.deepcopy(self.trajectories)
 
-            #self.mutate_trajectories(new_trajectories)
-            self.delete_last_connection(new_trajectories)
-            #self.change_start_station(new_trajectories)
-            #print(new_trajectories)
-            #self.separate_traject(new_trajectories)
-            #als de state is verslechterd:
-
-
-            # functions = self.mutate_random_trajectories()
-            # func = random.choice(functions)
-            # func(new_trajectories)
+            # breng wijzig aan 
+            functions = self.mutate_random_trajectories()
+            func = random.choice(functions)
+            func(new_trajectories)
             
-          
+            # check wijziging 
             self.check_solution(new_trajectories)
             scores_na_iteratie.append(self.value)
             
         return [new_trajectories, scores_na_iteratie, self.value]
-        #print(new_trajectories, len(new_trajectories))
                 
-
 
 def duplicate_traject(old_traject, start, start_index, end):
     """ traject dupliceren van en tot en met gekozen verbinding"""
@@ -138,17 +130,54 @@ def duplicate_traject(old_traject, start, start_index, end):
 
     for i in old_traject._stations[start_index:end]:
         traject.add_trajectconnection(station_object[i])
-
     return traject 
 
 def add_connections_to_trajectory(traject):
     """ voeg verbindingen toe aan de traject"""
-
     while True:
-
         connection = traject._endstation._connection[random.choice(list(traject._endstation._connection.keys()))]
         if int(traject._traveltime) + int(connection[1]) > 120:
             break
         traject.add_trajectconnection(connection[0])
-
     return traject 
+
+    
+
+
+
+
+def restart_hillclimber(iterations_hillclimber, mutation_iteration, random_chosen_solution):
+    """Hillclimber meerdere keren runnen met elke keer een andere start state"""
+    
+    hillclimber_results = []
+    scores_iteration_hillclimber = []
+    for i in range(iterations_hillclimber):
+
+        climber =  HillClimber(random_chosen_solution)
+        result =climber.run(mutation_iteration)
+        hillclimber_results.append(result)
+        scores_iteration_hillclimber.append(result[2])
+
+    return [hillclimber_results, scores_iteration_hillclimber]
+
+def calculate_best_trajectory(hc_restart, iteration_restart):
+    max_result = 0
+    hillclimber_results = hc_restart
+    
+    for i in range(iteration_restart):
+        if float(hillclimber_results[i][2]) > max_result:
+            max_result = float(hillclimber_results[i][2])
+            best_trajectories = hillclimber_results[i][0]
+
+    print(max_result)
+    return [max_result, best_trajectories]
+
+def make_random_start_state(number_of_starts):
+    """maakt random trajecten aan met random algoritme"""
+    stations = make_connections()
+    possible_solutions = []
+    for i in range(number_of_starts):
+        solution = run_random_algoritme(stations,2)
+        possible_solutions.append(solution)
+    random_chosen_solution= random.choice(possible_solutions)
+    return random_chosen_solution
