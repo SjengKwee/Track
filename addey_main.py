@@ -5,7 +5,6 @@ from code.bouwblokjes.score import *
 from code.bouwblokjes.inladen import *
 from code.bouwblokjes.writer import *
 
-import math
 
 
 

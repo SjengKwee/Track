@@ -1,9 +1,9 @@
 Tracks,Stations
-1,"['Gouda', 'Rotterdam Alexander', 'Rotterdam Centraal', 'Dordrecht']"
-2,"['Den Haag Centraal', 'Delft', 'Schiedam Centrum', 'Rotterdam Centraal']"
-3,"['Alkmaar', 'Den Helder', 'Alkmaar', 'Castricum', 'Beverwijk']"
-4,"['Heemstede-Aerdenhout', 'Haarlem', 'Amsterdam Sloterdijk', 'Zaandam', 'Hoorn']"
-5,"['Castricum', 'Zaandam', 'Beverwijk', 'Haarlem']"
-6,"['Amsterdam Zuid', 'Amsterdam Amstel', 'Amsterdam Centraal', 'Amsterdam Sloterdijk', 'Amsterdam Centraal', 'Amsterdam Amstel', 'Amsterdam Centraal', 'Amsterdam Sloterdijk', 'Amsterdam Zuid', 'Schiphol Airport']"
-7,"['Leiden Centraal', 'Den Haag Centraal', 'Gouda', 'Alphen a/d Rijn', 'Leiden Centraal', 'Heemstede-Aerdenhout', 'Leiden Centraal', 'Schiphol Airport']"
-Score:,8842.0
+1,"['Leiden Centraal', 'Schiphol Airport', 'Amsterdam Zuid', 'Amsterdam Amstel', 'Amsterdam Centraal', 'Amsterdam Sloterdijk']"
+2,"['Amsterdam Zuid', 'Amsterdam Sloterdijk', 'Zaandam', 'Beverwijk']"
+3,"['Haarlem', 'Amsterdam Sloterdijk']"
+4,"['Rotterdam Centraal', 'Schiedam Centrum', 'Delft', 'Den Haag Centraal', 'Gouda', 'Rotterdam Alexander', 'Rotterdam Centraal', 'Dordrecht']"
+5,"['Den Haag Centraal', 'Leiden Centraal', 'Alphen a/d Rijn']"
+6,"['Alkmaar', 'Hoorn', 'Zaandam', 'Castricum']"
+7,"['Den Helder', 'Alkmaar', 'Castricum', 'Beverwijk', 'Haarlem', 'Heemstede-Aerdenhout', 'Leiden Centraal']"
+Score:,8919.0
