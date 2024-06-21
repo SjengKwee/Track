@@ -50,7 +50,6 @@ def run_plot_trajectories(csv_file, save_file, stations_file = 'StationsHolland.
     adjust_text(texts)
     plt.title("Weergave van verbindingen", fontsize=25)
     plt.savefig(save_file) 
-    plt.show()
 
 
 def run_plot_random_alg_score(scores, save_file,titel='Histogram van Algoritme Scores' ):
