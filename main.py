@@ -12,7 +12,7 @@ from code.bouwblokjes.score import *
 from code.bouwblokjes.writer import *
 from code.bouwblokjes.heur_maker import *
 import sys
-
+from itertools import combinations
 if __name__ == "__main__":
     random.seed(10)
 
@@ -190,40 +190,44 @@ if __name__ == "__main__":
 
     elif(algoritme== "Hill Climber"):
 
-        if regio == "nederland":
-            print("werkt niet")
-    
         # --------------------------- Hill Climber ---------------------------------
-        number_random_startstate = 10000
+        number_random_startstate = 100
         hillclimber_iteration = 800
         hillclimber_restart_iteration= 100
+        stations_file = 'StationsHolland.csv'
+        connecties_file = 'ConnectiesHolland.csv'
+    
 
         print("Setting up Hill Climber...")
-        random_chosen_solution = make_random_start_state( number_random_startstate)
-        # huidige trajectories opslaan en plotten
+        random_chosen_solution = make_random_start_state( number_random_startstate, stations_file, connecties_file)
         score_chosen_solution = score_calc(random_chosen_solution)
-        tracks_writer(random_chosen_solution, score_chosen_solution, 'data/output/hillclimber/chosen_trajectories.csv')
-        run_plot_trajectories('data/output/hillclimber/chosen_trajectories.csv', 'data/images/hillclimber/huidige_trajectories.png')
+        tracks_writer(random_chosen_solution, score_chosen_solution, f'data/output/hillclimber/{regio}/chosen_trajectories.csv')
+        run_plot_trajectories(f"data/output/hillclimber/{regio}/chosen_trajectories.csv", f'data/images/hillclimber/{regio}/huidige_trajectories.png',stations_file )
 
-        # 1 Hillclimber runnen en scores opslaan 
-        climber =  HillClimber(random_chosen_solution)
-        result =climber.run(hillclimber_iteration)
-        trajectories = result[0]
-        scores_after_iteration = result[1]
-        plot_iterations_scores(scores_after_iteration,hillclimber_iteration, 'data/images/hillclimber/scores_na_wijziging.png')
-        trajectories_after_1_hillclimber = result[0]
-        score_after_1_hillclimber = result[2]
-        tracks_writer(trajectories_after_1_hillclimber, score_after_1_hillclimber, 'data/output/hillclimber/trajectories_after_one_hill.csv')
-        run_plot_trajectories('data/output/hillclimber/trajectories_after_one_hill.csv', 'data/images/hillclimber/trajectories_after_one_hill.png')
-    
-        # hillclimber meerdere keren runnen en plotten
-        hc_restart = restart_hillclimber(hillclimber_restart_iteration, hillclimber_iteration, random_chosen_solution)
-        run_plot_random_alg_score(hc_restart[1],'data/images/hillclimber/scores_iteration_hillclimber.png',"Restart Hill Climber scores")
+
+        # Hillclimber compinatie van mutaties testen
+        climber =  HillClimber(random_chosen_solution, stations_file, connecties_file)
+        combination_name, function_combinations = make_compinations(climber)
+        
+        # beste compinatie opslaan en plotten
+        best_score, best_trajectories, scores_after_iteration, best_combination, combination = test_combination(
+            hillclimber_iteration,function_combinations, combination_name, random_chosen_solution, stations_file,connecties_file,regio)
+
+        titel = f"Combination: {best_combination}"
+        titel =  ' '.join(titel.split('__'))
+        plot_iterations_scores(scores_after_iteration,hillclimber_iteration, f'data/images/hillclimber/{regio}/scores_of_best_combination.png', titel)
+        tracks_writer(best_trajectories, best_score, f'data/output/hillclimber/{regio}/trajectories_of_best_combination.csv')
+        run_plot_trajectories(f'data/output/hillclimber/{regio}/trajectories_of_best_combination.csv', f'data/images/hillclimber/{regio}/trajectories_of_best_combination.png', stations_file)
+
+        # # hillclimber meerdere keren runnen en plotten
+        print("restart Hill Climber...")
+        hc_restart = restart_hillclimber(hillclimber_restart_iteration, hillclimber_iteration, stations_file,connecties_file, combination)
+        run_plot_random_alg_score(hc_restart[1], f'data/images/hillclimber/{regio}/scores_iteration_hillclimber.png',"Restart Hill Climber scores")
         result_max = calculate_best_trajectory(hc_restart[0],hillclimber_restart_iteration)
         
         # de hilclimber met de beste score  plotten
-        tracks_writer(result_max[1], result_max[0], 'data/output/hillclimber/trajectories_after_more_hill.csv')
-        run_plot_trajectories('data/output/hillclimber/trajectories_after_more_hill.csv', 'data/images/hillclimber/trajectories_after_more_hill.png')
+        tracks_writer(result_max[1], result_max[0], f'data/output/hillclimber/{regio}/trajectories_after_more_hill.csv')
+        run_plot_trajectories(f'data/output/hillclimber/{regio}/trajectories_after_more_hill.csv', f'data/images/hillclimber/{regio}/trajectories_after_more_hill.png', stations_file)
 
     else:
         print("Verkeerde input")

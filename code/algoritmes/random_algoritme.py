@@ -21,7 +21,7 @@ def random_traject(stations: dict):
     #Runt tot traject te lang wordt
     while True:
         connection = traject._endstation._connection[random.choice(list(traject._endstation._connection.keys()))]
-        if int(traject._traveltime) + int(connection[1]) > 120:
+        if float(traject._traveltime) + float(connection[1]) > 120:
             break
         traject.add_trajectconnection(connection[0])
 

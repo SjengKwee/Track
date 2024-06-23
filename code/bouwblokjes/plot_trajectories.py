@@ -34,8 +34,11 @@ def run_plot_trajectories(csv_file, save_file, stations_file = 'StationsHolland.
 
     # namen van stations weergeven
     texts = []
-    for i, name in enumerate(station_names):
-        texts.append(plt.text(x[i], y[i], name, fontsize=18))
+    if stations_file == 'StationsHolland.csv':
+
+        
+        for i, name in enumerate(station_names):
+            texts.append(plt.text(x[i], y[i], name, fontsize=18))
 
     # Gereden trajecten inlezen en plotten
     with open(csv_file, 'r') as csvfile:
@@ -70,8 +73,9 @@ def plot_iterations_scores(scores,iterations, save_file, titel='Score per iterat
     """ Score na elke iteratie plotten """
     y = [score for score in scores]
     x = [iteration for iteration in range(iterations)]
+    plt.figure(figsize=(14, 10))
     plt.plot(x,y)
-
+    
     plt.xlabel('Iteratie', fontsize=16)  
     plt.ylabel('Score', fontsize=16)  
     plt.title(titel,fontsize=20)

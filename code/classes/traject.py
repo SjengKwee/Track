@@ -23,7 +23,7 @@ class Traject():
         """
 
         stationTuple = self._endstation._connection[station._name]
-        time = int(stationTuple[1])
+        time = float(stationTuple[1])
         self._traveltime += time
         newConn = Connection()
         newConn.add(self._endstation._name)
