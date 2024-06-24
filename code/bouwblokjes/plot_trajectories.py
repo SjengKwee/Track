@@ -104,25 +104,25 @@ def plot_meer_histogrammen(data1_x, data2_x, data3_x, data4_x,save_file):
 
     # Eerste histogram
     axes[0, 0].hist(data1, bins=30, alpha=0.75, color='blue')
-    axes[0, 0].set_title('Histogram 1')
+    axes[0, 0].set_title('Random')
     axes[0, 0].set_xlim(x_min, x_max)
     axes[0, 0].set_ylim(0, y_max)
 
     # Tweede histogram
     axes[0, 1].hist(data2, bins=30, alpha=0.75, color='green')
-    axes[0, 1].set_title('Histogram 2')
+    axes[0, 1].set_title('Connections')
     axes[0, 1].set_xlim(x_min, x_max)
     axes[0, 1].set_ylim(0, y_max)
 
     # Derde histogram
     axes[1, 0].hist(data3, bins=30, alpha=0.75, color='red')
-    axes[1, 0].set_title('Histogram 3')
+    axes[1, 0].set_title('Stations')
     axes[1, 0].set_xlim(x_min, x_max)
     axes[1, 0].set_ylim(0, y_max)
 
     # Vierde histogram
     axes[1, 1].hist(data4, bins=30, alpha=0.75, color='purple')
-    axes[1, 1].set_title('Histogram 4')
+    axes[1, 1].set_title('Filler')
     axes[1, 1].set_xlim(x_min, x_max)
     axes[1, 1].set_ylim(0, y_max)
 

@@ -10,9 +10,9 @@ files_holland = {
 }
 
 files_nederland = {
-    "1": ["data/output/progressive/nederland/random/1scores", "data/output/progressive/nederland/connections/1scores", "data/output/progressive/nederland/stations/1scores", "data/output/progressive/nederland/filler/1scores", "data/images/progressive/nederland/1/plot.png"],
-    "10": ["data/output/progressive/nederland/random/10scores", "data/output/progressive/nederland/connections/10scores", "data/output/progressive/nederland/stations/10scores", "data/output/progressive/nederland/filler/10scores", "data/images/progressive/nederland/10/plot.png"],
-    "100": ["data/output/progressive/nederland/random/100scores", "data/output/progressive/nederland/connections/100scores", "data/output/progressive/nederland/stations/100scores", "data/output/progressive/nederland/filler/100scores", "data/images/progressive/nederland/100/plot.png"]
+    "1": ["data/output/progressive/nederland/random/1scores", "data/output/progressive/nederland/connections/1scores", "data/output/progressive/nederland/stations/1scores", "data/output/progressive/nederland/filler/1scores", "data/images/progressive/nederland/plot1.png"],
+    "10": ["data/output/progressive/nederland/random/10scores", "data/output/progressive/nederland/connections/10scores", "data/output/progressive/nederland/stations/10scores", "data/output/progressive/nederland/filler/10scores", "data/images/progressive/nederland/plot10.png"],
+    "100": ["data/output/progressive/nederland/random/100scores", "data/output/progressive/nederland/connections/100scores", "data/output/progressive/nederland/stations/100scores", "data/output/progressive/nederland/filler/100scores", "data/images/progressive/nederland/plot100.png"]
 }
 
 for iteratie in files_holland.keys():
