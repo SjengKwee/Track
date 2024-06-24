@@ -177,6 +177,7 @@ def restart_hillclimber(iterations_hillclimber, mutation_iteration, stations_fil
         result =climber.run(combination, mutation_iteration)
         hillclimber_results.append(result)
         scores_iteration_hillclimber.append(result[2])
+        print("restart Hill Climber score: ", result[2])
         
 
     return [hillclimber_results, scores_iteration_hillclimber]
@@ -248,4 +249,5 @@ def test_combination( hillclimber_iteration,function_combinations, combination_n
             scores_after_iteration = result[1]
             best_combination = combination_name[index]
             chosen_combination = combination
+    
     return best_score, best_trajectories, scores_after_iteration, best_combination, chosen_combination

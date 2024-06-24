@@ -200,8 +200,8 @@ if __name__ == "__main__":
 
         # --------------------------- Hill Climber ---------------------------------
         number_random_startstate = 100
-        hillclimber_iteration = 800
-        hillclimber_restart_iteration= 100
+        hillclimber_iteration = 400
+        hillclimber_restart_iteration= 2
         stations_file = 'StationsHolland.csv'
         connecties_file = 'ConnectiesHolland.csv'
     
@@ -216,6 +216,7 @@ if __name__ == "__main__":
         # Hillclimber compinatie van mutaties testen
         climber =  HillClimber(random_chosen_solution, stations_file, connecties_file)
         combination_name, function_combinations = make_compinations(climber)
+        print(combination_name)
         
         # beste compinatie opslaan en plotten
         best_score, best_trajectories, scores_after_iteration, best_combination, combination = test_combination(

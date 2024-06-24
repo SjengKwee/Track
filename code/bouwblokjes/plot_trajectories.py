@@ -62,12 +62,14 @@ def run_plot_random_alg_score(scores, save_file,titel='Histogram van Algoritme S
     plt.figure(figsize=(15, 15))
     plt.hist(scores, bins=20, density=True, alpha=0.6, color='g', label='Scores')
     plt.grid(True)
-    plt.xlabel('Score', fontsize=16)  
-    plt.ylabel('Dichtheid', fontsize=16)  
+    plt.xlabel('Score', fontsize=18)  
+    plt.ylabel('Dichtheid', fontsize=18)  
     plt.title(titel, fontsize=20)
+    plt.xticks(fontsize=16)  
+    plt.yticks(fontsize=16)
     # opslaan en weergeven
     plt.savefig(save_file) 
-    plt.show()
+   
 
 def plot_iterations_scores(scores,iterations, save_file, titel='Score per iteratie'):
     
@@ -77,11 +79,13 @@ def plot_iterations_scores(scores,iterations, save_file, titel='Score per iterat
     plt.figure(figsize=(14, 10))
     plt.plot(x,y)
     
-    plt.xlabel('Iteratie', fontsize=16)  
-    plt.ylabel('Score', fontsize=16)  
+    plt.xlabel('Iteratie', fontsize=18)  
+    plt.ylabel('Score', fontsize=18)  
     plt.title(titel,fontsize=20)
+    plt.xticks(fontsize=16)  
+    plt.yticks(fontsize=16) 
     plt.savefig(save_file) 
-    plt.show()
+    
 
 
 def plot_meer_histogrammen(data1_x, data2_x, data3_x, data4_x,save_file):
@@ -128,4 +132,4 @@ def plot_meer_histogrammen(data1_x, data2_x, data3_x, data4_x,save_file):
 
     plt.tight_layout()
     plt.savefig(save_file) 
-    plt.show()
+    
