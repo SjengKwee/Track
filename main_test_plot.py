@@ -15,11 +15,11 @@ files_nederland = {
     "100": ["data/output/progressive/nederland/random/100scores", "data/output/progressive/nederland/connections/100scores", "data/output/progressive/nederland/stations/100scores", "data/output/progressive/nederland/filler/100scores", "data/images/progressive/nederland/plot100.png"]
 }
 
-for iteratie in files_holland.keys():
-    plot_meer_histogrammen(files_holland[iteratie][0], files_holland[iteratie][1], files_holland[iteratie][2], files_holland[iteratie][3], files_holland[iteratie][4])
-
 # for iteratie in files_holland.keys():
-#     plot_meer_histogrammen(files_nederland[iteratie][0], files_nederland[iteratie][1], files_nederland[iteratie][2],files_nederland[iteratie][3],files_nederland[iteratie][4],)
+#     plot_meer_histogrammen(files_holland[iteratie][0], files_holland[iteratie][1], files_holland[iteratie][2], files_holland[iteratie][3], files_holland[iteratie][4])
+
+for iteratie in files_nederland.keys():
+    plot_meer_histogrammen(files_nederland[iteratie][0], files_nederland[iteratie][1], files_nederland[iteratie][2],files_nederland[iteratie][3],files_nederland[iteratie][4],)
 
 
 # Plot tracks
