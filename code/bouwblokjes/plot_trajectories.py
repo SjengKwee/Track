@@ -2,6 +2,7 @@
 
 import csv
 import matplotlib.pyplot as plt
+import pandas as pd
 from code.bouwblokjes.inladen import make_stations
 import numpy as np
 from adjustText import adjust_text
@@ -83,3 +84,47 @@ def plot_iterations_scores(scores,iterations, save_file, titel='Score per iterat
     plt.show()
 
 
+def plot_meer_histogrammen(data1_x, data2_x, data3_x, data4_x,save_file):
+
+    # Laad de data van de Excel-bestanden, waarbij de eerste twee rijen worden overgeslagen
+    data1 = pd.read_excel(data1_x, skiprows=2).values.flatten()
+    data2 = pd.read_excel(data2_x, skiprows=2).values.flatten()
+    data3 = pd.read_excel(data3_x, skiprows=2).values.flatten()
+    data4 = pd.read_excel(data4_x, skiprows=2).values.flatten()
+
+    fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+
+    # Bepaal de gemeenschappelijke grenzen voor de assen
+    all_data = np.concatenate([data1, data2, data3, data4])
+    x_min, x_max = min(all_data), max(all_data)
+    y_max = max(max(np.histogram(data1, bins=30)[0]), 
+                max(np.histogram(data2, bins=30)[0]), 
+                max(np.histogram(data3, bins=30)[0]), 
+                max(np.histogram(data4, bins=30)[0]))
+
+    # Eerste histogram
+    axes[0, 0].hist(data1, bins=30, alpha=0.75, color='blue')
+    axes[0, 0].set_title('Histogram 1')
+    axes[0, 0].set_xlim(x_min, x_max)
+    axes[0, 0].set_ylim(0, y_max)
+
+    # Tweede histogram
+    axes[0, 1].hist(data2, bins=30, alpha=0.75, color='green')
+    axes[0, 1].set_title('Histogram 2')
+    axes[0, 1].set_xlim(x_min, x_max)
+    axes[0, 1].set_ylim(0, y_max)
+
+    # Derde histogram
+    axes[1, 0].hist(data3, bins=30, alpha=0.75, color='red')
+    axes[1, 0].set_title('Histogram 3')
+    axes[1, 0].set_xlim(x_min, x_max)
+    axes[1, 0].set_ylim(0, y_max)
+
+    # Vierde histogram
+    axes[1, 1].hist(data4, bins=30, alpha=0.75, color='purple')
+    axes[1, 1].set_title('Histogram 4')
+    axes[1, 1].set_xlim(x_min, x_max)
+    axes[1, 1].set_ylim(0, y_max)
+
+    plt.tight_layout()
+    plt.show()
