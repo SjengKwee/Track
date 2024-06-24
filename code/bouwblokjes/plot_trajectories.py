@@ -87,10 +87,10 @@ def plot_iterations_scores(scores,iterations, save_file, titel='Score per iterat
 def plot_meer_histogrammen(data1_x, data2_x, data3_x, data4_x,save_file):
 
     # Laad de data van de Excel-bestanden, waarbij de eerste twee rijen worden overgeslagen
-    data1 = pd.read_excel(data1_x, skiprows=2).values.flatten()
-    data2 = pd.read_excel(data2_x, skiprows=2).values.flatten()
-    data3 = pd.read_excel(data3_x, skiprows=2).values.flatten()
-    data4 = pd.read_excel(data4_x, skiprows=2).values.flatten()
+    data1 = pd.read_csv(f'{data1_x}.csv', skiprows=2).values.flatten()
+    data2 = pd.read_csv(f'{data2_x}.csv', skiprows=2).values.flatten()
+    data3 = pd.read_csv(f'{data3_x}.csv', skiprows=2).values.flatten()
+    data4 = pd.read_csv(f'{data4_x}.csv', skiprows=2).values.flatten()
 
     fig, axes = plt.subplots(2, 2, figsize=(10, 8))
 
@@ -100,7 +100,7 @@ def plot_meer_histogrammen(data1_x, data2_x, data3_x, data4_x,save_file):
     y_max = max(max(np.histogram(data1, bins=30)[0]), 
                 max(np.histogram(data2, bins=30)[0]), 
                 max(np.histogram(data3, bins=30)[0]), 
-                max(np.histogram(data4, bins=30)[0]))
+                max(np.histogram(data4, bins=30)[0]))+ 50
 
     # Eerste histogram
     axes[0, 0].hist(data1, bins=30, alpha=0.75, color='blue')
@@ -127,4 +127,5 @@ def plot_meer_histogrammen(data1_x, data2_x, data3_x, data4_x,save_file):
     axes[1, 1].set_ylim(0, y_max)
 
     plt.tight_layout()
+    plt.savefig(save_file) 
     plt.show()
