@@ -18,3 +18,14 @@ def tracks_writer(tracks: list, score, filename):
             counter += 1
         writer.writerow(["Score:", score])
     
+def scores_writer(filename, highscore: float, average: float, all_scores: list):
+    """
+    Print alle scores van een gerund algoritme
+    """
+    with open(filename, 'w', newline="") as file:
+        writer = csv.writer(file,quoting=csv.QUOTE_MINIMAL, delimiter = ",")
+        writer.writerow(["highscore:", highscore])
+        writer.writerow(["average:", average])
+        for score in all_scores:
+            writer.writerow([score])
+        
