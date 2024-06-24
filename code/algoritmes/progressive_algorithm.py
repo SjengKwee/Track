@@ -336,7 +336,6 @@ class Progressive_stations1(Progressive_connections):
 class Progressive_filler(Progressive_connections):
     """
     prioritises connections that lead to stations that have 2 connections left, so 1 more to go to after
-    more than 2 connections is prioritised over 1 connection, because it is better to have more than 1 option left to go to after then 0
     """
     
 
@@ -414,6 +413,9 @@ class Progressive_filler(Progressive_connections):
 
         #Return
         return traject
+    
+# class Progressive_even(Progressive_filler):
+
  
 class Progressive_randomstart(Progressive_filler):
     """
@@ -424,20 +426,20 @@ class Progressive_randomstart(Progressive_filler):
     def __init__(self, stations, repetitions=1000, trains=7, traveltime = 120, times = 10, number_of_connections = 28):
         super().__init__(stations, repetitions, trains, traveltime, times, number_of_connections)
 
-    # def first_track(self):  # same as Progressive_connections' next track
+    def first_track(self):  # same as Progressive_connections' next track
 
-    #     #Initialiseer parameters
-    #     start_station = self.next_start_station()
-    #     new_track = Traject(start_station)
+        #Initialiseer parameters
+        start_station = self.next_start_station()
+        new_track = Traject(start_station)
         
-    #     #Runt tot traject te lang wordt
-    #     while True:
-    #         connection = new_track._endstation._connection[random.choice(list(new_track._endstation._connection.keys()))]
-    #         if int(new_track._traveltime) + int(connection[1]) > self._traveltime:
-    #             break
-    #         new_track.add_trajectconnection(connection[0])
+        #Runt tot traject te lang wordt
+        while True:
+            connection = new_track._endstation._connection[random.choice(list(new_track._endstation._connection.keys()))]
+            if int(new_track._traveltime) + int(connection[1]) > self._traveltime:
+                break
+            new_track.add_trajectconnection(connection[0])
 
-    #     return new_track
+        return new_track
     
     def run(self):
         """
@@ -494,3 +496,69 @@ class Progressive_randomstart(Progressive_filler):
                 # update total used connections
                 for connection in self.max_tracks[track]._trajectconnection:
                     self._total_used_connections.add(connection)
+
+class Progressive_worm(Progressive_stations):
+    """
+    Makes tracks twice as long and splits them after
+    """
+    def __init__(self, stations, repetitions=1000, trains=7, traveltime = 120, times = 10, number_of_connections = 28, groups = 1):
+        super().__init__(stations, repetitions, trains, traveltime, times, number_of_connections)
+
+        self._track_groups = groups
+
+    # Cut trajectories in 2
+    def run(self):
+        """
+        Runs the algorithm
+        """
+        self.score_list.clear()
+        self.max_scores.clear()
+        self.max_tracks.clear()
+        self._tracks.clear()
+        self.max_score = 0
+
+        self._total_used_connections = set()
+
+        for track in range(self._trains):
+            self.score_list[track] = []
+            self.max_scores[track] = 0
+
+            # find best track to add
+            for n in range(self._repetitions):
+                # copy the current tracks
+                copy_tracks = copy.deepcopy(self._tracks)
+
+                for n in range(self._track_groups):
+                    # maak track
+                    new_track = self.next_track()
+
+                    # voeg toe aan oplossing
+                    copy_tracks.append(new_track)
+
+                # bereken score en sla op in dictionary
+                score = score_calc(copy_tracks, connections = self._number_of_connectinos)
+
+                # sla score op in dictionary
+                self.score_list[track].append(score)
+
+                # onthoud hoogste score, track, en gebruikte verbindingen
+                if track == 0:
+                    if score > self.max_scores[track]:
+                        self.max_scores[track] = score
+                        self.max_tracks[track] = new_track
+
+                else:
+                    if score > self.max_scores[track] and score > self.max_scores[(track-1)] and self.max_scores[(track-1)] != 0:
+                        self.max_scores[track] = score
+                        self.max_tracks[track] = new_track
+
+            # add best track
+            if self.max_tracks.get(track):
+                self._tracks.append(self.max_tracks[track])
+                self.max_score = self.max_scores[track]
+
+                # update total used connections
+                for connection in self.max_tracks[track]._trajectconnection:
+                    self._total_used_connections.add(connection)
+            else:
+                self._track_groups -= 1

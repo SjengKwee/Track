@@ -181,6 +181,9 @@ if __name__ == "__main__":
             progressive = pr.Progressive_stations(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
         elif(heuristiek == "Filler"):
             progressive = pr.Progressive_randomstart(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
+        elif(heuristiek == "Worm"):
+            groups = int(input("Hoeveel tracks tegelijkertijd toevoegen?"))
+            progressive = pr.Progressive_worm(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
         else:
             print("verkeerde input")
         
