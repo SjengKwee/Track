@@ -13,6 +13,7 @@ from code.bouwblokjes.writer import *
 from code.bouwblokjes.heur_maker import *
 import sys
 from itertools import combinations
+
 if __name__ == "__main__":
     random.seed(10)
 
@@ -167,6 +168,7 @@ if __name__ == "__main__":
         print("Voor een greedy progressive met voorkeur voor ongebruikte connecties: Connections")
         print("Voor een Connections met voorkeur voor benodigde stations: Stations")
         print("Voor een Connections met voorkeur voor stations met 1 vervolgverbinding: Filler")
+        print("Voor een stations met meerdere tracks tegelijkertijd: Group")
         heuristiek = input("Welke heuristiek wil je gebruiken? \n")
         repetitions = int(input("Hoeveel repetities per nieuwe track? \n"))
         times = int(input("Hoeveel scores wil je hebben? \n"))
@@ -181,9 +183,12 @@ if __name__ == "__main__":
             progressive = pr.Progressive_stations(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
         elif(heuristiek == "Filler"):
             progressive = pr.Progressive_randomstart(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
-        elif(heuristiek == "Worm"):
-            groups = int(input("Hoeveel tracks tegelijkertijd toevoegen?"))
-            progressive = pr.Progressive_worm(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
+        elif(heuristiek == "Group"):
+            groups = int(input("Hoeveel tracks tegelijkertijd toevoegen? \n"))
+            progressive = pr.Progressive_group(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
+        elif(heuristiek == "Even"):
+            groups = int(input("Hoeveel tracks tegelijkertijd toevoegen? \n"))
+            progressive = pr.Progressive_even(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
         else:
             print("verkeerde input")
         
