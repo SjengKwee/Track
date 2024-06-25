@@ -203,7 +203,8 @@ if __name__ == "__main__":
         # --------------------------- Hill Climber ---------------------------------
         number_random_startstate = 100
         hillclimber_iteration = 400
-        hillclimber_restart_iteration= 0
+        hillclimber_restart_iteration= 1000
+        number_traject = 7
         if stations_file == 'stationsnederland.csv':
             number_traject = 20
             print(stations_file, "209 main")
@@ -212,7 +213,8 @@ if __name__ == "__main__":
     
 
         print("Setting up Hill Climber...")
-        random_chosen_solution = make_random_start_state( number_random_startstate, stations_file, connecties_file,number_traject)
+        possible_solutions = make_random_start_state( number_random_startstate, stations_file, connecties_file,number_traject)
+        random_chosen_solution= random.choice(possible_solutions)
         score_chosen_solution = score_calc(random_chosen_solution)
         tracks_writer(random_chosen_solution, score_chosen_solution, f'data/output/hillclimber/{regio}/chosen_trajectories.csv')
         run_plot_trajectories(f"data/output/hillclimber/{regio}/chosen_trajectories.csv", f'data/images/hillclimber/{regio}/huidige_trajectories.png',stations_file )

@@ -171,17 +171,24 @@ def restart_hillclimber(iterations_hillclimber, mutation_iteration, stations_fil
     
     hillclimber_results = []
     scores_iteration_hillclimber = []
+    number_traject = 7
     if stations_file == 'stationsnederland.csv':
         number_traject = 20
         
+    
+    possible_solutions = make_random_start_state(iterations_hillclimber * 100, stations_file, connecties_file, number_traject)
+    
     for i in range(iterations_hillclimber):
-        random_chosen_solution = make_random_start_state( iterations_hillclimber*100, stations_file, connecties_file,number_traject)
-        climber =  HillClimber(random_chosen_solution, stations_file,connecties_file)
-        result =climber.run(combination, mutation_iteration)
+        
+        random_chosen_solution= random.choice(possible_solutions)
+        climber = HillClimber(random_chosen_solution, stations_file, connecties_file)
+        result = climber.run(combination, mutation_iteration)
         hillclimber_results.append(result)
         scores_iteration_hillclimber.append(result[2])
-        print("restart Hill Climber run: ", i, "score: ",result[2])
-        
+        print("Restart Hill Climber run: ", i, "score: ", result[2])
+
+        with open('data/output/hillclimber/scores_restart.csv', 'a') as file:
+            file.write(f"Restart Hill Climber run: {i} score: {result[2]}\n")
 
     return [hillclimber_results, scores_iteration_hillclimber]
 
@@ -205,8 +212,8 @@ def make_random_start_state(number_of_starts,stations_file, connecties_file, num
     for i in range(number_of_starts):
         solution = run_random_algoritme(stations,number_traject)
         possible_solutions.append(solution)
-    random_chosen_solution= random.choice(possible_solutions)
-    return random_chosen_solution
+    
+    return possible_solutions
 
 
 def save_used_functions(output_file,chosen_functions):

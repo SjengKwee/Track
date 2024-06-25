@@ -22,7 +22,7 @@ def random_traject(stations: dict, minutes=120):
     while True:
         connection = traject._endstation._connection[random.choice(list(traject._endstation._connection.keys()))]
         if float(traject._traveltime) + float(connection[1]) > minutes:
-            print(minutes)
+            
             break
         traject.add_trajectconnection(connection[0])
 
