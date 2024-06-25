@@ -26,12 +26,14 @@ if __name__ == "__main__":
         stations_file = 'StationsHolland.csv'
         traveltime = 120
         trains = 7
+        connecties_file = 'ConnectiesHolland.csv'
     elif(regio == "nederland"):
         stations = make_connections(stations_file = 'stationsnederland.csv', connecties_file = 'connectiesnederland.csv')
         number_connections = 89
         stations_file = 'stationsnederland.csv'
         traveltime = 180
         trains = 20
+        connecties_file = 'connectiesnederland.csv'
 
     print("Om onze random baseline te runnen: Random")
     print("Om de restricted random nr 1 te runnen: Restricted_1")
@@ -201,9 +203,8 @@ if __name__ == "__main__":
         # --------------------------- Hill Climber ---------------------------------
         number_random_startstate = 100
         hillclimber_iteration = 400
-        hillclimber_restart_iteration= 100
-        stations_file = 'StationsHolland.csv'
-        connecties_file = 'ConnectiesHolland.csv'
+        hillclimber_restart_iteration= 1
+       
     
 
         print("Setting up Hill Climber...")
