@@ -51,8 +51,8 @@ if __name__ == "__main__":
         run_plot_random_alg_score(random_results[0], 'data/images/baseline/scores_random_algoritme')
         tracks_writer(random_results[2], random_results[1], 'data/output/baseline/maximum.csv')
         tracks_writer(random_results[4], random_results[3], 'data/output/baseline/minimum.csv')
-        run_plot_trajectories('data/output/baseline/maximum.csv', 'data/images/baseline/max_7_track.png')
-        run_plot_trajectories('data/output/baseline/minimum.csv', 'data/images/baseline/min_7_track.png')
+        run_plot_trajectories('data/output/baseline/maximum.csv', 'data/images/baseline/max_7_track.png', stations_file)
+        run_plot_trajectories('data/output/baseline/minimum.csv', 'data/images/baseline/min_7_track.png', stations_file)
 
     #Restricted nr 1
     elif(algoritme == "Restricted_1"):
@@ -61,8 +61,8 @@ if __name__ == "__main__":
         run_plot_random_alg_score(restr1_results[0], 'data/images/random_restr_1/scores_random_algoritme')
         tracks_writer(restr1_results[2], restr1_results[1], 'data/output/random_restr_1/maximum.csv')
         tracks_writer(restr1_results[4], restr1_results[3], 'data/output/random_restr_1/minimum.csv')
-        run_plot_trajectories('data/output/random_restr_1/maximum.csv', 'data/images/random_restr_1/max_7_track.png')
-        run_plot_trajectories('data/output/random_restr_1/minimum.csv', 'data/images/random_restr_1/min_7_track.png')
+        run_plot_trajectories('data/output/random_restr_1/maximum.csv', 'data/images/random_restr_1/max_7_track.png', stations_file)
+        run_plot_trajectories('data/output/random_restr_1/minimum.csv', 'data/images/random_restr_1/min_7_track.png', stations_file)
 
     #Restricted nr 2
     elif(algoritme == "Restricted_2"):
@@ -72,8 +72,8 @@ if __name__ == "__main__":
         run_plot_random_alg_score(restr2_results[0], 'data/images/random_restr_2/scores_algoritme')
         tracks_writer(restr2_results[2], restr2_results[1], 'data/output/random_restr_2/maximum.csv')
         tracks_writer(restr2_results[4], restr2_results[3], 'data/output/random_restr_2/minimum.csv')
-        run_plot_trajectories('data/output/random_restr_2/maximum.csv', 'data/images/random_restr_2/max_7_track.png')
-        run_plot_trajectories('data/output/random_restr_2/minimum.csv', 'data/images/random_restr_2/min_7_track.png')
+        run_plot_trajectories('data/output/random_restr_2/maximum.csv', 'data/images/random_restr_2/max_7_track.png', stations_file)
+        run_plot_trajectories('data/output/random_restr_2/minimum.csv', 'data/images/random_restr_2/min_7_track.png', stations_file)
 
     #Restricted nr 3
     elif(algoritme == "Restricted_3"):
@@ -83,8 +83,8 @@ if __name__ == "__main__":
         run_plot_random_alg_score(restr3_results[0], 'data/images/random_restr_3/scores_algoritme')
         tracks_writer(restr3_results[2], restr3_results[1], 'data/output/random_restr_3/maximum.csv')
         tracks_writer(restr3_results[4], restr3_results[3], 'data/output/random_restr_3/minimum.csv')
-        run_plot_trajectories('data/output/random_restr_3/maximum.csv', 'data/images/random_restr_3/max_7_track.png')
-        run_plot_trajectories('data/output/random_restr_3/minimum.csv', 'data/images/random_restr_3/min_7_track.png')
+        run_plot_trajectories('data/output/random_restr_3/maximum.csv', 'data/images/random_restr_3/max_7_track.png', stations_file)
+        run_plot_trajectories('data/output/random_restr_3/minimum.csv', 'data/images/random_restr_3/min_7_track.png', stations_file)
 
     #Greedy_apri
     elif(algoritme == "Greedy_apri"):
@@ -102,8 +102,8 @@ if __name__ == "__main__":
             run_plot_random_alg_score(greed_results[0], 'data/images/greed_apri/zonder_heur/scores_algoritme')
             tracks_writer(greed_results[2], greed_results[1], 'data/output/greed_apri/zonder_heur/maximum.csv')
             tracks_writer(greed_results[4], greed_results[3], 'data/output/greed_apri/zonder_heur/minimum.csv')
-            run_plot_trajectories('data/output/greed_apri/zonder_heur/maximum.csv', 'data/images/greed_apri/zonder_heur/max_track.png')
-            run_plot_trajectories('data/output/greed_apri/zonder_heur/minimum.csv', 'data/images/greed_apri/zonder_heur/min_track.png')
+            run_plot_trajectories('data/output/greed_apri/zonder_heur/maximum.csv', 'data/images/greed_apri/zonder_heur/max_track.png', stations_file)
+            run_plot_trajectories('data/output/greed_apri/zonder_heur/minimum.csv', 'data/images/greed_apri/zonder_heur/min_track.png', stations_file)
 
         #Max connections heuristiek
         elif(heuristiek == "Max_connections"):
@@ -114,8 +114,8 @@ if __name__ == "__main__":
             run_plot_random_alg_score(greed_results[0], 'data/images/greed_apri/max_connections/scores_algoritme')
             tracks_writer(greed_results[2], greed_results[1], 'data/output/greed_apri/max_connections/maximum.csv')
             tracks_writer(greed_results[4], greed_results[3], 'data/output/greed_apri/max_connections/minimum.csv')
-            run_plot_trajectories('data/output/greed_apri/max_connections/maximum.csv', 'data/images/greed_apri/max_connections/max_track.png')
-            run_plot_trajectories('data/output/greed_apri/max_connections/minimum.csv', 'data/images/greed_apri/max_connections/min_track.png')
+            run_plot_trajectories('data/output/greed_apri/max_connections/maximum.csv', 'data/images/greed_apri/max_connections/max_track.png', stations_file)
+            run_plot_trajectories('data/output/greed_apri/max_connections/minimum.csv', 'data/images/greed_apri/max_connections/min_track.png', stations_file)
 
         #Min traveltime heuristiek
         elif(heuristiek == "Min_traveltime"):
@@ -126,8 +126,8 @@ if __name__ == "__main__":
             run_plot_random_alg_score(greed_results[0], 'data/images/greed_apri/min_traveltime/scores_algoritme')
             tracks_writer(greed_results[2], greed_results[1], 'data/output/greed_apri/min_traveltime/maximum.csv')
             tracks_writer(greed_results[4], greed_results[3], 'data/output/greed_apri/min_traveltime/minimum.csv')
-            run_plot_trajectories('data/output/greed_apri/min_traveltime/maximum.csv', 'data/images/greed_apri/min_traveltime/max_track.png')
-            run_plot_trajectories('data/output/greed_apri/min_traveltime/minimum.csv', 'data/images/greed_apri/min_traveltime/min_track.png')
+            run_plot_trajectories('data/output/greed_apri/min_traveltime/maximum.csv', 'data/images/greed_apri/min_traveltime/max_track.png', stations_file)
+            run_plot_trajectories('data/output/greed_apri/min_traveltime/minimum.csv', 'data/images/greed_apri/min_traveltime/min_track.png', stations_file)
 
         #Min combi heuristiek
         elif(heuristiek == "Combi"):
@@ -138,8 +138,8 @@ if __name__ == "__main__":
             run_plot_random_alg_score(greed1_results[0], 'data/images/greed_apri/combi/1,1/scores_algoritme')
             tracks_writer(greed1_results[2], greed1_results[1], 'data/output/greed_apri/combi/1,1/maximum.csv')
             tracks_writer(greed1_results[4], greed1_results[3], 'data/output/greed_apri/combi/1,1/minimum.csv')
-            run_plot_trajectories('data/output/greed_apri/combi/1,1/maximum.csv', 'data/images/greed_apri/combi/1,1/max_track.png')
-            run_plot_trajectories('data/output/greed_apri/combi/1,1/minimum.csv', 'data/images/greed_apri/combi/1,1/min_track.png')
+            run_plot_trajectories('data/output/greed_apri/combi/1,1/maximum.csv', 'data/images/greed_apri/combi/1,1/max_track.png', stations_file)
+            run_plot_trajectories('data/output/greed_apri/combi/1,1/minimum.csv', 'data/images/greed_apri/combi/1,1/min_track.png', stations_file)
 
             heur_stat2 = combi(stations,1,2)
             alg2 = Greedy_apri(heur_stat2)
@@ -148,8 +148,8 @@ if __name__ == "__main__":
             run_plot_random_alg_score(greed2_results[0], 'data/images/greed_apri/combi/1,2/scores_algoritme')
             tracks_writer(greed2_results[2], greed2_results[1], 'data/output/greed_apri/combi/1,2/maximum.csv')
             tracks_writer(greed2_results[4], greed2_results[3], 'data/output/greed_apri/combi/1,2/minimum.csv')
-            run_plot_trajectories('data/output/greed_apri/combi/1,2/maximum.csv', 'data/images/greed_apri/combi/1,2/max_track.png')
-            run_plot_trajectories('data/output/greed_apri/combi/1,2/minimum.csv', 'data/images/greed_apri/combi/1,2/min_track.png')
+            run_plot_trajectories('data/output/greed_apri/combi/1,2/maximum.csv', 'data/images/greed_apri/combi/1,2/max_track.png', stations_file)
+            run_plot_trajectories('data/output/greed_apri/combi/1,2/minimum.csv', 'data/images/greed_apri/combi/1,2/min_track.png', stations_file)
 
             heur_stat3 = combi(stations,2,1)
             alg3 = Greedy_apri(heur_stat3)
@@ -158,8 +158,8 @@ if __name__ == "__main__":
             run_plot_random_alg_score(greed3_results[0], 'data/images/greed_apri/combi/2,1/scores_algoritme')
             tracks_writer(greed3_results[2], greed3_results[1], 'data/output/greed_apri/combi/2,1/maximum.csv')
             tracks_writer(greed3_results[4], greed3_results[3], 'data/output/greed_apri/combi/2,1/minimum.csv')
-            run_plot_trajectories('data/output/greed_apri/combi/2,1/maximum.csv', 'data/images/greed_apri/combi/2,1/max_track.png')
-            run_plot_trajectories('data/output/greed_apri/combi/2,1/minimum.csv', 'data/images/greed_apri/combi/2,1/min_track.png')
+            run_plot_trajectories('data/output/greed_apri/combi/2,1/maximum.csv', 'data/images/greed_apri/combi/2,1/max_track.png', stations_file)
+            run_plot_trajectories('data/output/greed_apri/combi/2,1/minimum.csv', 'data/images/greed_apri/combi/2,1/min_track.png', stations_file)
 
         else:
             print("Verkeerde input")
