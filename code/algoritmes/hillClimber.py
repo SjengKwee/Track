@@ -151,11 +151,11 @@ def duplicate_traject(old_traject, start, start_index, end, stations_file, conne
 
 def add_connections_to_trajectory(traject, stations_file):
     """ voeg verbindingen toe aan de traject"""
+
     if stations_file == 'StationsHolland.csv':
         minutes = 120
     else:
          minutes = 180
-
     
     while True:
         connection = traject._endstation._connection[random.choice(list(traject._endstation._connection.keys()))]
@@ -171,8 +171,11 @@ def restart_hillclimber(iterations_hillclimber, mutation_iteration, stations_fil
     
     hillclimber_results = []
     scores_iteration_hillclimber = []
+    if stations_file == 'stationsnederland.csv':
+        number_traject = 20
+        
     for i in range(iterations_hillclimber):
-        random_chosen_solution = make_random_start_state( iterations_hillclimber*100, stations_file, connecties_file)
+        random_chosen_solution = make_random_start_state( iterations_hillclimber*100, stations_file, connecties_file,number_traject)
         climber =  HillClimber(random_chosen_solution, stations_file,connecties_file)
         result =climber.run(combination, mutation_iteration)
         hillclimber_results.append(result)
@@ -194,12 +197,13 @@ def calculate_best_trajectory(hc_restart, iteration_restart):
     print(max_result)
     return [max_result, best_trajectories]
 
-def make_random_start_state(number_of_starts,stations_file, connecties_file):
+def make_random_start_state(number_of_starts,stations_file, connecties_file, number_traject=7):
     """maakt random trajecten aan met random algoritme"""
     stations = make_connections(stations_file, connecties_file)
     possible_solutions = []
+
     for i in range(number_of_starts):
-        solution = run_random_algoritme(stations,7)
+        solution = run_random_algoritme(stations,number_traject)
         possible_solutions.append(solution)
     random_chosen_solution= random.choice(possible_solutions)
     return random_chosen_solution
@@ -240,7 +244,6 @@ def test_combination( hillclimber_iteration,function_combinations, combination_n
     for index, combination in enumerate(function_combinations):
         climber =  HillClimber(random_chosen_solution,stations_file, connecties_file)
         output_filename = f"{combination_name[index]}.csv"
-        #     print(combination_name)
         result = climber.run(combination, hillclimber_iteration, f'data/output/hillclimber/{regio}/{output_filename}.csv')
     
         if result[2] > best_score:

@@ -9,7 +9,7 @@ from code.classes.traject import *
 from code.bouwblokjes.score import *
 import time
 
-def random_traject(stations: dict): 
+def random_traject(stations: dict, minutes=120): 
     """
     Deze functie maakt een willekeurig gemaakt traject van maximale lengte.
     """
@@ -21,7 +21,8 @@ def random_traject(stations: dict):
     #Runt tot traject te lang wordt
     while True:
         connection = traject._endstation._connection[random.choice(list(traject._endstation._connection.keys()))]
-        if float(traject._traveltime) + float(connection[1]) > 120:
+        if float(traject._traveltime) + float(connection[1]) > minutes:
+            print(minutes)
             break
         traject.add_trajectconnection(connection[0])
 
@@ -32,13 +33,16 @@ def run_random_algoritme(stations: dict, n : int):
     """
     Maakt n aantal random trajecten
     """
+    minutes = 120
+    if n > 7:
+        minutes = 180
 
     #Initialiseer parameters
     lijst_traj = []
 
     #Maakt n random trajecten
     for i in range(n):
-        traject = random_traject(stations)
+        traject = random_traject(stations, minutes)
         lijst_traj.append(traject)
 
     #Return
