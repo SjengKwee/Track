@@ -59,7 +59,7 @@ class Restricted_2():
         #Return
         return lijst_traj
 
-    def run_random_restr2_times(self, i : int):
+    def run_random_restr2_times(self, i : int, connections: int):
         """
         Maakt i keer 1-7 random trajecten met unieke verbindingen en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
@@ -80,12 +80,12 @@ class Restricted_2():
         #Runt algoritme i keer
         for n in range(i):
             traj = self.run_random_restr2_algoritme(m)
-            score_list.append(score_calc(traj))
-            if score_calc(traj) > max_score:
-                max_score = score_calc(traj)
+            score_list.append(score_calc(traj, connections))
+            if score_calc(traj, connections) > max_score:
+                max_score = score_calc(traj, connections)
                 max_traj = traj
-            elif score_calc(traj) < min_score:
-                min_score = score_calc(traj)
+            elif score_calc(traj, connections) < min_score:
+                min_score = score_calc(traj, connections)
                 min_traj = traj
     
         #Berekent laatste waardes

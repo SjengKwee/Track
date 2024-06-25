@@ -69,7 +69,7 @@ class Greedy_apri():
         #Return
         return lijst_traj
 
-    def run_greedy_times(self, i : int):
+    def run_greedy_times(self, i : int, connections: int):
         """
         Maakt i keer 1-7 greedy trajecten en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
@@ -90,12 +90,12 @@ class Greedy_apri():
         #Runt algoritme i keer
         for n in range(i):
             traj = self.greedy_alg(m)
-            score_list.append(score_calc(traj))
-            if score_calc(traj) > max_score:
-                max_score = score_calc(traj)
+            score_list.append(score_calc(traj, connection))
+            if score_calc(traj, connection) > max_score:
+                max_score = score_calc(traj, connection)
                 max_traj = traj
-            elif score_calc(traj) < min_score:
-                min_score = score_calc(traj)
+            elif score_calc(traj, connection) < min_score:
+                min_score = score_calc(traj, connection)
                 min_traj = traj
     
         #Berekent laatste waardes

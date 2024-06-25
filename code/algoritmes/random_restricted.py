@@ -56,7 +56,7 @@ def run_random_restr_algoritme(stations: dict, n : int):
     #Return
     return lijst_traj
 
-def run_random_restr_times(stations: dict, i : int):
+def run_random_restr_times(stations: dict, i : int, connections: int):
     """
     Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
     [0]: een lijst met alle scores
@@ -77,12 +77,12 @@ def run_random_restr_times(stations: dict, i : int):
     #Runt algoritme i keer
     for n in range(i):
         traj = run_random_restr_algoritme(stations, m)
-        score_list.append(score_calc(traj))
-        if score_calc(traj) > max_score:
-            max_score = score_calc(traj)
+        score_list.append(score_calc(traj, connections))
+        if score_calc(traj, connections) > max_score:
+            max_score = score_calc(traj, connections)
             max_traj = traj
-        elif score_calc(traj) < min_score:
-            min_score = score_calc(traj)
+        elif score_calc(traj, connections) < min_score:
+            min_score = score_calc(traj, connections)
             min_traj = traj
     
     #Berekent laatste waardes
