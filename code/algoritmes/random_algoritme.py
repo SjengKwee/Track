@@ -53,8 +53,6 @@ def run_random_times(stations: dict, i : int, connections: int):
     [3]: de minimaal gehaalde score
     [4]: het traject van minimale score
     [5]: de tijd die dit algoritme heeft gerunt
-    [6]: een traject dat op het gemiddelde van 6000-6500 score zit
-    [7]: de score van [6]
     """
 
     #Initialiseert parameters
@@ -74,12 +72,9 @@ def run_random_times(stations: dict, i : int, connections: int):
         elif score_calc(traj, connections) < min_score:
             min_score = score_calc(traj, connections)
             min_traj = traj
-        elif score_calc(traj, connections) > 6000 and score_calc(traj, connections) < 6500:
-            medium_traj = traj
     
     #Berekent laatste waardes
-    medium_score = score_calc(medium_traj)
     time1 = time.time()
 
     #Return
-    return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0, medium_traj, medium_score]
+    return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0]

@@ -90,12 +90,12 @@ class Greedy_apri():
         #Runt algoritme i keer
         for n in range(i):
             traj = self.greedy_alg(m)
-            score_list.append(score_calc(traj, connection))
-            if score_calc(traj, connection) > max_score:
-                max_score = score_calc(traj, connection)
+            score_list.append(score_calc(traj, connections))
+            if score_calc(traj, connections) > max_score:
+                max_score = score_calc(traj, connections)
                 max_traj = traj
-            elif score_calc(traj, connection) < min_score:
-                min_score = score_calc(traj, connection)
+            elif score_calc(traj, connections) < min_score:
+                min_score = score_calc(traj, connections)
                 min_traj = traj
     
         #Berekent laatste waardes

@@ -109,7 +109,7 @@ if __name__ == "__main__":
         elif(heuristiek == "Max_connections"):
             heur_stat = max_connection_counter(stations)
             alg = Greedy_apri(heur_stat)
-            greed_results = alg.run_greedy_times(10000)
+            greed_results = alg.run_greedy_times(10000, number_connections)
             print("Het algoritme duurt", greed_results[5], "seconden")
             run_plot_random_alg_score(greed_results[0], 'data/images/greed_apri/max_connections/scores_algoritme')
             tracks_writer(greed_results[2], greed_results[1], 'data/output/greed_apri/max_connections/maximum.csv')
@@ -121,7 +121,7 @@ if __name__ == "__main__":
         elif(heuristiek == "Min_traveltime"):
             heur_stat = min_traveltime(stations)
             alg = Greedy_apri(heur_stat)
-            greed_results = alg.run_greedy_times(10000)
+            greed_results = alg.run_greedy_times(10000, number_connections)
             print("Het algoritme duurt", greed_results[5], "seconden")
             run_plot_random_alg_score(greed_results[0], 'data/images/greed_apri/min_traveltime/scores_algoritme')
             tracks_writer(greed_results[2], greed_results[1], 'data/output/greed_apri/min_traveltime/maximum.csv')
