@@ -177,7 +177,7 @@ def restart_hillclimber(iterations_hillclimber, mutation_iteration, stations_fil
         result =climber.run(combination, mutation_iteration)
         hillclimber_results.append(result)
         scores_iteration_hillclimber.append(result[2])
-        print("restart Hill Climber score: ", result[2])
+        print("restart Hill Climber run: ", i, "score: ",result[2])
         
 
     return [hillclimber_results, scores_iteration_hillclimber]
