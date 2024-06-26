@@ -1,7 +1,7 @@
 # Main
 # Hier runnen we al onze algoritmes
-# Alle opties voor altgoritmes worden met inputs gevraagd
-# Om dit over te slaan kan er onderaan dit bestand een script worden meegegeven aan de functie
+# Dit gaat via inputs vanuit de terminal, hier hebben we voor gekozen omdat we zo duidelijke stappen 
+# kunnen meegeven van hoe deze algoritmen te runnen zijn.
 
 from code.algoritmes.random_algoritme import *
 from code.algoritmes.random_restricted import *
@@ -19,48 +19,14 @@ from code.bouwblokjes.heur_maker import *
 import sys
 from itertools import combinations
 
-def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek = "heuristiek", repetitions = 0, times = 0, groups = 0): 
-
+if __name__ == "__main__":
     random.seed(10)
 
-    if script != "yes":
-        print("Welkom bij onze vette algoritmes")
+    print("Welkom bij onze vette algoritmes")
 
-        #Vraagt en initieerd welke stations we willen runnen
-        print("Wil je runnen voor holland of nederland?")
-        regio = input("kies: holland / nederland \n")
-        
-        # Vraag op welk algoritme je wilt runnen
-        print("Om onze random baseline te runnen: Random")
-        print("Om de restricted random nr 1 te runnen: Restricted_1")
-        print("Om de restricted random nr 2 te runnen: Restricted_2")
-        print("Om de restricted random nr 3 te runnen: Restricted_3")
-        print("Om een greedy algoritme met apriori heuristieken: Greedy_apri")
-        print('Om een progressive algoritme te runnen: Progressive')
-        print('Om Hill climber te runnen type: Hill Climber')
-        algoritme = input("Welk algoritme wil je runnen? ")
-
-        # Vraag welke heuristieken je wilt gebruiken
-        if algoritme == "Greedy-apri":
-            print("Voor een even verdeelde standaard heuristiek: Basic")
-            print("Voor een heuristiek gebasseerd het aantal verbindingen van groot naar klein: Max_connections")
-            print("Voor een heuristiek gebasseerd op de minimale traveltime: Min_traveltime")
-            print("Voor combinaties van de bovenstaande twee heuristieken: Combi")
-            print("Voor een heuristiek gebasseerd het aantal verbindingen van klein naar groot: Min_connections")
-            print("Voor een heuristiek gebasseerd op de maximale traveltime: Max_traveltime")
-            heuristiek = input("Welke heuristiek wil je gebruiken? ")
-        if algoritme == "Progressive":
-            print("Voor een progressive met random trajecten: Random")
-            print("Voor een progressive met voorkeur voor ongebruikte connecties: Connections")
-            print("Voor een progressive met voorkeur voor benodigde stations en ongebruikte connecties: Stations")
-            print("Voor een progressive_stations met meerdere tracks tegelijkertijd: Group")
-            print("Voor een progressive_stations met score op basis van even aantal ongebruikte verbindingen voor stations: Even")
-            heuristiek = input("Welke heuristiek wil je gebruiken? \n")
-            repetitions = int(input("Hoeveel repetities per nieuwe track? \n"))
-            times = int(input("Hoeveel scores wil je hebben? \n"))
-            if heuristiek == "Group" or heuristiek == "Even":
-                groups = int(input("Hoeveel tracks tegelijkertijd toevoegen? \n"))
-
+    #Vraagt en initieerd welke stations we willen runnen
+    print("Wil je runnen voor holland of nederland?")
+    regio = input("kies: holland / nederland \n")
     if(regio == "holland"):
         stations = make_connections()
         number_connections = 28
@@ -76,6 +42,15 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
         trains = 20
         connecties_file = 'connectiesnederland.csv'
 
+    #Vraagt op welk algoritme je wilt runnen
+    print("Om onze random baseline te runnen: Random")
+    print("Om de restricted random nr 1 te runnen: Restricted_1")
+    print("Om de restricted random nr 2 te runnen: Restricted_2")
+    print("Om de restricted random nr 3 te runnen: Restricted_3")
+    print("Om een greedy algoritme met apriori heuristieken: Greedy_apri")
+    print('Om een progressive algoritme te runnen: Progressive')
+    print('Om Hill climber te runnen type: Hill Climber')
+    algoritme = input("Welk algoritme wil je runnen? ")
 
     #Random algoritme
     if(algoritme == "Random"):
@@ -122,6 +97,13 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
 
     #Greedy_apri
     elif(algoritme == "Greedy_apri"):
+        print("Voor een even verdeelde standaard heuristiek: Basic")
+        print("Voor een heuristiek gebasseerd het aantal verbindingen van groot naar klein: Max_connections")
+        print("Voor een heuristiek gebasseerd op de minimale traveltime: Min_traveltime")
+        print("Voor combinaties van de bovenstaande twee heuristieken: Combi")
+        print("Voor een heuristiek gebasseerd het aantal verbindingen van klein naar groot: Min_connections")
+        print("Voor een heuristiek gebasseerd op de maximale traveltime: Max_traveltime")
+        heuristiek = input("Welke heuristiek wil je gebruiken? ")
 
         #Geen heuristiek
         if(heuristiek == "Basic"):
@@ -220,6 +202,15 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
 
     # Progressive_algorithm
     elif(algoritme == "Progressive"):
+        print("Voor een greedy progressive met random trajecten: Random")
+        print("Voor een greedy progressive met voorkeur voor ongebruikte connecties: Connections")
+        print("Voor een Connections met voorkeur voor benodigde stations: Stations")
+        print("Voor een Connections met voorkeur voor stations met 1 vervolgverbinding: Filler")
+        print("Voor een stations met meerdere tracks tegelijkertijd: Group")
+        heuristiek = input("Welke heuristiek wil je gebruiken? \n")
+        repetitions = int(input("Hoeveel repetities per nieuwe track? \n"))
+        times = int(input("Hoeveel scores wil je hebben? \n"))
+
         
         # initialise correct algorithm with inputted parameters
         if(heuristiek == "Random"):
@@ -231,8 +222,10 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
         elif(heuristiek == "Filler"):
             progressive = pr.Progressive_randomstart(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
         elif(heuristiek == "Group"):
+            groups = int(input("Hoeveel tracks tegelijkertijd toevoegen? \n"))
             progressive = pr.Progressive_group(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
         elif(heuristiek == "Even"):
+            groups = int(input("Hoeveel tracks tegelijkertijd toevoegen? \n"))
             progressive = pr.Progressive_even(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
         else:
             print("verkeerde input")
@@ -250,6 +243,8 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
         number_traject = 7
         connections = 28
         if stations_file == 'stationsnederland.csv':
+            hillclimber_iteration = 2000
+            hillclimber_restart_iteration= 100
             number_traject = 20
             connections =89
             minutes = 180
@@ -287,11 +282,3 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
         run_plot_trajectories(f'data/output/hillclimber/{regio}/trajectories_after_more_hill.csv', f'data/images/hillclimber/{regio}/trajectories_after_more_hill.png', stations_file)
     else:
         print("Verkeerde input")
-
-
-if __name__ == "__main__":
-
-    # Voorbeeld van het runnen van de main met een script:
-    #run_main(script = "yes", regio = "nederland", algoritme = "Progressive", heuristiek = "Even", repetitions = 10, times = 10, groups = 1)
-
-    run_main(script = "no")

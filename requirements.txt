@@ -1,4 +1,4 @@
-matplotlib==3.5.1
-pandas==2.2.2
-numpy==1.24.3
-adjustText==1.1.1
+matplotlib<4
+pandas<3
+numpy<1.26
+adjustText<2

@@ -176,9 +176,11 @@ def restart_hillclimber(iterations_hillclimber, mutation_iteration, stations_fil
     scores_iteration_hillclimber = []
     number_traject = 7
     minutes = 120
+    regio = "test"
     if stations_file == 'stationsnederland.csv':
         number_traject = 20
         minutes = 180
+        regio = nederland
         
     
     possible_solutions = make_random_start_state(iterations_hillclimber * 100, stations_file, connecties_file, number_traject, minutes)
@@ -192,7 +194,7 @@ def restart_hillclimber(iterations_hillclimber, mutation_iteration, stations_fil
         scores_iteration_hillclimber.append(result[2])
         print("Restart Hill Climber run: ", i, "score: ", result[2])
 
-        with open('data/output/hillclimber/scores_restart.csv', 'a') as file:
+        with open(f"data/output/hillclimber/{regio}/scores_restart.csv", "a") as file:
             file.write(f"Restart Hill Climber run: {i} score: {result[2]}\n")
 
     return [hillclimber_results, scores_iteration_hillclimber]
