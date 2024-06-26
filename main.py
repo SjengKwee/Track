@@ -101,6 +101,8 @@ if __name__ == "__main__":
         print("Voor een heuristiek gebasseerd het aantal verbindingen van groot naar klein: Max_connections")
         print("Voor een heuristiek gebasseerd op de minimale traveltime: Min_traveltime")
         print("Voor combinaties van de bovenstaande twee heuristieken: Combi")
+        print("Voor een heuristiek gebasseerd het aantal verbindingen van klein naar groot: Min_connections")
+        print("Voor een heuristiek gebasseerd op de maximale traveltime: Max_traveltime")
         heuristiek = input("Welke heuristiek wil je gebruiken? ")
 
         #Geen heuristiek
@@ -170,6 +172,30 @@ if __name__ == "__main__":
             tracks_writer(greed3_results[4], greed3_results[3], 'data/output/greed_apri/combi/2,1/minimum.csv')
             run_plot_trajectories('data/output/greed_apri/combi/2,1/maximum.csv', 'data/images/greed_apri/combi/2,1/max_track.png', stations_file)
             run_plot_trajectories('data/output/greed_apri/combi/2,1/minimum.csv', 'data/images/greed_apri/combi/2,1/min_track.png', stations_file)
+
+        #Min connections heuristiek
+        elif(heuristiek == "Min_connections"):
+            heur_stat = min_connection_counter(stations)
+            alg = Greedy_apri(heur_stat)
+            greed_results = alg.run_greedy_times(100000, number_connections, traveltime, trains)
+            print("Het algoritme duurt", greed_results[5], "seconden")
+            run_plot_random_alg_score(greed_results[0], 'data/images/greed_apri/min_connections/scores_algoritme')
+            tracks_writer(greed_results[2], greed_results[1], 'data/output/greed_apri/min_connections/maximum.csv')
+            tracks_writer(greed_results[4], greed_results[3], 'data/output/greed_apri/min_connections/minimum.csv')
+            run_plot_trajectories('data/output/greed_apri/min_connections/maximum.csv', 'data/images/greed_apri/min_connections/max_track.png', stations_file)
+            run_plot_trajectories('data/output/greed_apri/min_connections/minimum.csv', 'data/images/greed_apri/min_connections/min_track.png', stations_file)
+
+        #Max traveltime heuristiek
+        elif(heuristiek == "Max_traveltime"):
+            heur_stat = max_traveltime(stations)
+            alg = Greedy_apri(heur_stat)
+            greed_results = alg.run_greedy_times(100000, number_connections, traveltime, trains)
+            print("Het algoritme duurt", greed_results[5], "seconden")
+            run_plot_random_alg_score(greed_results[0], 'data/images/greed_apri/max_traveltime/scores_algoritme')
+            tracks_writer(greed_results[2], greed_results[1], 'data/output/greed_apri/max_traveltime/maximum.csv')
+            tracks_writer(greed_results[4], greed_results[3], 'data/output/greed_apri/max_traveltime/minimum.csv')
+            run_plot_trajectories('data/output/greed_apri/max_traveltime/maximum.csv', 'data/images/greed_apri/max_traveltime/max_track.png', stations_file)
+            run_plot_trajectories('data/output/greed_apri/max_traveltime/minimum.csv', 'data/images/greed_apri/max_traveltime/min_track.png', stations_file)
 
         else:
             print("Verkeerde input")
