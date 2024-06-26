@@ -244,17 +244,19 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
     elif(algoritme== "Hill Climber"):
 
          # --------------------------- Hill Climber ---------------------------------
-        number_random_startstate = 100
-        hillclimber_iteration = 2000
-        hillclimber_restart_iteration= 100
+        number_random_startstate = 10
+        hillclimber_iteration = 40
+        hillclimber_restart_iteration= 10
         number_traject = 7
         connections = 28
+        minutes = 120
         if stations_file == 'stationsnederland.csv':
+            hillclimber_iteration = 2000
+            hillclimber_restart_iteration= 100
             number_traject = 20
             connections =89
             minutes = 180
-
-        print("Setting up Hill Climber...")
+        print("Maak random start oplossing")
         possible_solutions = make_random_start_state( number_random_startstate, stations_file, connecties_file,number_traject, minutes)
         random_chosen_solution= random.choice(possible_solutions)
         score_chosen_solution = score_calc(random_chosen_solution, connections)
@@ -266,6 +268,7 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
         climber =  HillClimber(random_chosen_solution, stations_file, connecties_file)
         combination_name, function_combinations = make_compinations(climber)
         
+        print("Start Hill Climber combinatie test")
         # beste combinatie opslaan en plotten
         best_score, best_trajectories, scores_after_iteration, best_combination, combination = test_combination(
             hillclimber_iteration,function_combinations, combination_name, random_chosen_solution, stations_file,connecties_file,regio)
@@ -277,7 +280,7 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
         run_plot_trajectories(f'data/output/hillclimber/{regio}/trajectories_of_best_combination.csv', f'data/images/hillclimber/{regio}/trajectories_of_best_combination.png', stations_file)
 
         # # hillclimber meerdere keren runnen en plotten
-        print("restart Hill Climber...")
+        print("Start restart Hill Climber")
         hc_restart = restart_hillclimber(hillclimber_restart_iteration, hillclimber_iteration, stations_file,connecties_file, combination)
         run_plot_random_alg_score(hc_restart[1], f'data/images/hillclimber/{regio}/scores_iteration_hillclimber.png',"Restart Hill Climber scores")
         result_max = calculate_best_trajectory(hc_restart[0],hillclimber_restart_iteration)
