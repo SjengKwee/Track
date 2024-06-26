@@ -39,7 +39,7 @@ waarbij:
 - \( K \) de kwaliteit van de lijnvoering is,
 - \( p \) de fractie van de bereden verbindingen (dus tussen 0 en 1),
 - \( T \) het aantal trajecten,
-- \( \text{Min} \) het aantal minuten in alle trajecten samen.  
+- \( Min\) het aantal minuten in alle trajecten samen.  
 
 ## Installatie van vereisten
 

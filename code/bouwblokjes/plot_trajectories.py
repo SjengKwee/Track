@@ -15,11 +15,9 @@ def plot_track(track: list, stations_file = 'StationsHolland.csv'):
 
     # data bruikbaar maken voor plotten 
     stations_track  = track.strip('[]').replace("'",'' ).split(', ')
-    
     y = [float(stations[station]._coordinates[0]) for station in stations_track]
     x = [float(stations[station]._coordinates[1]) for station in stations_track]
     return plt.plot(x,y)
-
 
 def run_plot_trajectories(csv_file, save_file, stations_file = 'StationsHolland.csv'):
     """Namen van stations plotten op de juiste plaats en de functie plot_track aanroepen."""
@@ -73,7 +71,6 @@ def run_plot_random_alg_score(scores, save_file,titel='Histogram van Algoritme S
    
 
 def plot_iterations_scores(scores,iterations, save_file, titel='Score per iteratie'):
-    
     """ Score na elke iteratie plotten """
     y = [score for score in scores]
     x = [iteration for iteration in range(iterations)]
@@ -87,9 +84,8 @@ def plot_iterations_scores(scores,iterations, save_file, titel='Score per iterat
     plt.yticks(fontsize=16) 
     plt.savefig(save_file) 
     
-
-
 def plot_meer_histogrammen(data1_x, data2_x, data3_x, data4_x,save_file):
+    """Vier Histogrammen plotten in 1 figuur"""
 
     # Laad de data van de Excel-bestanden, waarbij de eerste twee rijen worden overgeslagen
     data1 = pd.read_csv(f'{data1_x}.csv', skiprows=2).values.flatten()

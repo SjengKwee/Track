@@ -12,8 +12,8 @@ random.seed(10)
 
 
 class HillClimber():
-    """De Hillclimber class kies willekeurig een verandering. 
-    Elke verandering wordt bewaard voor de volgende iteratie 
+    """De Hillclimber class kies willekeurig een soort wijziging. 
+    Elke wijziging die punten oplevert wordt bewaard voor de volgende iteratie 
     """
     def __init__(self,start_state, stations_file='StationsHolland.csv', connecties_file='ConnectiesHolland.csv'):
 
@@ -55,7 +55,7 @@ class HillClimber():
         new_trajectories[getal] = new_traject
     
     def change_start_station(self,new_trajectories):
-        """ Een random traject kiezen en start station wijzigen"""
+        """ Een random traject kiezen en start station verwijderen"""
 
         # Een random traject kiezen met minimaal 2 verbindingen
         getal = random.randint(0, len(new_trajectories)-1)
@@ -176,15 +176,13 @@ def restart_hillclimber(iterations_hillclimber, mutation_iteration, stations_fil
     scores_iteration_hillclimber = []
     number_traject = 7
     minutes = 120
-    regio = "test"
+    regio = "holland"
     if stations_file == 'stationsnederland.csv':
         number_traject = 20
         minutes = 180
-        regio = nederland
-        
-    
+        regio = "nederland"
+
     possible_solutions = make_random_start_state(iterations_hillclimber * 100, stations_file, connecties_file, number_traject, minutes)
-    
     for i in range(iterations_hillclimber):
         
         random_chosen_solution= random.choice(possible_solutions)
@@ -224,7 +222,7 @@ def make_random_start_state(number_of_starts,stations_file, connecties_file, num
 
 
 def save_used_functions(output_file,chosen_functions):
-
+    """ Sla gebruikte wijzigingen in de Hill Climber op"""
     with open(output_file, mode='w', newline='') as file:
         writer = csv.writer(file)
         for func_name, score in chosen_functions:
@@ -235,6 +233,7 @@ def save_used_functions(output_file,chosen_functions):
                 writer.writerow([f"Gekozen functie: {func_name}"])
 
 def make_compinations(climber):
+    """ Maak combinaties van de vier soort wijzigen die Hill Climber heeft"""
     function_names = [
         'separate_traject',
         'delete_last_connection',
@@ -254,6 +253,7 @@ def make_compinations(climber):
     return combination_name, function_combinations
 
 def test_combination( hillclimber_iteration,function_combinations, combination_name, random_chosen_solution, stations_file, connecties_file,regio):
+    """Test de combinatie van de wijzigingen """
     best_score = 0
     for index, combination in enumerate(function_combinations):
         climber =  HillClimber(random_chosen_solution,stations_file, connecties_file)
