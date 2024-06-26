@@ -1,3 +1,8 @@
+# Main
+# Hier runnen we al onze algoritmes
+# Dit gaat via inputs vanuit de terminal, hier hebben we voor gekozen omdat we zo duidelijke stappen 
+# kunnen meegeven van hoe deze algoritmen te runnen zijn.
+
 from code.algoritmes.random_algoritme import *
 from code.algoritmes.random_restricted import *
 from code.algoritmes.random_restricted_2 import *
@@ -56,7 +61,8 @@ if __name__ == "__main__":
 
     #Restricted nr 1
     elif(algoritme == "Restricted_1"):
-        restr1_results = run_random_restr_times(stations,10000, number_connections, traveltime, trains)
+        alg = Restricted_1(stations)
+        restr1_results = alg.run_random_restr_times(10000, number_connections, traveltime, trains)
         print("Het algoritme duurt", restr1_results[5], "seconden")
         run_plot_random_alg_score(restr1_results[0], 'data/images/random_restr_1/scores_random_algoritme')
         tracks_writer(restr1_results[2], restr1_results[1], 'data/output/random_restr_1/maximum.csv')

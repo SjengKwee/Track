@@ -9,84 +9,95 @@ from code.classes.traject import *
 from code.bouwblokjes.score import *
 import time
 
-def random_restr_traject(stations: dict, minutes = 120): 
-    """
-    Deze functie maakt een willekeurig gemaakt traject van maximale lengte.
-    """
 
-    #Initialiseer parameters
-    start_station = stations[random.choice(list(stations.keys()))]
-    traject = Traject(start_station)
-    passing_stations = [start_station._name]
-    
-    #Runt tot traject te lang wordt, of er geen stations over zijn
-    stop = False
-    while not stop:
-        lijstje = list(traject._endstation._connection.keys())
-        random.shuffle(lijstje)
-        stop = True
-        for connection in lijstje:
-            if connection in passing_stations:
-                stop = True
-            else:
-                conn_station = traject._endstation._connection[connection]
-                if int(traject._traveltime) + int(conn_station[1]) > minutes:
-                    return traject
-                traject.add_trajectconnection(conn_station[0])
-                passing_stations.append(connection)
-                stop = False
-                break
+class Restricted_1():
 
-    #Return
-    return traject
+    def __init__(self, stations: dict):
+        """
+        Copieert stations en slaat deze op
+        """
 
-def run_random_restr_algoritme(stations: dict, n : int, minutes = 120):
-    """
-    Maakt n aantal random trajecten
-    """
+        self._stations = copy.deepcopy(stations)
 
-    #Initialiseer parameters
-    lijst_traj = []
 
-    #Maakt n random trajecten
-    for i in range(n):
-        traject = random_restr_traject(stations, minutes)
-        lijst_traj.append(traject)
+    def random_restr_traject(self, minutes = 120): 
+        """
+        Deze functie maakt een willekeurig gemaakt traject van maximale lengte.
+        """
 
-    #Return
-    return lijst_traj
+        #Initialiseer parameters
+        start_station = self._stations[random.choice(list(self._stations.keys()))]
+        traject = Traject(start_station)
+        passing_stations = [start_station._name]
+        
+        #Runt tot traject te lang wordt, of er geen stations over zijn
+        stop = False
+        while not stop:
+            lijstje = list(traject._endstation._connection.keys())
+            random.shuffle(lijstje)
+            stop = True
+            for connection in lijstje:
+                if connection in passing_stations:
+                    stop = True
+                else:
+                    conn_station = traject._endstation._connection[connection]
+                    if int(traject._traveltime) + int(conn_station[1]) > minutes:
+                        return traject
+                    traject.add_trajectconnection(conn_station[0])
+                    passing_stations.append(connection)
+                    stop = False
+                    break
 
-def run_random_restr_times(stations: dict, i : int, connections: int, minutes = 120, tracks = 7):
-    """
-    Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
-    [0]: een lijst met alle scores
-    [1]: de maximaal gehaalde score
-    [2]: het traject dat de maximale score heeft gehaald
-    [3]: de minimaal gehaalde score
-    [4]: het traject van minimale score
-    [5]: de tijd die dit algoritme heeft gerunt
-    """
+        #Return
+        return traject
 
-    #Initialiseert parameters
-    time0 = time.time()
-    score_list = []
-    max_score = 0
-    min_score = 10000
-    m = random.randint(1, tracks)
+    def run_random_restr_algoritme(self, n : int, minutes = 120):
+        """
+        Maakt n aantal random trajecten
+        """
 
-    #Runt algoritme i keer
-    for n in range(i):
-        traj = run_random_restr_algoritme(stations, m, minutes)
-        score_list.append(score_calc(traj, connections))
-        if score_calc(traj, connections) > max_score:
-            max_score = score_calc(traj, connections)
-            max_traj = traj
-        elif score_calc(traj, connections) < min_score:
-            min_score = score_calc(traj, connections)
-            min_traj = traj
-    
-    #Berekent laatste waardes
-    time1 = time.time()
+        #Initialiseer parameters
+        lijst_traj = []
 
-    #Return
-    return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0]
+        #Maakt n random trajecten
+        for i in range(n):
+            traject = self.random_restr_traject(minutes)
+            lijst_traj.append(traject)
+
+        #Return
+        return lijst_traj
+
+    def run_random_restr_times(self, i : int, connections: int, minutes = 120, tracks = 7):
+        """
+        Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
+        [0]: een lijst met alle scores
+        [1]: de maximaal gehaalde score
+        [2]: het traject dat de maximale score heeft gehaald
+        [3]: de minimaal gehaalde score
+        [4]: het traject van minimale score
+        [5]: de tijd die dit algoritme heeft gerunt
+        """
+
+        #Initialiseert parameters
+        time0 = time.time()
+        score_list = []
+        max_score = 0
+        min_score = 10000
+        m = random.randint(1, tracks)
+
+        #Runt algoritme i keer
+        for n in range(i):
+            traj = self.run_random_restr_algoritme(m, minutes)
+            score_list.append(score_calc(traj, connections))
+            if score_calc(traj, connections) > max_score:
+                max_score = score_calc(traj, connections)
+                max_traj = traj
+            elif score_calc(traj, connections) < min_score:
+                min_score = score_calc(traj, connections)
+                min_traj = traj
+        
+        #Berekent laatste waardes
+        time1 = time.time()
+
+        #Return
+        return [score_list, max_score, max_traj, min_score, min_traj, time1 - time0]
