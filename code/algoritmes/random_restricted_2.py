@@ -18,7 +18,7 @@ class Restricted_2():
 
         self._stations = copy.deepcopy(stations)
     
-    def random_restr2_traject(self):
+    def random_restr2_traject(self, minutes = 120):
         """
         Maakt een random traject waar iedere verbinding maar een keer in voorkomt
         """
@@ -32,7 +32,7 @@ class Restricted_2():
             connect_name = random.choice(list(traject._endstation._connection.keys()))
             connection = traject._endstation._connection[connect_name]
             if not {traject._endstation._name, connect_name} in traject._trajectconnection:
-                if int(traject._traveltime) + int(connection[1]) > 120:
+                if int(traject._traveltime) + int(connection[1]) > minutes:
                     break
                 traject.add_trajectconnection(connection[0])
                 tried_conn = []
@@ -43,7 +43,7 @@ class Restricted_2():
         
         return traject
     
-    def run_random_restr2_algoritme(self, n : int):
+    def run_random_restr2_algoritme(self, n : int, minutes = 120):
         """
         Maakt n aantal random trajecten met unieke verbindingen
         """
@@ -53,13 +53,13 @@ class Restricted_2():
 
         #Maakt n random trajecten
         for i in range(n):
-            traject = self.random_restr2_traject()
+            traject = self.random_restr2_traject(minutes)
             lijst_traj.append(traject)
 
         #Return
         return lijst_traj
 
-    def run_random_restr2_times(self, i : int, connections: int):
+    def run_random_restr2_times(self, i : int, connections: int, minutes = 120, tracks = 7):
         """
         Maakt i keer 1-7 random trajecten met unieke verbindingen en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
@@ -75,11 +75,11 @@ class Restricted_2():
         score_list = []
         max_score = 0
         min_score = 10000
-        m = random.randint(1, 7)
+        m = random.randint(1, tracks)
 
         #Runt algoritme i keer
         for n in range(i):
-            traj = self.run_random_restr2_algoritme(m)
+            traj = self.run_random_restr2_algoritme(m, minutes)
             score_list.append(score_calc(traj, connections))
             if score_calc(traj, connections) > max_score:
                 max_score = score_calc(traj, connections)

@@ -9,7 +9,7 @@ from code.classes.traject import *
 from code.bouwblokjes.score import *
 import time
 
-def random_restr_traject(stations: dict): 
+def random_restr_traject(stations: dict, minutes = 120): 
     """
     Deze functie maakt een willekeurig gemaakt traject van maximale lengte.
     """
@@ -30,7 +30,7 @@ def random_restr_traject(stations: dict):
                 stop = True
             else:
                 conn_station = traject._endstation._connection[connection]
-                if int(traject._traveltime) + int(conn_station[1]) > 120:
+                if int(traject._traveltime) + int(conn_station[1]) > minutes:
                     return traject
                 traject.add_trajectconnection(conn_station[0])
                 passing_stations.append(connection)
@@ -40,7 +40,7 @@ def random_restr_traject(stations: dict):
     #Return
     return traject
 
-def run_random_restr_algoritme(stations: dict, n : int):
+def run_random_restr_algoritme(stations: dict, n : int, minutes = 120):
     """
     Maakt n aantal random trajecten
     """
@@ -50,13 +50,13 @@ def run_random_restr_algoritme(stations: dict, n : int):
 
     #Maakt n random trajecten
     for i in range(n):
-        traject = random_restr_traject(stations)
+        traject = random_restr_traject(stations, minutes)
         lijst_traj.append(traject)
 
     #Return
     return lijst_traj
 
-def run_random_restr_times(stations: dict, i : int, connections: int):
+def run_random_restr_times(stations: dict, i : int, connections: int, minutes = 120, tracks = 7):
     """
     Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
     [0]: een lijst met alle scores
@@ -72,11 +72,11 @@ def run_random_restr_times(stations: dict, i : int, connections: int):
     score_list = []
     max_score = 0
     min_score = 10000
-    m = random.randint(1, 7)
+    m = random.randint(1, tracks)
 
     #Runt algoritme i keer
     for n in range(i):
-        traj = run_random_restr_algoritme(stations, m)
+        traj = run_random_restr_algoritme(stations, m, minutes)
         score_list.append(score_calc(traj, connections))
         if score_calc(traj, connections) > max_score:
             max_score = score_calc(traj, connections)

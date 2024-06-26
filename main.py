@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     #Restricted nr 1
     elif(algoritme == "Restricted_1"):
-        restr1_results = run_random_restr_times(stations,10000, number_connections)
+        restr1_results = run_random_restr_times(stations,10000, number_connections, traveltime, trains)
         print("Het algoritme duurt", restr1_results[5], "seconden")
         run_plot_random_alg_score(restr1_results[0], 'data/images/random_restr_1/scores_random_algoritme')
         tracks_writer(restr1_results[2], restr1_results[1], 'data/output/random_restr_1/maximum.csv')
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     #Restricted nr 2
     elif(algoritme == "Restricted_2"):
         alg = Restricted_2(stations)
-        restr2_results = alg.run_random_restr2_times(10000, number_connections)
+        restr2_results = alg.run_random_restr2_times(10000, number_connections, traveltime, trains)
         print("Het algoritme duurt", restr2_results[5], "seconden")
         run_plot_random_alg_score(restr2_results[0], 'data/images/random_restr_2/scores_algoritme')
         tracks_writer(restr2_results[2], restr2_results[1], 'data/output/random_restr_2/maximum.csv')
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     #Restricted nr 3
     elif(algoritme == "Restricted_3"):
         alg = Restricted_3(stations)
-        restr3_results = alg.run_random_restr3_times(10000, number_connections)
+        restr3_results = alg.run_random_restr3_times(100000, number_connections, traveltime, trains)
         print("Het algoritme duurt", restr3_results[5], "seconden")
         run_plot_random_alg_score(restr3_results[0], 'data/images/random_restr_3/scores_algoritme')
         tracks_writer(restr3_results[2], restr3_results[1], 'data/output/random_restr_3/maximum.csv')

@@ -19,7 +19,7 @@ class Restricted_3():
         self._stations = copy.deepcopy(stations)
         self._ridentracks = []
     
-    def random_restr3_traject(self):
+    def random_restr3_traject(self, minutes = 120):
         """
         Maakt een random traject met de restrictie dat iedere verbinding unieke is/nog niet in self._ridentracks staat
         """
@@ -33,7 +33,7 @@ class Restricted_3():
             connect_name = random.choice(list(traject._endstation._connection.keys()))
             connection = traject._endstation._connection[connect_name]
             if not {traject._endstation._name, connect_name} in self._ridentracks:
-                if int(traject._traveltime) + int(connection[1]) > 120:
+                if int(traject._traveltime) + int(connection[1]) > minutes:
                     break
                 self._ridentracks.append({traject._endstation._name, connect_name})
                 traject.add_trajectconnection(connection[0])
@@ -46,7 +46,7 @@ class Restricted_3():
         
         return traject
     
-    def run_random_restr3_algoritme(self, n : int):
+    def run_random_restr3_algoritme(self, n : int, minutes = 120):
         """
         Maakt n aantal random trajecten, reset eerst ridentracks
         """
@@ -57,14 +57,14 @@ class Restricted_3():
 
         #Maakt n random trajecten
         for i in range(n):
-            traject = self.random_restr3_traject()
+            traject = self.random_restr3_traject(minutes)
             lijst_traj.append(traject)
         
 
         #Return
         return lijst_traj
 
-    def run_random_restr3_times(self, i : int, connections: int):
+    def run_random_restr3_times(self, i : int, connections: int, minutes = 120, tracks = 7):
         """
         Maakt i keer 1-7 random trajecten met onze restrictie en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
@@ -80,11 +80,11 @@ class Restricted_3():
         score_list = []
         max_score = 0
         min_score = 10000
-        m = random.randint(1, 7)
+        m = random.randint(1, tracks)
 
         #Runt algoritme i keer
         for n in range(i):
-            traj = self.run_random_restr3_algoritme(m)
+            traj = self.run_random_restr3_algoritme(m, minutes)
             score_list.append(score_calc(traj, connections))
             if score_calc(traj, connections) > max_score:
                 max_score = score_calc(traj, connections)
