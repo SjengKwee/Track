@@ -1,4 +1,5 @@
 # Aangemaakt door Addey
+# Plot de tracks en maakt de histogrammen
 
 import csv
 import matplotlib.pyplot as plt

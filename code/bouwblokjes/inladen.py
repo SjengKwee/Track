@@ -43,6 +43,10 @@ def make_connections(stations_file = 'StationsHolland.csv', connecties_file = 'C
         return stations
 
 def save_connections():
+    """
+    Slaat de ingeladen data op in een csv bestand
+    """
+
     with open('data/input/ConnectiesHolland.csv', newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
         next(csvreader) # skip the header

@@ -23,6 +23,8 @@ if __name__ == "__main__":
     random.seed(10)
 
     print("Welkom bij onze vette algoritmes")
+
+    #Vraagt en initieerd welke stations we willen runnen
     print("Wil je runnen voor holland of nederland?")
     regio = input("kies: holland / nederland \n")
     if(regio == "holland"):
@@ -40,6 +42,7 @@ if __name__ == "__main__":
         trains = 20
         connecties_file = 'connectiesnederland.csv'
 
+    #Vraagt op welk algoritme je wilt runnen
     print("Om onze random baseline te runnen: Random")
     print("Om de restricted random nr 1 te runnen: Restricted_1")
     print("Om de restricted random nr 2 te runnen: Restricted_2")
@@ -97,6 +100,7 @@ if __name__ == "__main__":
         print("Voor een even verdeelde standaard heuristiek: Basic")
         print("Voor een heuristiek gebasseerd het aantal verbindingen van groot naar klein: Max_connections")
         print("Voor een heuristiek gebasseerd op de minimale traveltime: Min_traveltime")
+        print("Voor combinaties van de bovenstaande twee heuristieken: Combi")
         heuristiek = input("Welke heuristiek wil je gebruiken? ")
 
         #Geen heuristiek
@@ -139,7 +143,7 @@ if __name__ == "__main__":
         elif(heuristiek == "Combi"):
             heur_stat1 = combi(stations,1,1)
             alg1 = Greedy_apri(heur_stat1)
-            greed1_results = alg1.run_greedy_times(100000, traveltime, trains)
+            greed1_results = alg1.run_greedy_times(100000,number_connections, traveltime, trains)
             print("De eerste combinatie duurt", greed1_results[5], "seconden")
             run_plot_random_alg_score(greed1_results[0], 'data/images/greed_apri/combi/1,1/scores_algoritme')
             tracks_writer(greed1_results[2], greed1_results[1], 'data/output/greed_apri/combi/1,1/maximum.csv')
@@ -149,7 +153,7 @@ if __name__ == "__main__":
 
             heur_stat2 = combi(stations,1,2)
             alg2 = Greedy_apri(heur_stat2)
-            greed2_results = alg2.run_greedy_times(10000)
+            greed2_results = alg2.run_greedy_times(100000,number_connections, traveltime, trains)
             print("De tweede combinatie duurt", greed2_results[5], "seconden")
             run_plot_random_alg_score(greed2_results[0], 'data/images/greed_apri/combi/1,2/scores_algoritme')
             tracks_writer(greed2_results[2], greed2_results[1], 'data/output/greed_apri/combi/1,2/maximum.csv')
@@ -159,7 +163,7 @@ if __name__ == "__main__":
 
             heur_stat3 = combi(stations,2,1)
             alg3 = Greedy_apri(heur_stat3)
-            greed3_results = alg3.run_greedy_times(10000)
+            greed3_results = alg3.run_greedy_times(100000, number_connections, traveltime, trains)
             print("De derde combinatie duurt", greed3_results[5], "seconden")
             run_plot_random_alg_score(greed3_results[0], 'data/images/greed_apri/combi/2,1/scores_algoritme')
             tracks_writer(greed3_results[2], greed3_results[1], 'data/output/greed_apri/combi/2,1/maximum.csv')

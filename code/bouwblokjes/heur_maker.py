@@ -65,7 +65,7 @@ def combi(stations:dict, weight_conn: float, weight_trav: float):
             traveltime = int(connecting_tuple[1])
             connecting_station = connecting_tuple[0]
             connected_number = int(len(connecting_station._connection))
-            station._apriori_heuristiek[connection] = weight_trav*traveltime - weight_conn*connected_number
+            station._apriori_heuristiek[connection] = weight_trav*int(traveltime) - weight_conn*int(connected_number)
         returnstations[key] = station
 
     #Return nieuwe stations
