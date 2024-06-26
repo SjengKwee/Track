@@ -29,13 +29,10 @@ def random_traject(stations: dict, minutes=120):
     #Return
     return traject
 
-def run_random_algoritme(stations: dict, n : int):
+def run_random_algoritme(stations: dict, n : int, minutes = 120):
     """
     Maakt n aantal random trajecten
     """
-    minutes = 120
-    if n > 7:
-        minutes = 180
 
     #Initialiseer parameters
     lijst_traj = []
@@ -48,7 +45,7 @@ def run_random_algoritme(stations: dict, n : int):
     #Return
     return lijst_traj
 
-def run_random_times(stations: dict, i : int, connections: int):
+def run_random_times(stations: dict, i : int, connections: int, minutes = 120, tracks = 7):
     """
     Maakt i keer 1-7 random trajecten en returnt een lijst van nuttige resultaten:
     [0]: een lijst met alle scores
@@ -64,11 +61,11 @@ def run_random_times(stations: dict, i : int, connections: int):
     score_list = []
     max_score = 0
     min_score = 10000
-    m = random.randint(1, 7)
+    m = random.randint(1, tracks)
 
     #Runt algoritme i keer
     for n in range(i):
-        traj = run_random_algoritme(stations, m)
+        traj = run_random_algoritme(stations, m, minutes)
         score_list.append(score_calc(traj, connections))
         if score_calc(traj, connections) > max_score:
             max_score = score_calc(traj, connections)

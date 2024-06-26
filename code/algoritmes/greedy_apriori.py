@@ -19,7 +19,7 @@ class Greedy_apri():
         self._stations = copy.deepcopy(stations)
         self._ridentracks = []
 
-    def greedy_traject(self):
+    def greedy_traject(self, minutes = 120):
         """
         Maakt een greedy traject op mbv een random startstation en heuristieken meegegeven bij de stations
         """
@@ -37,7 +37,7 @@ class Greedy_apri():
             for connection in sorted_connections:
                 if not {traject._endstation._name, connection} in self._ridentracks:
                     new_conn = traject._endstation._connection[connection]
-                    if int(traject._traveltime) + int(new_conn[1]) > 120:
+                    if int(traject._traveltime) + int(new_conn[1]) > minutes:
                         return traject
                     self._ridentracks.append({traject._endstation._name, connection})
                     traject.add_trajectconnection(new_conn[0])
@@ -52,7 +52,7 @@ class Greedy_apri():
                 elif len(tried_conn) == len(traject._endstation._connection):
                     return traject
 
-    def greedy_alg(self,n: int):
+    def greedy_alg(self,n: int, minutes = 120):
         """
         Maakt i aantal greedy trajecten, die geen verbindingen dubbel doen
         """
@@ -63,13 +63,13 @@ class Greedy_apri():
 
         #Maakt n random trajecten
         for i in range(n):
-            traject = self.greedy_traject()
+            traject = self.greedy_traject(minutes)
             lijst_traj.append(traject)
         
         #Return
         return lijst_traj
 
-    def run_greedy_times(self, i : int, connections: int):
+    def run_greedy_times(self, i : int, connections: int, minutes = 120, tracks = 7):
         """
         Maakt i keer 1-7 greedy trajecten en returnt een lijst van nuttige resultaten:
         [0]: een lijst met alle scores
@@ -85,11 +85,11 @@ class Greedy_apri():
         score_list = []
         max_score = 0
         min_score = 10000
-        m = random.randint(1, 7)
+        m = random.randint(1, tracks)
 
         #Runt algoritme i keer
         for n in range(i):
-            traj = self.greedy_alg(m)
+            traj = self.greedy_alg(m, minutes)
             score_list.append(score_calc(traj, connections))
             if score_calc(traj, connections) > max_score:
                 max_score = score_calc(traj, connections)

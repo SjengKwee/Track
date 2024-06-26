@@ -1,7 +1,21 @@
 Tracks,Stations
-1,"['Breda', 'Dordrecht', 'Rotterdam Centraal', 'Rotterdam Alexander', 'Gouda', 'Utrecht Centraal', 'Amsterdam Amstel', 'Almere Centrum']"
-2,"['Almere Centrum', 'Amsterdam Centraal', 'Utrecht Centraal', 's-Hertogenbosch', 'Eindhoven', 'Tilburg']"
-3,"['Den Haag Centraal', 'Gouda', 'Den Haag HS', 'Leiden Centraal', 'Den Haag Centraal', 'Delft', 'Den Haag Laan v NOI', 'Leiden Centraal', 'Schiphol Airport']"
-4,"['Ede-Wageningen', 'Utrecht Centraal', 'Hilversum', 'Amsterdam Amstel', 'Amsterdam Centraal', 'Amsterdam Sloterdijk', 'Zaandam', 'Castricum', 'Beverwijk']"
-5,"['Den Haag HS', 'Delft', 'Schiedam Centrum', 'Rotterdam Blaak', 'Dordrecht', 'Roosendaal', 'Etten-Leur', 'Breda', 'Tilburg', 's-Hertogenbosch', 'Oss']"
-Score:,3196.6629213483147
+1,"['Utrecht Centraal', 'Gouda', 'Den Haag Centraal', 'Leiden Centraal', 'Den Haag HS', 'Gouda', 'Den Haag Laan v NOI', 'Leiden Centraal', 'Schiphol Airport', 'Utrecht Centraal']"
+2,"['Rotterdam Alexander', 'Gouda', 'Alphen a/d Rijn', 'Utrecht Centraal', 'Amsterdam Amstel', 'Almere Centrum', 'Amsterdam Centraal', 'Utrecht Centraal', 's-Hertogenbosch']"
+3,"['Schiphol Airport', 'Amsterdam Zuid', 'Amsterdam Amstel', 'Amsterdam Centraal', 'Amsterdam Sloterdijk', 'Zaandam', 'Castricum', 'Beverwijk', 'Zaandam', 'Hoorn', 'Alkmaar', 'Castricum']"
+4,"['Rotterdam Blaak', 'Dordrecht', 'Breda', 'Tilburg', 'Eindhoven', 's-Hertogenbosch', 'Tilburg']"
+5,"['Almelo', 'Zwolle', 'Deventer', 'Apeldoorn', 'Amersfoort', 'Utrecht Centraal', 'Hilversum', 'Amsterdam Amstel']"
+6,"['Alphen a/d Rijn', 'Leiden Centraal', 'Heemstede-Aerdenhout', 'Haarlem', 'Amsterdam Sloterdijk', 'Amsterdam Zuid']"
+7,"['s-Hertogenbosch', 'Oss', 'Nijmegen', 'Arnhem Centraal', 'Ede-Wageningen', 'Utrecht Centraal']"
+8,"['Schiedam Centrum', 'Delft', 'Den Haag Laan v NOI']"
+9,"['Haarlem', 'Beverwijk']"
+10,"['Den Helder', 'Alkmaar']"
+11,"['Assen', 'Zwolle', 'Amersfoort']"
+12,"['Sittard', 'Roermond', 'Weert', 'Eindhoven', 'Helmond', 'Venlo']"
+13,"['Den Haag HS', 'Delft', 'Den Haag Centraal']"
+14,"['Schiedam Centrum', 'Rotterdam Blaak', 'Rotterdam Alexander', 'Rotterdam Centraal', 'Dordrecht', 'Roosendaal', 'Etten-Leur', 'Breda']"
+15,"['Heerlen', 'Sittard', 'Maastricht']"
+16,['Castricum']
+17,"['Arnhem Centraal', 'Dieren', 'Zutphen', 'Deventer', 'Almelo', 'Hengelo', 'Enschede']"
+18,['Den Haag HS']
+19,"['Zwolle', 'Steenwijk', 'Heerenveen', 'Leeuwarden', 'Groningen', 'Assen']"
+Score:,6115.202247191011
