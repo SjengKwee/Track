@@ -53,13 +53,28 @@ De resultaten van deze case kunnen worden verkregen door:
 1. De main te runnen
         - ```python3 main.py```
 2. Als input meegeven welke deel van de case je wilt runnen
-    - nederland
-    - holland
+    - ```nederland```
+    - ```holland```
     - **GEEN HOOFDLETTER**
 3. Als input meegeven welke algoritme je wilt runnen
 
-
-De algoritme.. vraagt om meer input, zie vlogende stappen
+De algoritme.. vraagt om meer input, zie volgende stappen
 
 ## Structuur 
+De hierop volgende lijst beschrijft de belangrijkste mappen en files in het project, en waar je ze kan vinden:
+
+- **/code**: bevat alle code van dit project
+    - **/code/algoritmes**: bevat de code voor algoritmes
+    - **/code/classes**: bevat benodigde classes voor deze case
+    - **/code/bouwblokjes**: bevat benodigde functies voor dit project
+
+- **data**
+    - **data/images**: bevat meerdere mappen. Elke map slaat de figuren van een bepaald algoritme
+    - **data/input**: bevat de input files voor dit project
+    - **data/output**: bevat meerdere mappen. Elke map slaat de output van een bepaald algoritme.  
+    Sommige mappen scheiden de data in Holland en Nederland.
+
 ## Auteurs
+- Alec
+- Sjeng
+- Addey
