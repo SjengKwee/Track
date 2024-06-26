@@ -1,3 +1,6 @@
+# Aangemaakt door Sjeng
+# Connection.py
+
 class Connection(set):
 
     def __hash__(self):
@@ -8,7 +11,7 @@ class Connection(set):
     
     def endstation(self, startstation):
         """
-        Returns the station with which this connection connects the inputted startstation
+        Returnt het station waarmee het gegeven station door deze connectie is verbonden
         """
         items = tuple(self)
         if items[0] == startstation:
@@ -18,7 +21,7 @@ class Connection(set):
     
     def has(self, station):
         """
-        Checks if a station is in the connection
+        Checkt of een station in deze connectie zit
         """
 
         items = tuple(self)

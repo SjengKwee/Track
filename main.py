@@ -10,7 +10,7 @@ from code.algoritmes.random_restricted_3 import *
 from code.algoritmes.greedy_apriori import *
 from code.algoritmes.progressive_algorithm import Progressive_algorithm as pr
 from code.algoritmes.hillClimber import *
-from main_sjeng import *
+from code.bouwblokjes.progressive_runner import *
 from code.bouwblokjes.plot_trajectories import *
 from code.bouwblokjes.inladen import *
 from code.bouwblokjes.score import *
@@ -55,10 +55,11 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
             print("Voor een progressive met voorkeur voor benodigde stations en ongebruikte connecties: Stations")
             print("Voor een progressive_stations met meerdere tracks tegelijkertijd: Group")
             print("Voor een progressive_stations met score op basis van even aantal ongebruikte verbindingen voor stations: Even")
+            print("Voor een progressive_even met een look-ahead wanneer geen ongebruikte verbindingen: Final")
             heuristiek = input("Welke heuristiek wil je gebruiken? \n")
             repetitions = int(input("Hoeveel repetities per nieuwe track? \n"))
             times = int(input("Hoeveel scores wil je hebben? \n"))
-            if heuristiek == "Group" or heuristiek == "Even":
+            if heuristiek == "Group" or heuristiek == "Even" or heuristiek == "Final":
                 groups = int(input("Hoeveel tracks tegelijkertijd toevoegen? \n"))
 
     if(regio == "holland"):
@@ -234,6 +235,9 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
             progressive = pr.Progressive_group(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
         elif(heuristiek == "Even"):
             progressive = pr.Progressive_even(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
+        elif(heuristiek == "Final"):
+            progressive = pr.Progressive_final(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
+
         else:
             print("verkeerde input")
         
@@ -294,7 +298,7 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
 
 if __name__ == "__main__":
 
-    # Voorbeeld van het runnen van de main met een script:
-    #run_main(script = "yes", regio = "nederland", algoritme = "Progressive", heuristiek = "Even", repetitions = 10, times = 10, groups = 1)
+    #Voorbeeld van het runnen van de main met een script:
+    run_main(script = "yes", regio = "nederland", algoritme = "Progressive", heuristiek = "Final", repetitions = 100, times = 1000, groups = 1)
 
-    run_main(script = "no")
+    #run_main(script = "no")

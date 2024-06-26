@@ -60,6 +60,8 @@ De resultaten van deze case kunnen worden verkregen door:
 
 De algoritme.. vraagt om meer input, zie volgende stappen
 
+Om het inputten van alle vervolgstappen te omzeilen kan onderaan de main een script worden megegeven aan de functie run_main. Dit script bevat alle informatie die normaal met inputs wordt opgevraagd. Zie de main voor een voorbeeld.
+
 ## Structuur 
 De hierop volgende lijst beschrijft de belangrijkste mappen en files in het project, en waar je ze kan vinden:
 
