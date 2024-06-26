@@ -1,400 +1,2000 @@
-"Gekozen functie: change_start_station, 18957.714285714283"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 18990.714285714283"
-"Gekozen functie: separate_traject, 19451.0"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: delete_last_connection, 19467.0"
-"Gekozen functie: delete_last_connection, 19481.0"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 19496.0"
+"Gekozen functie: delete_last_connection, 2303.4494382022467"
 Gekozen functie: separate_traject
-"Gekozen functie: separate_traject, 19552.142857142855"
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 19568.142857142855"
-Gekozen functie: separate_traject
-Gekozen functie: delete_last_connection
-"Gekozen functie: separate_traject, 19655.285714285717"
-"Gekozen functie: change_start_station, 19666.285714285717"
-"Gekozen functie: delete_last_connection, 19677.285714285717"
-"Gekozen functie: change_start_station, 19697.285714285717"
-"Gekozen functie: delete_last_connection, 19713.285714285717"
-"Gekozen functie: separate_traject, 19791.428571428572"
-Gekozen functie: mutate_trajectories
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 19819.428571428572"
-"Gekozen functie: delete_last_connection, 19833.428571428572"
-"Gekozen functie: separate_traject, 19912.571428571428"
-Gekozen functie: separate_traject
-"Gekozen functie: delete_last_connection, 19936.571428571428"
-"Gekozen functie: delete_last_connection, 19942.571428571428"
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 19952.571428571428"
-"Gekozen functie: change_start_station, 19965.571428571428"
-"Gekozen functie: change_start_station, 19981.571428571428"
-"Gekozen functie: delete_last_connection, 20008.571428571428"
-"Gekozen functie: delete_last_connection, 20014.571428571428"
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 20024.571428571428"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: delete_last_connection, 20048.571428571428"
-"Gekozen functie: delete_last_connection, 20055.571428571428"
-"Gekozen functie: delete_last_connection, 20079.571428571428"
-Gekozen functie: separate_traject
-"Gekozen functie: separate_traject, 20515.857142857145"
-"Gekozen functie: separate_traject, 20608.0"
-"Gekozen functie: delete_last_connection, 20622.0"
-"Gekozen functie: change_start_station, 20649.0"
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 20663.0"
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 20687.0"
-"Gekozen functie: mutate_trajectories, 20905.0"
-"Gekozen functie: delete_last_connection, 20929.0"
-"Gekozen functie: change_start_station, 20957.0"
-"Gekozen functie: delete_last_connection, 20993.0"
-"Gekozen functie: change_start_station, 21020.0"
-"Gekozen functie: separate_traject, 21122.142857142855"
-"Gekozen functie: mutate_trajectories, 21357.142857142855"
-"Gekozen functie: change_start_station, 21383.142857142855"
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 21390.142857142855"
-"Gekozen functie: separate_traject, 21772.428571428572"
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 21793.428571428572"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 21810.428571428572"
-"Gekozen functie: change_start_station, 21821.428571428572"
-"Gekozen functie: delete_last_connection, 21840.428571428572"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 21846.428571428572"
-Gekozen functie: change_start_station
-"Gekozen functie: delete_last_connection, 21881.428571428572"
-"Gekozen functie: change_start_station, 21895.428571428572"
-"Gekozen functie: delete_last_connection, 21910.428571428572"
-"Gekozen functie: separate_traject, 22004.571428571428"
-Gekozen functie: change_start_station
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 22020.571428571428"
-"Gekozen functie: change_start_station, 22030.571428571428"
-"Gekozen functie: change_start_station, 22048.571428571428"
-"Gekozen functie: separate_traject, 22121.714285714283"
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-"Gekozen functie: separate_traject, 22218.857142857145"
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 22224.857142857145"
-"Gekozen functie: delete_last_connection, 22234.857142857145"
-Gekozen functie: change_start_station
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 22241.857142857145"
-"Gekozen functie: mutate_trajectories, 22481.857142857145"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: mutate_trajectories, 22723.857142857145"
-"Gekozen functie: change_start_station, 22734.857142857145"
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 22745.857142857145"
-"Gekozen functie: change_start_station, 22758.857142857145"
-"Gekozen functie: change_start_station, 22773.857142857145"
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 22808.857142857145"
-Gekozen functie: change_start_station
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 22820.857142857145"
-Gekozen functie: change_start_station
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 22831.857142857145"
-"Gekozen functie: change_start_station, 22847.857142857145"
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-"Gekozen functie: delete_last_connection, 22858.857142857145"
-"Gekozen functie: delete_last_connection, 22869.857142857145"
-"Gekozen functie: delete_last_connection, 22888.857142857145"
-"Gekozen functie: separate_traject, 22975.0"
-"Gekozen functie: mutate_trajectories, 23223.0"
-"Gekozen functie: change_start_station, 23238.0"
-Gekozen functie: separate_traject
-"Gekozen functie: separate_traject, 23660.285714285717"
-"Gekozen functie: delete_last_connection, 23667.285714285717"
-"Gekozen functie: delete_last_connection, 23686.285714285717"
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 23710.285714285717"
-Gekozen functie: change_start_station
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 23716.285714285717"
-"Gekozen functie: change_start_station, 23731.285714285717"
-Gekozen functie: change_start_station
-"Gekozen functie: separate_traject, 23839.428571428572"
-"Gekozen functie: delete_last_connection, 23846.428571428572"
-"Gekozen functie: change_start_station, 23863.428571428572"
-"Gekozen functie: change_start_station, 23883.428571428572"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 23898.428571428572"
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-Gekozen functie: change_start_station
-"Gekozen functie: delete_last_connection, 23910.428571428572"
-Gekozen functie: mutate_trajectories
-Gekozen functie: delete_last_connection
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 23928.428571428572"
-"Gekozen functie: change_start_station, 23941.428571428572"
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: separate_traject
-"Gekozen functie: mutate_trajectories, 24214.428571428572"
-"Gekozen functie: separate_traject, 24295.571428571428"
-"Gekozen functie: delete_last_connection, 24310.571428571428"
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-"Gekozen functie: mutate_trajectories, 24554.571428571428"
-Gekozen functie: delete_last_connection
-"Gekozen functie: change_start_station, 24576.571428571428"
-Gekozen functie: change_start_station
-"Gekozen functie: delete_last_connection, 24612.571428571428"
-Gekozen functie: mutate_trajectories
-Gekozen functie: delete_last_connection
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 24618.571428571428"
-"Gekozen functie: mutate_trajectories, 24842.571428571428"
-Gekozen functie: change_start_station
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 24882.571428571428"
-"Gekozen functie: delete_last_connection, 24889.571428571428"
-"Gekozen functie: delete_last_connection, 24899.571428571428"
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-"Gekozen functie: delete_last_connection, 24913.571428571428"
-"Gekozen functie: change_start_station, 24934.571428571428"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: delete_last_connection, 24945.571428571428"
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-"Gekozen functie: mutate_trajectories, 25175.571428571428"
-Gekozen functie: mutate_trajectories
-Gekozen functie: delete_last_connection
-"Gekozen functie: delete_last_connection, 25189.571428571428"
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: separate_traject
-Gekozen functie: delete_last_connection
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 25197.571428571428"
-Gekozen functie: change_start_station
-Gekozen functie: delete_last_connection
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-"Gekozen functie: mutate_trajectories, 25429.571428571428"
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-Gekozen functie: delete_last_connection
-"Gekozen functie: change_start_station, 25465.571428571428"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: delete_last_connection, 25487.571428571428"
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 25498.571428571428"
-"Gekozen functie: change_start_station, 25540.571428571428"
+"Gekozen functie: mutate_trajectories, 2583.4494382022467"
+"Gekozen functie: delete_last_connection, 2607.4494382022467"
+"Gekozen functie: delete_last_connection, 2631.4494382022467"
 Gekozen functie: delete_last_connection
 Gekozen functie: separate_traject
 Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 25547.571428571428"
-Gekozen functie: separate_traject
+"Gekozen functie: delete_last_connection, 2642.4494382022467"
 Gekozen functie: mutate_trajectories
+"Gekozen functie: mutate_trajectories, 2793.089887640449"
+"Gekozen functie: change_start_station, 2803.089887640449"
+"Gekozen functie: delete_last_connection, 2839.089887640449"
 Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 25565.571428571428"
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 25586.571428571428"
-"Gekozen functie: separate_traject, 25644.714285714283"
-Gekozen functie: separate_traject
-"Gekozen functie: delete_last_connection, 25654.714285714283"
-Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 2860.089887640449"
 Gekozen functie: delete_last_connection
-"Gekozen functie: delete_last_connection, 25672.714285714283"
+"Gekozen functie: change_start_station, 2902.089887640449"
+Gekozen functie: mutate_trajectories
+"Gekozen functie: change_start_station, 2918.089887640449"
 Gekozen functie: separate_traject
-Gekozen functie: delete_last_connection
-"Gekozen functie: delete_last_connection, 25707.714285714283"
+"Gekozen functie: mutate_trajectories, 2968.3707865168544"
+"Gekozen functie: delete_last_connection, 2978.3707865168544"
+"Gekozen functie: delete_last_connection, 3002.3707865168544"
 Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 25725.714285714283"
-"Gekozen functie: delete_last_connection, 25746.714285714283"
+"Gekozen functie: delete_last_connection, 3014.3707865168544"
+"Gekozen functie: mutate_trajectories, 3028.651685393258"
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 3038.651685393258"
+"Gekozen functie: separate_traject, 3224.089887640449"
+"Gekozen functie: delete_last_connection, 3240.089887640449"
+"Gekozen functie: delete_last_connection, 3276.089887640449"
+"Gekozen functie: delete_last_connection, 3293.089887640449"
+Gekozen functie: separate_traject
+"Gekozen functie: mutate_trajectories, 3335.3707865168544"
 Gekozen functie: mutate_trajectories
 Gekozen functie: change_start_station
-Gekozen functie: change_start_station
-Gekozen functie: change_start_station
-Gekozen functie: separate_traject
-"Gekozen functie: delete_last_connection, 25765.714285714283"
-"Gekozen functie: change_start_station, 25783.714285714283"
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 25800.714285714283"
-"Gekozen functie: delete_last_connection, 25810.714285714283"
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 25831.714285714283"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 25848.714285714283"
-"Gekozen functie: delete_last_connection, 25859.714285714283"
-Gekozen functie: mutate_trajectories
-Gekozen functie: change_start_station
-Gekozen functie: mutate_trajectories
-"Gekozen functie: mutate_trajectories, 26078.714285714283"
-Gekozen functie: separate_traject
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 26096.714285714283"
-"Gekozen functie: delete_last_connection, 26112.714285714283"
-Gekozen functie: delete_last_connection
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 26127.714285714283"
-"Gekozen functie: delete_last_connection, 26138.714285714283"
-Gekozen functie: mutate_trajectories
-"Gekozen functie: delete_last_connection, 26157.714285714283"
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
+"Gekozen functie: mutate_trajectories, 3361.651685393258"
+"Gekozen functie: separate_traject, 3438.730337078652"
 Gekozen functie: separate_traject
 Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 3458.730337078652"
+"Gekozen functie: change_start_station, 3482.730337078652"
 Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 26165.714285714283"
-"Gekozen functie: delete_last_connection, 26178.714285714283"
-Gekozen functie: change_start_station
-Gekozen functie: separate_traject
-Gekozen functie: delete_last_connection
-"Gekozen functie: change_start_station, 26185.714285714283"
-"Gekozen functie: delete_last_connection, 26203.714285714283"
-Gekozen functie: mutate_trajectories
-Gekozen functie: delete_last_connection
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 26218.714285714283"
+"Gekozen functie: mutate_trajectories, 3626.3707865168544"
+"Gekozen functie: change_start_station, 3640.3707865168544"
+"Gekozen functie: mutate_trajectories, 3807.011235955056"
 Gekozen functie: delete_last_connection
 Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 26228.714285714283"
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-Gekozen functie: change_start_station
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 26237.714285714283"
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: delete_last_connection
-"Gekozen functie: delete_last_connection, 26254.714285714283"
-Gekozen functie: delete_last_connection
-"Gekozen functie: change_start_station, 26266.714285714283"
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 26279.714285714283"
+"Gekozen functie: change_start_station, 3823.011235955056"
 Gekozen functie: mutate_trajectories
 Gekozen functie: change_start_station
-Gekozen functie: change_start_station
-Gekozen functie: separate_traject
-Gekozen functie: change_start_station
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-"Gekozen functie: change_start_station, 26289.714285714283"
-Gekozen functie: separate_traject
 Gekozen functie: delete_last_connection
 Gekozen functie: delete_last_connection
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 26296.714285714283"
-"Gekozen functie: change_start_station, 26313.714285714283"
-Gekozen functie: change_start_station
-Gekozen functie: separate_traject
-Gekozen functie: mutate_trajectories
-Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 3850.011235955056"
+"Gekozen functie: delete_last_connection, 3865.011235955056"
 Gekozen functie: delete_last_connection
-Gekozen functie: mutate_trajectories
-"Gekozen functie: delete_last_connection, 26323.714285714283"
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: delete_last_connection
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 26340.714285714283"
-Gekozen functie: change_start_station
-Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 3885.011235955056"
 Gekozen functie: delete_last_connection
 Gekozen functie: separate_traject
-Gekozen functie: change_start_station
-Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 26357.714285714283"
 Gekozen functie: delete_last_connection
-"Gekozen functie: delete_last_connection, 26370.714285714283"
-Gekozen functie: mutate_trajectories
-Gekozen functie: separate_traject
-"Gekozen functie: delete_last_connection, 26383.714285714283"
-Gekozen functie: mutate_trajectories
+"Gekozen functie: separate_traject, 4055.4494382022467"
 Gekozen functie: delete_last_connection
-"Gekozen functie: delete_last_connection, 26404.714285714283"
-Gekozen functie: change_start_station
-Gekozen functie: delete_last_connection
+"Gekozen functie: delete_last_connection, 4069.4494382022467"
+"Gekozen functie: change_start_station, 4081.4494382022467"
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 4096.449438202247"
 Gekozen functie: mutate_trajectories
 Gekozen functie: mutate_trajectories
 Gekozen functie: mutate_trajectories
-Gekozen functie: change_start_station
-Gekozen functie: change_start_station
+"Gekozen functie: change_start_station, 4103.449438202247"
+"Gekozen functie: change_start_station, 4119.449438202247"
 Gekozen functie: separate_traject
 Gekozen functie: mutate_trajectories
 Gekozen functie: delete_last_connection
 Gekozen functie: separate_traject
-"Gekozen functie: change_start_station, 26417.714285714283"
+"Gekozen functie: delete_last_connection, 4139.449438202247"
+Gekozen functie: delete_last_connection
 Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+"Gekozen functie: change_start_station, 4146.449438202247"
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 4156.449438202247"
+Gekozen functie: change_start_station
+"Gekozen functie: change_start_station, 4171.449438202247"
+"Gekozen functie: delete_last_connection, 4206.449438202247"
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 4213.449438202247"
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+"Gekozen functie: separate_traject, 4249.52808988764"
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 4265.52808988764"
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 4301.52808988764"
+"Gekozen functie: delete_last_connection, 4312.52808988764"
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+"Gekozen functie: mutate_trajectories, 4404.168539325843"
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 4419.168539325843"
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 4443.168539325843"
+Gekozen functie: separate_traject
+"Gekozen functie: mutate_trajectories, 4482.449438202247"
+"Gekozen functie: mutate_trajectories, 4529.089887640449"
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+"Gekozen functie: change_start_station, 4540.089887640449"
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+"Gekozen functie: separate_traject, 4588.168539325843"
+"Gekozen functie: delete_last_connection, 4605.168539325843"
+"Gekozen functie: change_start_station, 4632.168539325843"
+"Gekozen functie: change_start_station, 4646.168539325843"
+"Gekozen functie: separate_traject, 4657.247191011236"
+"Gekozen functie: delete_last_connection, 4671.247191011236"
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+"Gekozen functie: delete_last_connection, 4687.247191011236"
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 4696.247191011236"
+Gekozen functie: mutate_trajectories
+"Gekozen functie: mutate_trajectories, 4870.247191011236"
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+"Gekozen functie: delete_last_connection, 4894.247191011236"
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 4911.247191011236"
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+"Gekozen functie: delete_last_connection, 4921.247191011236"
+"Gekozen functie: change_start_station, 4935.247191011236"
+"Gekozen functie: delete_last_connection, 4947.247191011236"
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 4967.247191011236"
+Gekozen functie: separate_traject
+"Gekozen functie: mutate_trajectories, 5093.887640449438"
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 5117.887640449438"
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+"Gekozen functie: delete_last_connection, 5137.887640449438"
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+"Gekozen functie: change_start_station, 5142.887640449438"
+"Gekozen functie: separate_traject, 5277.3258426966295"
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 5287.3258426966295"
+"Gekozen functie: delete_last_connection, 5308.3258426966295"
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 5325.3258426966295"
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 5337.3258426966295"
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+"Gekozen functie: delete_last_connection, 5361.3258426966295"
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+"Gekozen functie: delete_last_connection, 5377.3258426966295"
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 5392.3258426966295"
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+"Gekozen functie: separate_traject, 5441.404494382023"
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+"Gekozen functie: delete_last_connection, 5449.404494382023"
+"Gekozen functie: delete_last_connection, 5457.404494382023"
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+"Gekozen functie: change_start_station, 5465.404494382023"
+Gekozen functie: delete_last_connection
+"Gekozen functie: change_start_station, 5473.404494382023"
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 5501.404494382023"
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+"Gekozen functie: delete_last_connection, 5516.404494382023"
+Gekozen functie: separate_traject
 Gekozen functie: change_start_station
 Gekozen functie: mutate_trajectories
 Gekozen functie: mutate_trajectories
 Gekozen functie: change_start_station
+"Gekozen functie: change_start_station, 5528.404494382023"
 Gekozen functie: change_start_station
-"Gekozen functie: delete_last_connection, 26427.714285714283"
 Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
-Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 5538.404494382023"
 Gekozen functie: mutate_trajectories
 Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+"Gekozen functie: change_start_station, 5546.404494382023"
+"Gekozen functie: delete_last_connection, 5564.404494382023"
+"Gekozen functie: delete_last_connection, 5591.404494382023"
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 5610.404494382023"
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 5620.404494382023"
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 5639.404494382023"
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
 Gekozen functie: separate_traject
 Gekozen functie: delete_last_connection
 Gekozen functie: mutate_trajectories
 Gekozen functie: separate_traject
 Gekozen functie: mutate_trajectories
 Gekozen functie: separate_traject
-"Gekozen functie: delete_last_connection, 26451.714285714283"
-Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
 Gekozen functie: separate_traject
-Gekozen functie: change_start_station
-"Gekozen functie: change_start_station, 26460.714285714283"
-Gekozen functie: change_start_station
+Gekozen functie: separate_traject
 Gekozen functie: mutate_trajectories
 Gekozen functie: change_start_station
 Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 5657.404494382023"
+Gekozen functie: mutate_trajectories
+"Gekozen functie: change_start_station, 5672.404494382023"
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+"Gekozen functie: change_start_station, 5685.404494382023"
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+"Gekozen functie: delete_last_connection, 5693.404494382023"
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 5712.404494382023"
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+"Gekozen functie: delete_last_connection, 5722.404494382023"
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+"Gekozen functie: separate_traject, 5861.842696629214"
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 5867.842696629214"
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+"Gekozen functie: mutate_trajectories, 6026.842696629214"
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+"Gekozen functie: delete_last_connection, 6035.842696629214"
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+"Gekozen functie: separate_traject, 6064.921348314607"
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 6072.921348314607"
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 6078.921348314607"
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 6089.921348314607"
+"Gekozen functie: change_start_station, 6097.921348314607"
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 6113.921348314607"
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+"Gekozen functie: delete_last_connection, 6119.921348314607"
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+"Gekozen functie: change_start_station, 6125.921348314607"
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+"Gekozen functie: change_start_station, 6152.921348314607"
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+"Gekozen functie: change_start_station, 6179.921348314607"
+"Gekozen functie: delete_last_connection, 6185.921348314607"
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+"Gekozen functie: delete_last_connection, 6215.921348314607"
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+"Gekozen functie: delete_last_connection, 6221.921348314607"
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+"Gekozen functie: delete_last_connection, 6229.921348314607"
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+"Gekozen functie: delete_last_connection, 6239.921348314607"
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+"Gekozen functie: delete_last_connection, 6245.921348314607"
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+"Gekozen functie: delete_last_connection, 6251.921348314607"
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
 Gekozen functie: separate_traject
 Gekozen functie: mutate_trajectories
 Gekozen functie: mutate_trajectories
 Gekozen functie: mutate_trajectories
 Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
 Gekozen functie: mutate_trajectories
 Gekozen functie: delete_last_connection
-"Gekozen functie: delete_last_connection, 26468.714285714283"
-"Gekozen functie: change_start_station, 26489.714285714283"
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
 Gekozen functie: mutate_trajectories
 Gekozen functie: mutate_trajectories
 Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: mutate_trajectories
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: change_start_station
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: mutate_trajectories
+Gekozen functie: delete_last_connection
+Gekozen functie: delete_last_connection
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: change_start_station
+Gekozen functie: separate_traject
+Gekozen functie: delete_last_connection

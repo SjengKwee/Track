@@ -18,7 +18,10 @@ class HillClimber():
     def __init__(self,start_state, stations_file='StationsHolland.csv', connecties_file='ConnectiesHolland.csv'):
 
         self.trajectories = copy.deepcopy(start_state)
-        self.value = score_calc(start_state)
+        self.connections = 28 
+        if stations_file == 'stationsnederland.csv':
+            self.connections = 89
+        self.value = score_calc(start_state, self.connections)
         self.stations_file = stations_file
         self.connecties_file = connecties_file
         self.functions = [
@@ -94,7 +97,7 @@ class HillClimber():
        
     def check_solution(self, new_trajectories):
         """ check en accepter wijzigingen die de score verhogen"""
-        new_value = score_calc(new_trajectories)
+        new_value = score_calc(new_trajectories, self.connections)
         old_value = self.value 
 
         if new_value >= old_value:
@@ -172,11 +175,13 @@ def restart_hillclimber(iterations_hillclimber, mutation_iteration, stations_fil
     hillclimber_results = []
     scores_iteration_hillclimber = []
     number_traject = 7
+    minutes = 120
     if stations_file == 'stationsnederland.csv':
         number_traject = 20
+        minutes = 180
         
     
-    possible_solutions = make_random_start_state(iterations_hillclimber * 100, stations_file, connecties_file, number_traject)
+    possible_solutions = make_random_start_state(iterations_hillclimber * 100, stations_file, connecties_file, number_traject, minutes)
     
     for i in range(iterations_hillclimber):
         
@@ -204,13 +209,13 @@ def calculate_best_trajectory(hc_restart, iteration_restart):
     print(max_result)
     return [max_result, best_trajectories]
 
-def make_random_start_state(number_of_starts,stations_file, connecties_file, number_traject=7):
+def make_random_start_state(number_of_starts,stations_file, connecties_file, number_traject=7, minutes=120):
     """maakt random trajecten aan met random algoritme"""
     stations = make_connections(stations_file, connecties_file)
     possible_solutions = []
 
     for i in range(number_of_starts):
-        solution = run_random_algoritme(stations,number_traject)
+        solution = run_random_algoritme(stations,number_traject,minutes)
         possible_solutions.append(solution)
     
     return possible_solutions

@@ -236,31 +236,30 @@ if __name__ == "__main__":
 
     elif(algoritme== "Hill Climber"):
 
-        # --------------------------- Hill Climber ---------------------------------
+         # --------------------------- Hill Climber ---------------------------------
         number_random_startstate = 100
-        hillclimber_iteration = 400
-        hillclimber_restart_iteration= 1000
+        hillclimber_iteration = 2000
+        hillclimber_restart_iteration= 100
         number_traject = 7
+        connections = 28
         if stations_file == 'stationsnederland.csv':
             number_traject = 20
-            print(stations_file, "209 main")
-        
-       
-    
+            connections =89
+            minutes = 180
 
         print("Setting up Hill Climber...")
-        possible_solutions = make_random_start_state( number_random_startstate, stations_file, connecties_file,number_traject)
+        possible_solutions = make_random_start_state( number_random_startstate, stations_file, connecties_file,number_traject, minutes)
         random_chosen_solution= random.choice(possible_solutions)
-        score_chosen_solution = score_calc(random_chosen_solution)
+        score_chosen_solution = score_calc(random_chosen_solution, connections)
         tracks_writer(random_chosen_solution, score_chosen_solution, f'data/output/hillclimber/{regio}/chosen_trajectories.csv')
         run_plot_trajectories(f"data/output/hillclimber/{regio}/chosen_trajectories.csv", f'data/images/hillclimber/{regio}/huidige_trajectories.png',stations_file )
 
 
-        # Hillclimber compinatie van mutaties testen
+        # Hillclimber combinatie van mutaties testen
         climber =  HillClimber(random_chosen_solution, stations_file, connecties_file)
         combination_name, function_combinations = make_compinations(climber)
         
-        # beste compinatie opslaan en plotten
+        # beste combinatie opslaan en plotten
         best_score, best_trajectories, scores_after_iteration, best_combination, combination = test_combination(
             hillclimber_iteration,function_combinations, combination_name, random_chosen_solution, stations_file,connecties_file,regio)
 
@@ -279,6 +278,5 @@ if __name__ == "__main__":
         # de hilclimber met de beste score  plotten
         tracks_writer(result_max[1], result_max[0], f'data/output/hillclimber/{regio}/trajectories_after_more_hill.csv')
         run_plot_trajectories(f'data/output/hillclimber/{regio}/trajectories_after_more_hill.csv', f'data/images/hillclimber/{regio}/trajectories_after_more_hill.png', stations_file)
-
     else:
         print("Verkeerde input")
