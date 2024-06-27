@@ -575,7 +575,8 @@ class Progressive_even(Progressive_group):
         
         score = 0
         # Punten voor het aantal gereden verbindingen?
-        score += (len(connections) * 100)
+        if connections != None:
+            score += (len(connections) * 100)
 
         # punten voor de verhouding even/oneven verbindingen bij stations
         for station_name in self._station_connections.keys():

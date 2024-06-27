@@ -59,7 +59,7 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
             heuristiek = input("Welke heuristiek wil je gebruiken? \n")
             repetitions = int(input("Hoeveel repetities per nieuwe track? \n"))
             times = int(input("Hoeveel scores wil je hebben? \n"))
-            if heuristiek == "Group" or heuristiek == "Even" or heuristiek == "Final":
+            if heuristiek == "Group" or heuristiek == "even" or heuristiek == "final":
                 groups = int(input("Hoeveel tracks tegelijkertijd toevoegen? \n"))
 
     if(regio == "holland"):
