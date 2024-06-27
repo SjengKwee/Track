@@ -50,12 +50,12 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
             print("Voor een heuristiek gebasseerd op de maximale traveltime: Max_traveltime")
             heuristiek = input("Welke heuristiek wil je gebruiken? ")
         if algoritme == "Progressive":
-            print("Voor een progressive met random trajecten: Random")
-            print("Voor een progressive met voorkeur voor ongebruikte connecties: Connections")
-            print("Voor een progressive met voorkeur voor benodigde stations en ongebruikte connecties: Stations")
-            print("Voor een progressive_stations met meerdere tracks tegelijkertijd: Group")
-            print("Voor een progressive_stations met score op basis van even aantal ongebruikte verbindingen voor stations: Even")
-            print("Voor een progressive_even met een look-ahead wanneer geen ongebruikte verbindingen: Final")
+            print("Voor een progressive met random trajecten: random")
+            print("Voor een progressive met voorkeur voor ongebruikte connecties: connections")
+            print("Voor een progressive met voorkeur voor benodigde stations en ongebruikte connecties: stations")
+            print("Voor een progressive_stations met meerdere tracks tegelijkertijd: group")
+            print("Voor een progressive_stations met score op basis van even aantal ongebruikte verbindingen voor stations: even")
+            print("Voor een progressive_even met een look-ahead wanneer geen ongebruikte verbindingen: final")
             heuristiek = input("Welke heuristiek wil je gebruiken? \n")
             repetitions = int(input("Hoeveel repetities per nieuwe track? \n"))
             times = int(input("Hoeveel scores wil je hebben? \n"))
@@ -223,26 +223,30 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
     elif(algoritme == "Progressive"):
         
         # initialise correct algorithm with inputted parameters
-        if(heuristiek == "Random"):
+        csv_location = 'data/output/progressive/' + regio + '/' + heuristiek + '/' + str(repetitions) + 'x' + str(groups) + 'maximum'
+        png_location = 'data/images/progressive/' + regio + '/' + heuristiek + '/' + str(repetitions) + 'x' + str(groups) + 'maximum'
+        score_csv = 'data/output/progressive/' + regio + '/' + heuristiek + '/' + str(repetitions) + 'x' + str(groups) + 'scores'
+
+        if(heuristiek == "random"):
             progressive = pr.Progressive_algorithm(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
-        elif(heuristiek == "Connections"):
+        elif(heuristiek == "connections"):
             progressive = pr.Progressive_connections(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
-        elif(heuristiek == "Stations"):
+        elif(heuristiek == "stations"):
             progressive = pr.Progressive_stations(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
-        elif(heuristiek == "Filler"):
-            progressive = pr.Progressive_randomstart(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
-        elif(heuristiek == "Group"):
+        elif(heuristiek == "filler"):
+            progressive = pr.Progressive_filler(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections)
+        elif(heuristiek == "group"):
             progressive = pr.Progressive_group(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
-        elif(heuristiek == "Even"):
+        elif(heuristiek == "even"):
             progressive = pr.Progressive_even(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
-        elif(heuristiek == "Final"):
+        elif(heuristiek == "final"):
             progressive = pr.Progressive_final(stations, repetitions=repetitions, trains=trains, traveltime=traveltime, times=times, number_of_connections = number_connections, groups = groups)
 
         else:
             print("verkeerde input")
         
         # run algorithm
-        run_progressive_run_times(progressive, stations_file = stations_file)
+        run_progressive_run_times(progressive, stations_file = stations_file, csv_location = csv_location, png_location = png_location, score_csv = score_csv)
 
 
     elif(algoritme== "Hill Climber"):
@@ -299,6 +303,6 @@ def run_main(script = "no", regio = "regio", algoritme = "algoritme", heuristiek
 if __name__ == "__main__":
 
     #Voorbeeld van het runnen van de main met een script:
-    run_main(script = "yes", regio = "nederland", algoritme = "Progressive", heuristiek = "Final", repetitions = 100, times = 1000, groups = 1)
+    #run_main(script = "yes", regio = "nederland", algoritme = "Progressive", heuristiek = "final", repetitions = 10, times = 10, groups = 1)
 
-    #run_main(script = "no")
+    run_main(script = "no")

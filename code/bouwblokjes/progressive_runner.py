@@ -74,15 +74,14 @@ def run_progressive_run_times(algorithm, stations_file, csv_location = 'data/out
         # write csv
         tracks_writer(track_list, algorithm.best_max_scores[track], csvname)
 
-        # # plot best score per added track
-        # run_plot_trajectories(csvname, pngname, stations_file = stations_file)
+        # plot best score per added track
+        run_plot_trajectories(csvname, pngname, stations_file = stations_file)
 
     # output alle scores
-    scorename = score_csv
     all_scores = algorithm.all_max_scores
     gem_score = (sum(all_scores)/len(all_scores))
 
     scores_writer(score_csv, highscore=absolutebest, average=gem_score, all_scores=all_scores)
 
-    # # plot verdeling van de scores
-    # run_plot_random_alg_score(algorithm.all_max_scores, png_location + "plot.png")
+    # plot verdeling van de scores
+    run_plot_random_alg_score(algorithm.all_max_scores, png_location + "plot.png")

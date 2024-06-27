@@ -418,8 +418,6 @@ class Progressive_filler(Progressive_connections):
 
         #Return
         return traject
-    
-# class Progressive_even(Progressive_filler):
 
 class Progressive_group(Progressive_stations):
     """
@@ -429,6 +427,56 @@ class Progressive_group(Progressive_stations):
         super().__init__(stations, repetitions, trains, traveltime, times, number_of_connections)
 
         self._track_groups = groups
+
+    def next_track(self, connections_in = None):
+
+        #Initialiseer parameters
+        start_station = self.next_start_station()
+        traject = Traject(start_station)
+        if connections_in != None:
+            used_connections_temp = connections_in
+        else:
+            used_connections_temp = self._total_used_connections.copy()
+
+        #Runt tot traject te lang wordt
+        while True:
+
+            # Maak een lijst van beschikbare connecties die nog niet gereden zijn.
+            connections_choices = []
+            connections_available = set()
+
+            for station in traject._endstation._connection.keys():
+
+                # voeg paren toe aan available
+                connections_available.add(Connection((traject._endstation._name, station)))
+
+            # selecteer de connecties die nog niet zijn bereden
+            connections_choices = list(connections_available - used_connections_temp)
+            if not connections_choices:
+                connections_choices = list(connections_available)
+            
+            # selecteer een station
+            choice = random.choice(connections_choices)
+
+            # maak de connectie
+            for station_name in choice:
+                if station_name != traject._endstation._name:
+                    endstation_name = station_name
+            connection = traject._endstation._connection[endstation_name]
+            if int(traject._traveltime) + int(connection[1]) > self._traveltime:
+                break
+            traject.add_trajectconnection(connection[0])
+
+            # Onthoud dat de gekozen verbinding is bereden
+            if choice not in used_connections_temp:
+                used_connections_temp.add(choice)
+            
+            # Stop met bouwen aan traject als alle verbindingen zijn bereden
+            if used_connections_temp == self._all_connections:
+                break
+
+        #Return
+        return traject, used_connections_temp
 
     def run(self):
         """
@@ -446,25 +494,35 @@ class Progressive_group(Progressive_stations):
             self.score_list[track] = []
             self.max_scores[track] = 0
 
-            # zoek de beste track
+            # Zoek de beste vervolg-track
             for n in range(self._repetitions):
 
-                # kopieer huidige tracks
+                # Kopieer huidige tracks
                 copy_tracks = copy.deepcopy(self._tracks)
+                
+                
+                connections_in = None
 
                 for n in range(self._track_groups):
+                    
                     # maak track
-                    new_track = self.next_track()
+                    # maak eerste track in n
+                    if connections_in == None:
+                        new_track, connections_in = self.next_track()
+
+                    # maak vervolgtracks in n
+                    else:
+                        new_track, connections_in = self.next_track(connections_in)
 
                     # voeg toe aan oplossing
                     copy_tracks.append(new_track)
 
-                # bereken score en sla op in dictionary
+                # bereken score
                 score = score_calc(copy_tracks, connections = self._number_of_connectinos)
 
                 # sla score op in dictionary
                 self.score_list[track].append(score)
-
+                
                 # onthoud hoogste score, track, en gebruikte verbindingen
                 if track == 0:
                     if score > self.max_scores[track]:
